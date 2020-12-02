@@ -1,6 +1,6 @@
 # encoding: UTF-8
 
-control "xccdf_org.cisecurity.benchmarks_rule_1.1.1_L1_Ensure_Enforce_password_history_is_set_to_24_or_more_passwords" do
+control "1.1.1_L1_Ensure_Enforce_password_history_is_set_to_24_or_more_passwords" do
   title "(L1) Ensure 'Enforce password history' is set to '24 or more password(s)'"
   desc  "
     This policy setting determines the number of renewed, unique passwords that have to be associated with a user account before you can reuse an old password. The value for this policy setting must be between 0 and 24 passwords. The default value for Windows Vista is 0 passwords, but the default setting in a domain is 24 passwords. To maintain the effectiveness of this policy setting, use the Minimum password age setting to prevent users from repeatedly changing their password.
@@ -18,7 +18,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_1.1.1_L1_Ensure_Enforce_password_h
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_1.1.2_L1_Ensure_Maximum_password_age_is_set_to_60_or_fewer_days_but_not_0" do
+control "1.1.2_L1_Ensure_Maximum_password_age_is_set_to_60_or_fewer_days_but_not_0" do
   title "(L1) Ensure 'Maximum password age' is set to '60 or fewer days, but not 0'"
   desc  "
     This policy setting defines how long a user can use their password before it expires.
@@ -41,7 +41,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_1.1.2_L1_Ensure_Maximum_password_a
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_1.1.3_L1_Ensure_Minimum_password_age_is_set_to_1_or_more_days" do
+control "1.1.3_L1_Ensure_Minimum_password_age_is_set_to_1_or_more_days" do
   title "(L1) Ensure 'Minimum password age' is set to '1 or more day(s)'"
   desc  "
     This policy setting determines the number of days that you must use a password before you can change it. The range of values for this policy setting is between 1 and 999 days. (You may also set the value to 0 to allow immediate password changes.) The default value for this setting is 0 days.
@@ -58,7 +58,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_1.1.3_L1_Ensure_Minimum_password_a
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_1.1.4_L1_Ensure_Minimum_password_length_is_set_to_14_or_more_characters" do
+control "1.1.4_L1_Ensure_Minimum_password_length_is_set_to_14_or_more_characters" do
   title "(L1) Ensure 'Minimum password length' is set to '14 or more character(s)'"
   desc  "
     This policy setting determines the least number of characters that make up a password for a user account. There are many different theories about how to determine the best password length for an organization, but perhaps \"pass phrase\" is a better term than \"password.\" In Microsoft Windows 2000 or later, pass phrases can be quite long and can include spaces. Therefore, a phrase such as \"I want to drink a $5 milkshake\" is a valid pass phrase; it is a considerably stronger password than an 8 or 10 character string of random numbers and letters, and yet is easier to remember. Users must be educated about the proper selection and maintenance of passwords, especially with regard to password length.
@@ -74,7 +74,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_1.1.4_L1_Ensure_Minimum_password_l
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_1.1.5_L1_Ensure_Password_must_meet_complexity_requirements_is_set_to_Enabled" do
+control "1.1.5_L1_Ensure_Password_must_meet_complexity_requirements_is_set_to_Enabled" do
   title "(L1) Ensure 'Password must meet complexity requirements' is set to 'Enabled'"
   desc  "
     This policy setting checks all new passwords to ensure that they meet basic requirements for strong passwords.
@@ -103,7 +103,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_1.1.5_L1_Ensure_Password_must_meet
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_1.1.6_L1_Ensure_Store_passwords_using_reversible_encryption_is_set_to_Disabled" do
+control "1.1.6_L1_Ensure_Store_passwords_using_reversible_encryption_is_set_to_Disabled" do
   title "(L1) Ensure 'Store passwords using reversible encryption' is set to 'Disabled'"
   desc  "
     This policy setting determines whether the operating system stores passwords in a way that uses reversible encryption, which provides support for application protocols that require knowledge of the user's password for authentication purposes. Passwords that are stored with reversible encryption are essentially the same as plaintext versions of the passwords.
@@ -119,7 +119,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_1.1.6_L1_Ensure_Store_passwords_us
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_1.2.1_L1_Ensure_Account_lockout_duration_is_set_to_15_or_more_minutes" do
+control "1.2.1_L1_Ensure_Account_lockout_duration_is_set_to_15_or_more_minutes" do
   title "(L1) Ensure 'Account lockout duration' is set to '15 or more minute(s)'"
   desc  "
     This policy setting determines the length of time that must pass before a locked account is unlocked and a user can try to log on again. The setting does this by specifying the number of minutes a locked out account will remain unavailable. If the value for this policy setting is configured to 0, locked out accounts will remain locked out until an administrator manually unlocks them.
@@ -137,7 +137,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_1.2.1_L1_Ensure_Account_lockout_du
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_1.2.2_L1_Ensure_Account_lockout_threshold_is_set_to_10_or_fewer_invalid_logon_attempts_but_not_0" do
+control "1.2.2_L1_Ensure_Account_lockout_threshold_is_set_to_10_or_fewer_invalid_logon_attempts_but_not_0" do
   title "(L1) Ensure 'Account lockout threshold' is set to '10 or fewer invalid logon attempt(s), but not 0'"
   desc  "
     This policy setting determines the number of failed logon attempts before the account is locked. Setting this policy to 0 does not conform with the benchmark as doing so disables the account lockout threshold.
@@ -156,7 +156,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_1.2.2_L1_Ensure_Account_lockout_th
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_1.2.3_L1_Ensure_Reset_account_lockout_counter_after_is_set_to_15_or_more_minutes" do
+control "1.2.3_L1_Ensure_Reset_account_lockout_counter_after_is_set_to_15_or_more_minutes" do
   title "(L1) Ensure 'Reset account lockout counter after' is set to '15 or more minute(s)'"
   desc  "
     This policy setting determines the length of time before the Account lockout threshold resets to zero. The default value for this policy setting is Not Defined. If the Account lockout threshold is defined, this reset time must be less than or equal to the value for the Account lockout duration setting.
@@ -174,7 +174,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_1.2.3_L1_Ensure_Reset_account_lock
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.1_L1_Ensure_Access_Credential_Manager_as_a_trusted_caller_is_set_to_No_One" do
+control "2.2.1_L1_Ensure_Access_Credential_Manager_as_a_trusted_caller_is_set_to_No_One" do
   title "(L1) Ensure 'Access Credential Manager as a trusted caller' is set to 'No One'"
   desc  "
     This security setting is used by Credential Manager during Backup and Restore. No accounts should have this user right, as it is only assigned to Winlogon. Users' saved credentials might be compromised if this user right is assigned to other entities.
@@ -190,7 +190,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.1_L1_Ensure_Access_Credential_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.2_L1_Ensure_Access_this_computer_from_the_network_is_set_to_Administrators" do
+control "2.2.2_L1_Ensure_Access_this_computer_from_the_network_is_set_to_Administrators" do
   title "(L1) Ensure 'Access this computer from the network' is set to 'Administrators'"
   desc  "
     This policy setting allows other users on the network to connect to the computer and is required by various network protocols that include Server Message Block (SMB)-based protocols, NetBIOS, Common Internet File System (CIFS), and Component Object Model Plus (COM+).
@@ -207,7 +207,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.2_L1_Ensure_Access_this_comput
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.3_L1_Ensure_Act_as_part_of_the_operating_system_is_set_to_No_One" do
+control "2.2.3_L1_Ensure_Act_as_part_of_the_operating_system_is_set_to_No_One" do
   title "(L1) Ensure 'Act as part of the operating system' is set to 'No One'"
   desc  "
     This policy setting allows a process to assume the identity of any user and thus gain access to the resources that the user is authorized to access.
@@ -223,7 +223,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.3_L1_Ensure_Act_as_part_of_the
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.4_L1_Ensure_Adjust_memory_quotas_for_a_process_is_set_to_Administrators_LOCAL_SERVICE_NETWORK_SERVICE" do
+control "2.2.4_L1_Ensure_Adjust_memory_quotas_for_a_process_is_set_to_Administrators_LOCAL_SERVICE_NETWORK_SERVICE" do
   title "(L1) Ensure 'Adjust memory quotas for a process' is set to 'Administrators, LOCAL SERVICE, NETWORK SERVICE'"
   desc  "
     This policy setting allows a user to adjust the maximum amount of memory that is available to a process. The ability to adjust memory quotas is useful for system tuning, but it can be abused. In the wrong hands, it could be used to launch a denial of service (DoS) attack.
@@ -240,7 +240,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.4_L1_Ensure_Adjust_memory_quot
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.5_L1_Ensure_Allow_log_on_locally_is_set_to_Administrators_Users" do
+control "2.2.5_L1_Ensure_Allow_log_on_locally_is_set_to_Administrators_Users" do
   title "(L1) Ensure 'Allow log on locally' is set to 'Administrators, Users'"
   desc  "
     This policy setting determines which users can interactively log on to computers in your environment. Logons that are initiated by pressing the CTRL+ALT+DEL key sequence on the client computer keyboard require this user right. Users who attempt to log on through Terminal Services or IIS also require this user right.
@@ -259,7 +259,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.5_L1_Ensure_Allow_log_on_local
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.6_L1_Ensure_Allow_log_on_through_Remote_Desktop_Services_is_set_to_Administrators_Remote_Desktop_Users" do
+control "2.2.6_L1_Ensure_Allow_log_on_through_Remote_Desktop_Services_is_set_to_Administrators_Remote_Desktop_Users" do
   title "(L1) Ensure 'Allow log on through Remote Desktop Services' is set to 'Administrators, Remote Desktop Users'"
   desc  "
     This policy setting determines which users or groups have the right to log on as a Terminal Services client. Remote desktop users require this user right. If your organization uses Remote Assistance as part of its help desk strategy, create a group and assign it this user right through Group Policy. If the help desk in your organization does not use Remote Assistance, assign this user right only to the Administrators group or use the restricted groups feature to ensure that no user accounts are part of the Remote Desktop Users group.
@@ -278,7 +278,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.6_L1_Ensure_Allow_log_on_throu
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.7_L1_Ensure_Back_up_files_and_directories_is_set_to_Administrators" do
+control "2.2.7_L1_Ensure_Back_up_files_and_directories_is_set_to_Administrators" do
   title "(L1) Ensure 'Back up files and directories' is set to 'Administrators'"
   desc  "
     This policy setting allows users to circumvent file and directory permissions to back up the system. This user right is enabled only when an application (such as NTBACKUP) attempts to access a file or directory through the NTFS file system backup application programming interface (API). Otherwise, the assigned file and directory permissions apply.
@@ -295,7 +295,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.7_L1_Ensure_Back_up_files_and_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.8_L1_Ensure_Change_the_system_time_is_set_to_Administrators_LOCAL_SERVICE" do
+control "2.2.8_L1_Ensure_Change_the_system_time_is_set_to_Administrators_LOCAL_SERVICE" do
   title "(L1) Ensure 'Change the system time' is set to 'Administrators, 'LOCAL SERVICE'"
   desc  "
     This policy setting determines which users and groups can change the time and date on the internal clock of the computers in your environment. Users who are assigned this user right can affect the appearance of event logs. When a computer's time setting is changed, logged events reflect the new time, not the actual time that the events occurred.
@@ -324,7 +324,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.8_L1_Ensure_Change_the_system_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.9_L1_Ensure_Change_the_time_zone_is_set_to_Administrators_LOCAL_SERVICE_Users" do
+control "2.2.9_L1_Ensure_Change_the_time_zone_is_set_to_Administrators_LOCAL_SERVICE_Users" do
   title "(L1) Ensure 'Change the time zone' is set to 'Administrators, LOCAL SERVICE, Users'"
   desc  "
     This setting determines which users can change the time zone of the computer. This ability holds no great danger for the computer and may be useful for mobile workers.
@@ -341,7 +341,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.9_L1_Ensure_Change_the_time_zo
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.10_L1_Ensure_Create_a_pagefile_is_set_to_Administrators" do
+control "2.2.10_L1_Ensure_Create_a_pagefile_is_set_to_Administrators" do
   title "(L1) Ensure 'Create a pagefile' is set to 'Administrators'"
   desc  "
     This policy setting allows users to change the size of the pagefile. By making the pagefile extremely large or extremely small, an attacker could easily affect the performance of a compromised computer.
@@ -358,7 +358,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.10_L1_Ensure_Create_a_pagefile
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.11_L1_Ensure_Create_a_token_object_is_set_to_No_One" do
+control "2.2.11_L1_Ensure_Create_a_token_object_is_set_to_No_One" do
   title "(L1) Ensure 'Create a token object' is set to 'No One'"
   desc  "
     This policy setting allows a process to create an access token, which may provide elevated rights to access sensitive data.
@@ -376,7 +376,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.11_L1_Ensure_Create_a_token_ob
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.12_L1_Ensure_Create_global_objects_is_set_to_Administrators_LOCAL_SERVICE_NETWORK_SERVICE_SERVICE" do
+control "2.2.12_L1_Ensure_Create_global_objects_is_set_to_Administrators_LOCAL_SERVICE_NETWORK_SERVICE_SERVICE" do
   title "(L1) Ensure 'Create global objects' is set to 'Administrators, LOCAL SERVICE, NETWORK SERVICE, SERVICE'"
   desc  "
     This policy setting determines whether users can create global objects that are available to all sessions. Users can still create objects that are specific to their own session if they do not have this user right.
@@ -395,7 +395,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.12_L1_Ensure_Create_global_obj
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.13_L1_Ensure_Create_permanent_shared_objects_is_set_to_No_One" do
+control "2.2.13_L1_Ensure_Create_permanent_shared_objects_is_set_to_No_One" do
   title "(L1) Ensure 'Create permanent shared objects' is set to 'No One'"
   desc  "
     This user right is useful to kernel-mode components that extend the object namespace. However, components that run in kernel mode have this user right inherently. Therefore, it is typically not necessary to specifically assign this user right.
@@ -411,7 +411,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.13_L1_Ensure_Create_permanent_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.14_L1_Ensure_Create_symbolic_links_is_set_to_Administrators" do
+control "2.2.14_L1_Ensure_Create_symbolic_links_is_set_to_Administrators" do
   title "(L1) Ensure 'Create symbolic links' is set to 'Administrators'"
   desc  "
     This policy setting determines which users can create symbolic links. In Windows Vista, existing NTFS file system objects, such as files and folders, can be accessed by referring to a new kind of file system object called a symbolic link. A symbolic link is a pointer (much like a shortcut or .lnk file) to another file system object, which can be a file, folder, shortcut or another symbolic link. The difference between a shortcut and a symbolic link is that a shortcut only works from within the Windows shell. To other programs and applications, shortcuts are just another file, whereas with symbolic links, the concept of a shortcut is implemented as a feature of the NTFS file system.
@@ -430,7 +430,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.14_L1_Ensure_Create_symbolic_l
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.15_L1_Ensure_Debug_programs_is_set_to_Administrators" do
+control "2.2.15_L1_Ensure_Debug_programs_is_set_to_Administrators" do
   title "(L1) Ensure 'Debug programs' is set to 'Administrators'"
   desc  "
     This policy setting determines which user accounts will have the right to attach a debugger to any process or to the kernel, which provides complete access to sensitive and critical operating system components. Developers who are debugging their own applications do not need to be assigned this user right; however, developers who are debugging new system components will need it.
@@ -447,7 +447,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.15_L1_Ensure_Debug_programs_is
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.16_L1_Ensure_Deny_access_to_this_computer_from_the_network_to_include_Guests_Local_account" do
+control "2.2.16_L1_Ensure_Deny_access_to_this_computer_from_the_network_to_include_Guests_Local_account" do
   title "(L1) Ensure 'Deny access to this computer from the network' to include 'Guests, Local account'"
   desc  "
     This policy setting prohibits users from connecting to a computer from across the network, which would allow users to access and potentially modify data remotely. In high security environments, there should be no need for remote users to access data on a computer. Instead, file sharing should be accomplished through the use of network servers.
@@ -466,7 +466,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.16_L1_Ensure_Deny_access_to_th
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.17_L1_Ensure_Deny_log_on_as_a_batch_job_to_include_Guests" do
+control "2.2.17_L1_Ensure_Deny_log_on_as_a_batch_job_to_include_Guests" do
   title "(L1) Ensure 'Deny log on as a batch job' to include 'Guests'"
   desc  "
     This policy setting determines which accounts will not be able to log on to the computer as a batch job. A batch job is not a batch (.bat) file, but rather a batch-queue facility. Accounts that use the Task Scheduler to schedule jobs need this user right.
@@ -485,7 +485,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.17_L1_Ensure_Deny_log_on_as_a_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.18_L1_Ensure_Deny_log_on_as_a_service_to_include_Guests" do
+control "2.2.18_L1_Ensure_Deny_log_on_as_a_service_to_include_Guests" do
   title "(L1) Ensure 'Deny log on as a service' to include 'Guests'"
   desc  "
     This security setting determines which service accounts are prevented from registering a process as a service. This policy setting supersedes the **Log on as a service** policy setting if an account is subject to both policies.
@@ -504,7 +504,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.18_L1_Ensure_Deny_log_on_as_a_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.19_L1_Ensure_Deny_log_on_locally_to_include_Guests" do
+control "2.2.19_L1_Ensure_Deny_log_on_locally_to_include_Guests" do
   title "(L1) Ensure 'Deny log on locally' to include 'Guests'"
   desc  "
     This security setting determines which users are prevented from logging on at the computer. This policy setting supersedes the **Allow log on locally** policy setting if an account is subject to both policies.
@@ -523,7 +523,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.19_L1_Ensure_Deny_log_on_local
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.20_L1_Ensure_Deny_log_on_through_Remote_Desktop_Services_to_include_Guests_Local_account" do
+control "2.2.20_L1_Ensure_Deny_log_on_through_Remote_Desktop_Services_to_include_Guests_Local_account" do
   title "(L1) Ensure 'Deny log on through Remote Desktop Services' to include 'Guests, Local account'"
   desc  "
     This policy setting determines whether users can log on as Terminal Services clients. After the baseline workstation is joined to a domain environment, there is no need to use local accounts to access the workstation from the network. Domain accounts can access the server for administration and end-user processing.
@@ -542,7 +542,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.20_L1_Ensure_Deny_log_on_throu
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.21_L1_Ensure_Enable_computer_and_user_accounts_to_be_trusted_for_delegation_is_set_to_No_One" do
+control "2.2.21_L1_Ensure_Enable_computer_and_user_accounts_to_be_trusted_for_delegation_is_set_to_No_One" do
   title "(L1) Ensure 'Enable computer and user accounts to be trusted for delegation' is set to 'No One'"
   desc  "
     This policy setting allows users to change the Trusted for Delegation setting on a computer object in Active Directory. Abuse of this privilege could allow unauthorized users to impersonate other users on the network.
@@ -558,7 +558,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.21_L1_Ensure_Enable_computer_a
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.22_L1_Ensure_Force_shutdown_from_a_remote_system_is_set_to_Administrators" do
+control "2.2.22_L1_Ensure_Force_shutdown_from_a_remote_system_is_set_to_Administrators" do
   title "(L1) Ensure 'Force shutdown from a remote system' is set to 'Administrators'"
   desc  "
     This policy setting allows users to shut down Windows Vista-based computers from remote locations on the network. Anyone who has been assigned this user right can cause a denial of service (DoS) condition, which would make the computer unavailable to service user requests. Therefore, it is recommended that only highly trusted administrators be assigned this user right.
@@ -575,7 +575,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.22_L1_Ensure_Force_shutdown_fr
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.23_L1_Ensure_Generate_security_audits_is_set_to_LOCAL_SERVICE_NETWORK_SERVICE" do
+control "2.2.23_L1_Ensure_Generate_security_audits_is_set_to_LOCAL_SERVICE_NETWORK_SERVICE" do
   title "(L1) Ensure 'Generate security audits' is set to 'LOCAL SERVICE, NETWORK SERVICE'"
   desc  "
     This policy setting determines which users or processes can generate audit records in the Security log.
@@ -592,7 +592,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.23_L1_Ensure_Generate_security
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.24_L1_Ensure_Impersonate_a_client_after_authentication_is_set_to_Administrators_LOCAL_SERVICE_NETWORK_SERVICE_SERVICE" do
+control "2.2.24_L1_Ensure_Impersonate_a_client_after_authentication_is_set_to_Administrators_LOCAL_SERVICE_NETWORK_SERVICE_SERVICE" do
   title "(L1) Ensure 'Impersonate a client after authentication' is set to 'Administrators, LOCAL SERVICE, NETWORK SERVICE, SERVICE'"
   desc  "
     The policy setting allows programs that run on behalf of a user to impersonate that user (or another specified account) so that they can act on behalf of the user. If this user right is required for this kind of impersonation, an unauthorized user will not be able to convince a client to connect#x2014;for example, by remote procedure call (RPC) or named pipes#x2014;to a service that they have created to impersonate that client, which could elevate the unauthorized user's permissions to administrative or system levels.
@@ -618,7 +618,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.24_L1_Ensure_Impersonate_a_cli
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.25_L1_Ensure_Increase_scheduling_priority_is_set_to_Administrators" do
+control "2.2.25_L1_Ensure_Increase_scheduling_priority_is_set_to_Administrators" do
   title "(L1) Ensure 'Increase scheduling priority' is set to 'Administrators'"
   desc  "
     This policy setting determines whether users can increase the base priority class of a process. (It is not a privileged operation to increase relative priority within a priority class.) This user right is not required by administrative tools that are supplied with the operating system but might be required by software development tools.
@@ -635,7 +635,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.25_L1_Ensure_Increase_scheduli
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.26_L1_Ensure_Load_and_unload_device_drivers_is_set_to_Administrators" do
+control "2.2.26_L1_Ensure_Load_and_unload_device_drivers_is_set_to_Administrators" do
   title "(L1) Ensure 'Load and unload device drivers' is set to 'Administrators'"
   desc  "
     This policy setting allows users to dynamically load a new device driver on a system. An attacker could potentially use this capability to install malicious code that appears to be a device driver. This user right is required for users to add local printers or printer drivers in Windows Vista.
@@ -652,7 +652,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.26_L1_Ensure_Load_and_unload_d
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.27_L1_Ensure_Lock_pages_in_memory_is_set_to_No_One" do
+control "2.2.27_L1_Ensure_Lock_pages_in_memory_is_set_to_No_One" do
   title "(L1) Ensure 'Lock pages in memory' is set to 'No One'"
   desc  "
     This policy setting allows a process to keep data in physical memory, which prevents the system from paging the data to virtual memory on disk. If this user right is assigned, significant degradation of system performance can occur.
@@ -668,7 +668,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.27_L1_Ensure_Lock_pages_in_mem
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.28_L2_Ensure_Log_on_as_a_batch_job_is_set_to_Administrators" do
+control "2.2.28_L2_Ensure_Log_on_as_a_batch_job_is_set_to_Administrators" do
   title "(L2) Ensure 'Log on as a batch job' is set to 'Administrators'"
   desc  "
     This policy setting allows accounts to log on using the task scheduler service. Because the task scheduler is often used for administrative purposes, it may be needed in enterprise environments. However, its use should be restricted in high security environments to prevent misuse of system resources or to prevent attackers from using the right to launch malicious code after gaining user level access to a computer.
@@ -687,7 +687,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.28_L2_Ensure_Log_on_as_a_batch
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.29_L2_Ensure_Log_on_as_a_service_is_set_to_No_One" do
+control "2.2.29_L2_Ensure_Log_on_as_a_service_is_set_to_No_One" do
   title "(L2) Ensure 'Log on as a service' is set to 'No One'"
   desc  "
     This policy setting allows accounts to launch network services or to register a process as a service running on the system. This user right should be restricted on any computer in a high security environment, but because many applications may require this privilege, it should be carefully evaluated and tested before configuring it in an enterprise environment. On Windows Vista-based computers, no users or groups have this privilege by default.
@@ -706,7 +706,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.29_L2_Ensure_Log_on_as_a_servi
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.30_L1_Ensure_Manage_auditing_and_security_log_is_set_to_Administrators" do
+control "2.2.30_L1_Ensure_Manage_auditing_and_security_log_is_set_to_Administrators" do
   title "(L1) Ensure 'Manage auditing and security log' is set to 'Administrators'"
   desc  "
     This policy setting determines which users can change the auditing options for files and directories and clear the Security log.
@@ -723,7 +723,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.30_L1_Ensure_Manage_auditing_a
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.31_L1_Ensure_Modify_an_object_label_is_set_to_No_One" do
+control "2.2.31_L1_Ensure_Modify_an_object_label_is_set_to_No_One" do
   title "(L1) Ensure 'Modify an object label' is set to 'No One'"
   desc  "
     This privilege determines which user accounts can modify the integrity label of objects, such as files, registry keys, or processes owned by other users. Processes running under a user account can modify the label of an object owned by that user to a lower level without this privilege.
@@ -739,7 +739,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.31_L1_Ensure_Modify_an_object_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.32_L1_Ensure_Modify_firmware_environment_values_is_set_to_Administrators" do
+control "2.2.32_L1_Ensure_Modify_firmware_environment_values_is_set_to_Administrators" do
   title "(L1) Ensure 'Modify firmware environment values' is set to 'Administrators'"
   desc  "
     This policy setting allows users to configure the system-wide environment variables that affect hardware configuration. This information is typically stored in the Last Known Good Configuration. Modification of these values and could lead to a hardware failure that would result in a denial of service condition.
@@ -756,7 +756,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.32_L1_Ensure_Modify_firmware_e
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.33_L1_Ensure_Perform_volume_maintenance_tasks_is_set_to_Administrators" do
+control "2.2.33_L1_Ensure_Perform_volume_maintenance_tasks_is_set_to_Administrators" do
   title "(L1) Ensure 'Perform volume maintenance tasks' is set to 'Administrators'"
   desc  "
     This policy setting allows users to manage the system's volume or disk configuration, which could allow a user to delete a volume and cause data loss as well as a denial-of-service condition.
@@ -773,7 +773,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.33_L1_Ensure_Perform_volume_ma
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.34_L1_Ensure_Profile_single_process_is_set_to_Administrators" do
+control "2.2.34_L1_Ensure_Profile_single_process_is_set_to_Administrators" do
   title "(L1) Ensure 'Profile single process' is set to 'Administrators'"
   desc  "
     This policy setting determines which users can use tools to monitor the performance of non-system processes. Typically, you do not need to configure this user right to use the Microsoft Management Console (MMC) Performance snap-in. However, you do need this user right if System Monitor is configured to collect data using Windows Management Instrumentation (WMI). Restricting the Profile single process user right prevents intruders from gaining additional information that could be used to mount an attack on the system.
@@ -790,7 +790,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.34_L1_Ensure_Profile_single_pr
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.35_L1_Ensure_Profile_system_performance_is_set_to_Administrators_NT_SERVICEWdiServiceHost" do
+control "2.2.35_L1_Ensure_Profile_system_performance_is_set_to_Administrators_NT_SERVICEWdiServiceHost" do
   title "(L1) Ensure 'Profile system performance' is set to 'Administrators, NT SERVICE\\WdiServiceHost'"
   desc  "
     This policy setting allows users to use tools to view the performance of different system processes, which could be abused to allow attackers to determine a system's active processes and provide insight into the potential attack surface of the computer.
@@ -807,7 +807,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.35_L1_Ensure_Profile_system_pe
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.36_L1_Ensure_Replace_a_process_level_token_is_set_to_LOCAL_SERVICE_NETWORK_SERVICE" do
+control "2.2.36_L1_Ensure_Replace_a_process_level_token_is_set_to_LOCAL_SERVICE_NETWORK_SERVICE" do
   title "(L1) Ensure 'Replace a process level token' is set to 'LOCAL SERVICE, NETWORK SERVICE'"
   desc  "
     This policy setting allows one process or service to start another service or process with a different security access token, which can be used to modify the security access token of that sub-process and result in the escalation of privileges.
@@ -824,7 +824,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.36_L1_Ensure_Replace_a_process
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.37_L1_Ensure_Restore_files_and_directories_is_set_to_Administrators" do
+control "2.2.37_L1_Ensure_Restore_files_and_directories_is_set_to_Administrators" do
   title "(L1) Ensure 'Restore files and directories' is set to 'Administrators'"
   desc  "
     This policy setting determines which users can bypass file, directory, registry, and other persistent object permissions when restoring backed up files and directories on computers that run Windows Vista in your environment. This user right also determines which users can set valid security principals as object owners; it is similar to the Back up files and directories user right.
@@ -843,7 +843,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.37_L1_Ensure_Restore_files_and
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.38_L1_Ensure_Shut_down_the_system_is_set_to_Administrators_Users" do
+control "2.2.38_L1_Ensure_Shut_down_the_system_is_set_to_Administrators_Users" do
   title "(L1) Ensure 'Shut down the system' is set to 'Administrators, Users'"
   desc  "
     This policy setting determines which users who are logged on locally to the computers in your environment can shut down the operating system with the Shut Down command. Misuse of this user right can result in a denial of service condition.
@@ -860,7 +860,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.38_L1_Ensure_Shut_down_the_sys
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.2.39_L1_Ensure_Take_ownership_of_files_or_other_objects_is_set_to_Administrators" do
+control "2.2.39_L1_Ensure_Take_ownership_of_files_or_other_objects_is_set_to_Administrators" do
   title "(L1) Ensure 'Take ownership of files or other objects' is set to 'Administrators'"
   desc  "
     This policy setting allows users to take ownership of files, folders, registry keys, processes, or threads. This user right bypasses any permissions that are in place to protect objects to give ownership to the specified user.
@@ -877,7 +877,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.2.39_L1_Ensure_Take_ownership_of
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.1.1_L1_Ensure_Accounts_Administrator_account_status_is_set_to_Disabled" do
+control "2.3.1.1_L1_Ensure_Accounts_Administrator_account_status_is_set_to_Disabled" do
   title "(L1) Ensure 'Accounts: Administrator account status' is set to 'Disabled'"
   desc  "
     This policy setting enables or disables the Administrator account during normal operation. When a computer is booted into safe mode, the Administrator account is always enabled, regardless of how this setting is configured. Note that this setting will have no impact when applied to the domain controller organizational unit via group policy because domain controllers have no local account database. It can be configured at the domain level via group policy, similar to account lockout and password policy settings.
@@ -895,7 +895,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.1.1_L1_Ensure_Accounts_Adminis
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.1.2_L1_Ensure_Accounts_Block_Microsoft_accounts_is_set_to_Users_cant_add_or_log_on_with_Microsoft_accounts" do
+control "2.3.1.2_L1_Ensure_Accounts_Block_Microsoft_accounts_is_set_to_Users_cant_add_or_log_on_with_Microsoft_accounts" do
   title "(L1) Ensure 'Accounts: Block Microsoft accounts' is set to 'Users can't add or log on with Microsoft accounts'"
   desc  "
     This policy setting prevents users from adding new Microsoft accounts on this computer.
@@ -918,7 +918,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.1.2_L1_Ensure_Accounts_Block_M
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.1.3_L1_Ensure_Accounts_Guest_account_status_is_set_to_Disabled" do
+control "2.3.1.3_L1_Ensure_Accounts_Guest_account_status_is_set_to_Disabled" do
   title "(L1) Ensure 'Accounts: Guest account status' is set to 'Disabled'"
   desc  "
     This policy setting determines whether the Guest account is enabled or disabled. The Guest account allows unauthenticated network users to gain access to the system. Note that this setting will have no impact when applied to the domain controller organizational unit via group policy because domain controllers have no local account database. It can be configured at the domain level via group policy, similar to account lockout and password policy settings.
@@ -936,7 +936,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.1.3_L1_Ensure_Accounts_Guest_a
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.1.4_L1_Ensure_Accounts_Limit_local_account_use_of_blank_passwords_to_console_logon_only_is_set_to_Enabled" do
+control "2.3.1.4_L1_Ensure_Accounts_Limit_local_account_use_of_blank_passwords_to_console_logon_only_is_set_to_Enabled" do
   title "(L1) Ensure 'Accounts: Limit local account use of blank passwords to console logon only' is set to 'Enabled'"
   desc  "
     This policy setting determines whether local accounts that are not password protected can be used to log on from locations other than the physical computer console. If you enable this policy setting, local accounts that have blank passwords will not be able to log on to the network from remote client computers. Such accounts will only be able to log on at the keyboard of the computer.
@@ -953,7 +953,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.1.4_L1_Ensure_Accounts_Limit_l
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.1.5_L1_Configure_Accounts_Rename_administrator_account" do
+control "2.3.1.5_L1_Configure_Accounts_Rename_administrator_account" do
   title "(L1) Configure 'Accounts: Rename administrator account'"
   desc  "
     The built-in local administrator account is a well-known account name that attackers will target. It is recommended to choose another name for this account, and to avoid names that denote administrative or elevated access accounts. Be sure to also change the default description for the local administrator (through the Computer Management console).
@@ -970,7 +970,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.1.5_L1_Configure_Accounts_Rena
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.1.6_L1_Configure_Accounts_Rename_guest_account" do
+control "2.3.1.6_L1_Configure_Accounts_Rename_guest_account" do
   title "(L1) Configure 'Accounts: Rename guest account'"
   desc  "
     The built-in local guest account is another well-known name to attackers. It is recommended to rename this account to something that does not indicate its purpose. Even if you disable this account, which is recommended, ensure that you rename it for added security.
@@ -985,7 +985,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.1.6_L1_Configure_Accounts_Rena
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.2.1_L1_Ensure_Audit_Force_audit_policy_subcategory_settings_Windows_Vista_or_later_to_override_audit_policy_category_settings_is_set_to_Enabled" do
+control "2.3.2.1_L1_Ensure_Audit_Force_audit_policy_subcategory_settings_Windows_Vista_or_later_to_override_audit_policy_category_settings_is_set_to_Enabled" do
   title "(L1) Ensure 'Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings' is set to 'Enabled'"
   desc  "
     This policy setting allows administrators to enable the more precise auditing capabilities present in Windows Vista.
@@ -1004,7 +1004,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.2.1_L1_Ensure_Audit_Force_audi
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.2.2_L1_Ensure_Audit_Shut_down_system_immediately_if_unable_to_log_security_audits_is_set_to_Disabled" do
+control "2.3.2.2_L1_Ensure_Audit_Shut_down_system_immediately_if_unable_to_log_security_audits_is_set_to_Disabled" do
   title "(L1) Ensure 'Audit: Shut down system immediately if unable to log security audits' is set to 'Disabled'"
   desc  "
     This policy setting determines whether the system shuts down if it is unable to log Security events. It is a requirement for Trusted Computer System Evaluation Criteria (TCSEC)-C2 and Common Criteria certification to prevent auditable events from occurring if the audit system is unable to log them. Microsoft has chosen to meet this requirement by halting the system and displaying a stop message if the auditing system experiences a failure. When this policy setting is enabled, the system will be shut down if a security audit cannot be logged for any reason.
@@ -1023,7 +1023,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.2.2_L1_Ensure_Audit_Shut_down_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.4.1_L1_Ensure_Devices_Allowed_to_format_and_eject_removable_media_is_set_to_Administrators_and_Interactive_Users" do
+control "2.3.4.1_L1_Ensure_Devices_Allowed_to_format_and_eject_removable_media_is_set_to_Administrators_and_Interactive_Users" do
   title "(L1) Ensure 'Devices: Allowed to format and eject removable media' is set to 'Administrators and Interactive Users'"
   desc  "
     This policy setting determines who is allowed to format and eject removable NTFS media. You can use this policy setting to prevent unauthorized users from removing data on one computer to access it on another computer on which they have local administrator privileges.
@@ -1040,7 +1040,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.4.1_L1_Ensure_Devices_Allowed_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.6.1_L1_Ensure_Domain_member_Digitally_encrypt_or_sign_secure_channel_data_always_is_set_to_Enabled" do
+control "2.3.6.1_L1_Ensure_Domain_member_Digitally_encrypt_or_sign_secure_channel_data_always_is_set_to_Enabled" do
   title "(L1) Ensure 'Domain member: Digitally encrypt or sign secure channel data (always)' is set to 'Enabled'"
   desc  "
     This policy setting determines whether all secure channel traffic that is initiated by the domain member must be signed or encrypted. If a system is set to always encrypt or sign secure channel data, it cannot establish a secure channel with a domain controller that is not capable of signing or encrypting all secure channel traffic, because all secure channel data must be signed and encrypted.
@@ -1057,7 +1057,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.6.1_L1_Ensure_Domain_member_Di
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.6.2_L1_Ensure_Domain_member_Digitally_encrypt_secure_channel_data_when_possible_is_set_to_Enabled" do
+control "2.3.6.2_L1_Ensure_Domain_member_Digitally_encrypt_secure_channel_data_when_possible_is_set_to_Enabled" do
   title "(L1) Ensure 'Domain member: Digitally encrypt secure channel data (when possible)' is set to 'Enabled'"
   desc  "
     This policy setting determines whether a domain member should attempt to negotiate encryption for all secure channel traffic that it initiates. If you enable this policy setting, the domain member will request encryption of all secure channel traffic. If you disable this policy setting, the domain member will be prevented from negotiating secure channel encryption.
@@ -1074,7 +1074,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.6.2_L1_Ensure_Domain_member_Di
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.6.3_L1_Ensure_Domain_member_Digitally_sign_secure_channel_data_when_possible_is_set_to_Enabled" do
+control "2.3.6.3_L1_Ensure_Domain_member_Digitally_sign_secure_channel_data_when_possible_is_set_to_Enabled" do
   title "(L1) Ensure 'Domain member: Digitally sign secure channel data (when possible)' is set to 'Enabled'"
   desc  "
     This policy setting determines whether a domain member should attempt to negotiate whether all secure channel traffic that it initiates must be digitally signed. Digital signatures protect the traffic from being modified by anyone who captures the data as it traverses the network.
@@ -1091,7 +1091,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.6.3_L1_Ensure_Domain_member_Di
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.6.4_L1_Ensure_Domain_member_Disable_machine_account_password_changes_is_set_to_Disabled" do
+control "2.3.6.4_L1_Ensure_Domain_member_Disable_machine_account_password_changes_is_set_to_Disabled" do
   title "(L1) Ensure 'Domain member: Disable machine account password changes' is set to 'Disabled'"
   desc  "
     This policy setting determines whether a domain member can periodically change its computer account password. If you enable this policy setting, the domain member will be prevented from changing its computer account password. If you disable this policy setting, the domain member can change its computer account password as specified by the Domain Member: Maximum machine account password age setting, which by default is every 30 days. Computers that cannot automatically change their account passwords are potentially vulnerable, because an attacker might be able to determine the password for the system's domain account.
@@ -1108,7 +1108,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.6.4_L1_Ensure_Domain_member_Di
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.6.5_L1_Ensure_Domain_member_Maximum_machine_account_password_age_is_set_to_30_or_fewer_days_but_not_0" do
+control "2.3.6.5_L1_Ensure_Domain_member_Maximum_machine_account_password_age_is_set_to_30_or_fewer_days_but_not_0" do
   title "(L1) Ensure 'Domain member: Maximum machine account password age' is set to '30 or fewer days, but not 0'"
   desc  "
     This policy setting determines the maximum allowable age for a computer account password. By default, domain members automatically change their domain passwords every 30 days. If you increase this interval significantly so that the computers no longer change their passwords, an attacker would have more time to undertake a brute force attack against one of the computer accounts.
@@ -1131,7 +1131,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.6.5_L1_Ensure_Domain_member_Ma
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.6.6_L1_Ensure_Domain_member_Require_strong_Windows_2000_or_later_session_key_is_set_to_Enabled" do
+control "2.3.6.6_L1_Ensure_Domain_member_Require_strong_Windows_2000_or_later_session_key_is_set_to_Enabled" do
   title "(L1) Ensure 'Domain member: Require strong (Windows 2000 or later) session key' is set to 'Enabled'"
   desc  "
     When this policy setting is enabled, a secure channel can only be established with domain controllers that are capable of encrypting secure channel data with a strong (128-bit) session key.
@@ -1150,7 +1150,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.6.6_L1_Ensure_Domain_member_Re
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.7.1_L1_Ensure_Interactive_logon_Do_not_display_last_user_name_is_set_to_Enabled" do
+control "2.3.7.1_L1_Ensure_Interactive_logon_Do_not_display_last_user_name_is_set_to_Enabled" do
   title "(L1) Ensure 'Interactive logon: Do not display last user name' is set to 'Enabled'"
   desc  "
     This policy setting determines whether the account name of the last user to log on to the client computers in your organization will be displayed in each computer's respective Windows logon screen. Enable this policy setting to prevent intruders from collecting account names visually from the screens of desktop or laptop computers in your organization.
@@ -1167,7 +1167,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.7.1_L1_Ensure_Interactive_logo
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.7.2_L1_Ensure_Interactive_logon_Do_not_require_CTRLALTDEL_is_set_to_Disabled" do
+control "2.3.7.2_L1_Ensure_Interactive_logon_Do_not_require_CTRLALTDEL_is_set_to_Disabled" do
   title "(L1) Ensure 'Interactive logon: Do not require CTRL+ALT+DEL' is set to 'Disabled'"
   desc  "
     This policy setting determines whether users must press CTRL+ALT+DEL before they log on. If you enable this policy setting, users can log on without this key combination. If you disable this policy setting, users must press CTRL+ALT+DEL before they log on to Windows unless they use a smart card for Windows logon. A smart card is a tamper-proof device that stores security information.
@@ -1186,7 +1186,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.7.2_L1_Ensure_Interactive_logo
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.7.4_L1_Ensure_Interactive_logon_Machine_inactivity_limit_is_set_to_900_or_fewer_seconds_but_not_0" do
+control "2.3.7.4_L1_Ensure_Interactive_logon_Machine_inactivity_limit_is_set_to_900_or_fewer_seconds_but_not_0" do
   title "(L1) Ensure 'Interactive logon: Machine inactivity limit' is set to '900 or fewer second(s), but not 0'"
   desc  "
     Windows notices inactivity of a logon session, and if the amount of inactive time exceeds the inactivity limit, then the screen saver will run, locking the session.
@@ -1209,7 +1209,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.7.4_L1_Ensure_Interactive_logo
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.7.5_L1_Configure_Interactive_logon_Message_text_for_users_attempting_to_log_on" do
+control "2.3.7.5_L1_Configure_Interactive_logon_Message_text_for_users_attempting_to_log_on" do
   title "(L1) Configure 'Interactive logon: Message text for users attempting to log on'"
   desc  "
     This policy setting specifies a text message that displays to users when they log on. Set the following group policy to a value that is consistent with the security and operational requirements of your organization.
@@ -1226,7 +1226,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.7.5_L1_Configure_Interactive_l
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.7.6_L1_Configure_Interactive_logon_Message_title_for_users_attempting_to_log_on" do
+control "2.3.7.6_L1_Configure_Interactive_logon_Message_title_for_users_attempting_to_log_on" do
   title "(L1) Configure 'Interactive logon: Message title for users attempting to log on'"
   desc  "
     This policy setting specifies the text displayed in the title bar of the window that users see when they log on to the system. Configure this setting in a manner that is consistent with the security and operational requirements of your organization.
@@ -1241,7 +1241,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.7.6_L1_Configure_Interactive_l
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.7.7_L2_Ensure_Interactive_logon_Number_of_previous_logons_to_cache_in_case_domain_controller_is_not_available_is_set_to_4_or_fewer_logons" do
+control "2.3.7.7_L2_Ensure_Interactive_logon_Number_of_previous_logons_to_cache_in_case_domain_controller_is_not_available_is_set_to_4_or_fewer_logons" do
   title "(L2) Ensure 'Interactive logon: Number of previous logons to cache (in case domain controller is not available)' is set to '4 or fewer logon(s)'"
   desc  "
     This policy setting determines whether a user can log on to a Windows domain using cached account information. Logon information for domain accounts can be cached locally to allow users to log on even if a domain controller cannot be contacted. This policy setting determines the number of unique users for whom logon information is cached locally. If this value is set to 0, the logon cache feature is disabled. An attacker who is able to access the file system of the server could locate this cached information and use a brute force attack to determine user passwords.
@@ -1260,7 +1260,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.7.7_L2_Ensure_Interactive_logo
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.7.8_L1_Ensure_Interactive_logon_Prompt_user_to_change_password_before_expiration_is_set_to_between_5_and_14_days" do
+control "2.3.7.8_L1_Ensure_Interactive_logon_Prompt_user_to_change_password_before_expiration_is_set_to_between_5_and_14_days" do
   title "(L1) Ensure 'Interactive logon: Prompt user to change password before expiration' is set to 'between 5 and 14 days'"
   desc  "
     This policy setting determines how far in advance users are warned that their password will expire. It is recommended that you configure this policy setting to at least 5 days but no more than 14 days to sufficiently warn users when their passwords will expire.
@@ -1281,7 +1281,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.7.8_L1_Ensure_Interactive_logo
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.7.9_L1_Ensure_Interactive_logon_Smart_card_removal_behavior_is_set_to_Lock_Workstation_or_higher" do
+control "2.3.7.9_L1_Ensure_Interactive_logon_Smart_card_removal_behavior_is_set_to_Lock_Workstation_or_higher" do
   title "(L1) Ensure 'Interactive logon: Smart card removal behavior' is set to 'Lock Workstation' or higher"
   desc  "
     This policy setting determines what happens when the smart card for a logged-on user is removed from the smart card reader.
@@ -1298,7 +1298,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.7.9_L1_Ensure_Interactive_logo
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.8.1_L1_Ensure_Microsoft_network_client_Digitally_sign_communications_always_is_set_to_Enabled" do
+control "2.3.8.1_L1_Ensure_Microsoft_network_client_Digitally_sign_communications_always_is_set_to_Enabled" do
   title "(L1) Ensure 'Microsoft network client: Digitally sign communications (always)' is set to 'Enabled'"
   desc  "
     This policy setting determines whether packet signing is required by the SMB client component. If you enable this policy setting, the Microsoft network client computer cannot communicate with a Microsoft network server unless that server agrees to sign SMB packets. In mixed environments with legacy client computers, set this option to Disabled because these computers will not be able to authenticate or gain access to domain controllers. However, you can use this policy setting in Windows 2000 or later environments.
@@ -1319,7 +1319,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.8.1_L1_Ensure_Microsoft_networ
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.8.2_L1_Ensure_Microsoft_network_client_Digitally_sign_communications_if_server_agrees_is_set_to_Enabled" do
+control "2.3.8.2_L1_Ensure_Microsoft_network_client_Digitally_sign_communications_if_server_agrees_is_set_to_Enabled" do
   title "(L1) Ensure 'Microsoft network client: Digitally sign communications (if server agrees)' is set to 'Enabled'"
   desc  "
     This policy setting determines whether the SMB client will attempt to negotiate SMB packet signing. The implementation of digital signing in Windows-based networks helps to prevent sessions from being hijacked. If you enable this policy setting, the Microsoft network client will use signing only if the server with which it communicates accepts digitally signed communication.
@@ -1340,7 +1340,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.8.2_L1_Ensure_Microsoft_networ
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.8.3_L1_Ensure_Microsoft_network_client_Send_unencrypted_password_to_third-party_SMB_servers_is_set_to_Disabled" do
+control "2.3.8.3_L1_Ensure_Microsoft_network_client_Send_unencrypted_password_to_third-party_SMB_servers_is_set_to_Disabled" do
   title "(L1) Ensure 'Microsoft network client: Send unencrypted password to third-party SMB servers' is set to 'Disabled'"
   desc  "
     Disable this policy setting to prevent the SMB redirector from sending plaintext passwords during authentication to third-party SMB servers that do not support password encryption. It is recommended that you disable this policy setting unless there is a strong business case to enable it. If this policy setting is enabled, unencrypted passwords will be allowed across the network.
@@ -1357,7 +1357,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.8.3_L1_Ensure_Microsoft_networ
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.9.1_L1_Ensure_Microsoft_network_server_Amount_of_idle_time_required_before_suspending_session_is_set_to_15_or_fewer_minutes_but_not_0" do
+control "2.3.9.1_L1_Ensure_Microsoft_network_server_Amount_of_idle_time_required_before_suspending_session_is_set_to_15_or_fewer_minutes_but_not_0" do
   title "(L1) Ensure 'Microsoft network server: Amount of idle time required before suspending session' is set to '15 or fewer minute(s), but not 0'"
   desc  "
     This policy setting allows you to specify the amount of continuous idle time that must pass in an SMB session before the session is suspended because of inactivity. Administrators can use this policy setting to control when a computer suspends an inactive SMB session. If client activity resumes, the session is automatically reestablished.
@@ -1380,7 +1380,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.9.1_L1_Ensure_Microsoft_networ
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.9.2_L1_Ensure_Microsoft_network_server_Digitally_sign_communications_always_is_set_to_Enabled" do
+control "2.3.9.2_L1_Ensure_Microsoft_network_server_Digitally_sign_communications_always_is_set_to_Enabled" do
   title "(L1) Ensure 'Microsoft network server: Digitally sign communications (always)' is set to 'Enabled'"
   desc  "
     This policy setting determines if the server side SMB service is required to perform SMB packet signing. Enable this policy setting in a mixed environment to prevent downstream clients from using the workstation as a network server.
@@ -1399,7 +1399,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.9.2_L1_Ensure_Microsoft_networ
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.9.3_L1_Ensure_Microsoft_network_server_Digitally_sign_communications_if_client_agrees_is_set_to_Enabled" do
+control "2.3.9.3_L1_Ensure_Microsoft_network_server_Digitally_sign_communications_if_client_agrees_is_set_to_Enabled" do
   title "(L1) Ensure 'Microsoft network server: Digitally sign communications (if client agrees)' is set to 'Enabled'"
   desc  "
     This policy setting determines if the server side SMB service is able to sign SMB packets if it is requested to do so by a client that attempts to establish a connection. If no signing request comes from the client, a connection will be allowed without a signature if the **Microsoft network server: Digitally sign communications (always)** setting is not enabled.
@@ -1420,7 +1420,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.9.3_L1_Ensure_Microsoft_networ
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.9.4_L1_Ensure_Microsoft_network_server_Disconnect_clients_when_logon_hours_expire_is_set_to_Enabled" do
+control "2.3.9.4_L1_Ensure_Microsoft_network_server_Disconnect_clients_when_logon_hours_expire_is_set_to_Enabled" do
   title "(L1) Ensure 'Microsoft network server: Disconnect clients when logon hours expire' is set to 'Enabled'"
   desc  "
     This policy setting determines whether to disconnect users who are connected to the local computer outside their user account's valid logon hours. It affects the SMB component. If you enable this policy setting, client sessions with the SMB service will be forcibly disconnected when the client's logon hours expire. If you disable this policy setting, established client sessions will be maintained after the client's logon hours expire. If you enable this policy setting you should also enable **Network security: Force logoff when logon hours expire**.
@@ -1439,7 +1439,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.9.4_L1_Ensure_Microsoft_networ
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.9.5_L1_Ensure_Microsoft_network_server_Server_SPN_target_name_validation_level_is_set_to_Accept_if_provided_by_client_or_higher" do
+control "2.3.9.5_L1_Ensure_Microsoft_network_server_Server_SPN_target_name_validation_level_is_set_to_Accept_if_provided_by_client_or_higher" do
   title "(L1) Ensure 'Microsoft network server: Server SPN target name validation level' is set to 'Accept if provided by client' or higher"
   desc  "
     This policy setting controls the level of validation a computer with shared folders or printers (the server) performs on the service principal name (SPN) that is provided by the client computer when it establishes a session using the server message block (SMB) protocol.
@@ -1460,7 +1460,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.9.5_L1_Ensure_Microsoft_networ
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.10.1_L1_Ensure_Network_access_Allow_anonymous_SIDName_translation_is_set_to_Disabled" do
+control "2.3.10.1_L1_Ensure_Network_access_Allow_anonymous_SIDName_translation_is_set_to_Disabled" do
   title "(L1) Ensure 'Network access: Allow anonymous SID/Name translation' is set to 'Disabled'"
   desc  "
     This policy setting determines whether an anonymous user can request security identifier (SID) attributes for another user, or use a SID to obtain its corresponding user name. Disable this policy setting to prevent unauthenticated users from obtaining user names that are associated with their respective SIDs.
@@ -1476,7 +1476,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.10.1_L1_Ensure_Network_access_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.10.2_L1_Ensure_Network_access_Do_not_allow_anonymous_enumeration_of_SAM_accounts_is_set_to_Enabled" do
+control "2.3.10.2_L1_Ensure_Network_access_Do_not_allow_anonymous_enumeration_of_SAM_accounts_is_set_to_Enabled" do
   title "(L1) Ensure 'Network access: Do not allow anonymous enumeration of SAM accounts' is set to 'Enabled'"
   desc  "
     This policy setting controls the ability of anonymous users to enumerate the accounts in the Security Accounts Manager (SAM). If you enable this policy setting, users with anonymous connections cannot enumerate domain account user names on the workstations in your environment. This policy setting also allows additional restrictions on anonymous connections.
@@ -1493,7 +1493,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.10.2_L1_Ensure_Network_access_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.10.3_L1_Ensure_Network_access_Do_not_allow_anonymous_enumeration_of_SAM_accounts_and_shares_is_set_to_Enabled" do
+control "2.3.10.3_L1_Ensure_Network_access_Do_not_allow_anonymous_enumeration_of_SAM_accounts_and_shares_is_set_to_Enabled" do
   title "(L1) Ensure 'Network access: Do not allow anonymous enumeration of SAM accounts and shares' is set to 'Enabled'"
   desc  "
     This policy setting controls the ability of anonymous users to enumerate SAM accounts as well as shares. If you enable this policy setting, anonymous users will not be able to enumerate domain account user names and network share names on the workstations in your environment.
@@ -1512,7 +1512,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.10.3_L1_Ensure_Network_access_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.10.4_L1_Ensure_Network_access_Do_not_allow_storage_of_passwords_and_credentials_for_network_authentication_is_set_to_Enabled" do
+control "2.3.10.4_L1_Ensure_Network_access_Do_not_allow_storage_of_passwords_and_credentials_for_network_authentication_is_set_to_Enabled" do
   title "(L1) Ensure 'Network access: Do not allow storage of passwords and credentials for network authentication' is set to 'Enabled'"
   desc  "
     This policy setting determines whether the Stored User Names and Passwords feature may save passwords or credentials for later use when it gains domain authentication. If you enable this policy setting, the Stored User Names and Passwords feature of Windows does not store passwords and credentials.
@@ -1529,7 +1529,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.10.4_L1_Ensure_Network_access_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.10.5_L1_Ensure_Network_access_Let_Everyone_permissions_apply_to_anonymous_users_is_set_to_Disabled" do
+control "2.3.10.5_L1_Ensure_Network_access_Let_Everyone_permissions_apply_to_anonymous_users_is_set_to_Disabled" do
   title "(L1) Ensure 'Network access: Let Everyone permissions apply to anonymous users' is set to 'Disabled'"
   desc  "
     This policy setting determines what additional permissions are assigned for anonymous connections to the computer. If you enable this policy setting, anonymous Windows users are allowed to perform certain activities, such as enumerate the names of domain accounts and network shares. An unauthorized user could anonymously list account names and shared resources and use the information to guess passwords or perform social engineering attacks.
@@ -1546,7 +1546,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.10.5_L1_Ensure_Network_access_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.10.6_L1_Ensure_Network_access_Named_Pipes_that_can_be_accessed_anonymously_is_set_to_None" do
+control "2.3.10.6_L1_Ensure_Network_access_Named_Pipes_that_can_be_accessed_anonymously_is_set_to_None" do
   title "(L1) Ensure 'Network access: Named Pipes that can be accessed anonymously' is set to 'None'"
   desc  "
     This policy setting determines which communication sessions, or pipes, will have attributes and permissions that allow anonymous access.
@@ -1563,7 +1563,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.10.6_L1_Ensure_Network_access_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.10.7_L1_Ensure_Network_access_Remotely_accessible_registry_paths" do
+control "2.3.10.7_L1_Ensure_Network_access_Remotely_accessible_registry_paths" do
   title "(L1) Ensure 'Network access: Remotely accessible registry paths'"
   desc  "
     This policy setting determines which registry paths will be accessible after referencing the WinReg key to determine access permissions to the paths.
@@ -1587,7 +1587,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.10.7_L1_Ensure_Network_access_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.10.8_L1_Ensure_Network_access_Remotely_accessible_registry_paths_and_sub-paths" do
+control "2.3.10.8_L1_Ensure_Network_access_Remotely_accessible_registry_paths_and_sub-paths" do
   title "(L1) Ensure 'Network access: Remotely accessible registry paths and sub-paths'"
   desc  "
     This policy setting determines which registry paths and sub-paths will be accessible when an application or process references the WinReg key to determine access permissions.
@@ -1619,7 +1619,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.10.8_L1_Ensure_Network_access_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.10.9_L1_Ensure_Network_access_Restrict_anonymous_access_to_Named_Pipes_and_Shares_is_set_to_Enabled" do
+control "2.3.10.9_L1_Ensure_Network_access_Restrict_anonymous_access_to_Named_Pipes_and_Shares_is_set_to_Enabled" do
   title "(L1) Ensure 'Network access: Restrict anonymous access to Named Pipes and Shares' is set to 'Enabled'"
   desc  "
     When enabled, this policy setting restricts anonymous access to only those shares and pipes that are named in the Network access: Named pipes that can be accessed anonymously and Network access: Shares that can be accessed anonymously settings. This policy setting controls null session access to shares on your computers by adding RestrictNullSessAccess with the value 1 in the
@@ -1640,7 +1640,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.10.9_L1_Ensure_Network_access_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.10.10_L1_Ensure_Network_access_Shares_that_can_be_accessed_anonymously_is_set_to_None" do
+control "2.3.10.10_L1_Ensure_Network_access_Shares_that_can_be_accessed_anonymously_is_set_to_None" do
   title "(L1) Ensure 'Network access: Shares that can be accessed anonymously' is set to 'None'"
   desc  "
     This policy setting determines which network shares can be accessed by anonymous users. The default configuration for this policy setting has little effect because all users have to be authenticated before they can access shared resources on the server.
@@ -1657,7 +1657,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.10.10_L1_Ensure_Network_access
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.10.11_L1_Ensure_Network_access_Sharing_and_security_model_for_local_accounts_is_set_to_Classic_-_local_users_authenticate_as_themselves" do
+control "2.3.10.11_L1_Ensure_Network_access_Sharing_and_security_model_for_local_accounts_is_set_to_Classic_-_local_users_authenticate_as_themselves" do
   title "(L1) Ensure 'Network access: Sharing and security model for local accounts' is set to 'Classic - local users authenticate as themselves'"
   desc  "
     This policy setting determines how network logons that use local accounts are authenticated. The Classic option allows precise control over access to resources, including the ability to assign different types of access to different users for the same resource. The Guest only option allows you to treat all users equally. In this context, all users authenticate as Guest only to receive the same access level to a given resource.
@@ -1674,7 +1674,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.10.11_L1_Ensure_Network_access
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.11.1_L1_Ensure_Network_security_Allow_Local_System_to_use_computer_identity_for_NTLM_is_set_to_Enabled" do
+control "2.3.11.1_L1_Ensure_Network_security_Allow_Local_System_to_use_computer_identity_for_NTLM_is_set_to_Enabled" do
   title "(L1) Ensure 'Network security: Allow Local System to use computer identity for NTLM' is set to 'Enabled'"
   desc  "
     When enabled, this policy setting causes Local System services that use Negotiate to use the computer identity when NTLM authentication is selected by the negotiation. This policy is supported on at least Windows 7 or Windows Server 2008 R2.
@@ -1691,7 +1691,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.11.1_L1_Ensure_Network_securit
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.11.2_L1_Ensure_Network_security_Allow_LocalSystem_NULL_session_fallback_is_set_to_Disabled" do
+control "2.3.11.2_L1_Ensure_Network_security_Allow_LocalSystem_NULL_session_fallback_is_set_to_Disabled" do
   title "(L1) Ensure 'Network security: Allow LocalSystem NULL session fallback' is set to 'Disabled'"
   desc  "
     Allow NTLM to fall back to NULL session when used with LocalSystem. The default is TRUE up to Windows Vista / Server 2008 and FALSE from Windows 7 / Server 2008 R2 and beyond.
@@ -1708,7 +1708,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.11.2_L1_Ensure_Network_securit
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.11.3_L1_Ensure_Network_Security_Allow_PKU2U_authentication_requests_to_this_computer_to_use_online_identities_is_set_to_Disabled" do
+control "2.3.11.3_L1_Ensure_Network_Security_Allow_PKU2U_authentication_requests_to_this_computer_to_use_online_identities_is_set_to_Disabled" do
   title "(L1) Ensure 'Network Security: Allow PKU2U authentication requests to this computer to use online identities' is set to 'Disabled'"
   desc  "
     This setting determines if online identities are able to authenticate to this computer.
@@ -1729,7 +1729,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.11.3_L1_Ensure_Network_Securit
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.11.4_L1_Ensure_Network_Security_Configure_encryption_types_allowed_for_Kerberos_is_set_to_RC4_HMAC_MD5_AES128_HMAC_SHA1_AES256_HMAC_SHA1_Future_encryption_types" do
+control "2.3.11.4_L1_Ensure_Network_Security_Configure_encryption_types_allowed_for_Kerberos_is_set_to_RC4_HMAC_MD5_AES128_HMAC_SHA1_AES256_HMAC_SHA1_Future_encryption_types" do
   title "(L1) Ensure 'Network Security: Configure encryption types allowed for Kerberos' is set to 'RC4_HMAC_MD5, AES128_HMAC_SHA1, AES256_HMAC_SHA1, Future encryption types'"
   desc  "
     This policy setting allows you to set the encryption types that Kerberos is allowed to use. This policy is supported on at least Windows 7 or Windows Server 2008 R2.
@@ -1746,7 +1746,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.11.4_L1_Ensure_Network_Securit
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.11.5_L1_Ensure_Network_security_Do_not_store_LAN_Manager_hash_value_on_next_password_change_is_set_to_Enabled" do
+control "2.3.11.5_L1_Ensure_Network_security_Do_not_store_LAN_Manager_hash_value_on_next_password_change_is_set_to_Enabled" do
   title "(L1) Ensure 'Network security: Do not store LAN Manager hash value on next password change' is set to 'Enabled'"
   desc  "
     This policy setting determines whether the LAN Manager (LM) hash value for the new password is stored when the password is changed. The LM hash is relatively weak and prone to attack compared to the cryptographically stronger Microsoft Windows NT hash.
@@ -1765,7 +1765,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.11.5_L1_Ensure_Network_securit
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.11.6_L1_Ensure_Network_security_Force_logoff_when_logon_hours_expire_is_set_to_Enabled" do
+control "2.3.11.6_L1_Ensure_Network_security_Force_logoff_when_logon_hours_expire_is_set_to_Enabled" do
   title "(L1) Ensure 'Network security: Force logoff when logon hours expire' is set to 'Enabled'"
   desc  "
     This policy setting, which determines whether to disconnect users who are connected to the local computer outside their user account's valid logon hours, affects the SMB component. If you enable this policy setting, client sessions with the SMB server will be disconnected when the client's logon hours expire. If you disable this policy setting, established client sessions will be maintained after the client's logon hours expire.
@@ -1782,7 +1782,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.11.6_L1_Ensure_Network_securit
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.11.7_L1_Ensure_Network_security_LAN_Manager_authentication_level_is_set_to_Send_NTLMv2_response_only._Refuse_LM__NTLM" do
+control "2.3.11.7_L1_Ensure_Network_security_LAN_Manager_authentication_level_is_set_to_Send_NTLMv2_response_only._Refuse_LM__NTLM" do
   title "(L1) Ensure 'Network security: LAN Manager authentication level' is set to 'Send NTLMv2 response only. Refuse LM  NTLM'"
   desc  "
     LAN Manager (LM) is a family of early Microsoft client/server software that allows users to link personal computers together on a single network. Network capabilities include transparent file and print sharing, user security features, and network administration tools. In Active Directory domains, the Kerberos protocol is the default authentication protocol. However, if the Kerberos protocol is not negotiated for some reason, Active Directory will use LM, NTLM, or NTLMv2. LAN Manager authentication includes the LM, NTLM, and NTLM version 2 (NTLMv2) variants, and is the protocol that is used to authenticate all Windows clients when they perform the following operations:
@@ -1830,7 +1830,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.11.7_L1_Ensure_Network_securit
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.11.8_L1_Ensure_Network_security_LDAP_client_signing_requirements_is_set_to_Negotiate_signing_or_higher" do
+control "2.3.11.8_L1_Ensure_Network_security_LDAP_client_signing_requirements_is_set_to_Negotiate_signing_or_higher" do
   title "(L1) Ensure 'Network security: LDAP client signing requirements' is set to 'Negotiate signing' or higher"
   desc  "
     This policy setting determines the level of data signing that is requested on behalf of clients that issue LDAP BIND requests, as follows:
@@ -1858,7 +1858,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.11.8_L1_Ensure_Network_securit
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.11.9_L1_Ensure_Network_security_Minimum_session_security_for_NTLM_SSP_based_including_secure_RPC_clients_is_set_to_Require_NTLMv2_session_security_Require_128-bit_encryption" do
+control "2.3.11.9_L1_Ensure_Network_security_Minimum_session_security_for_NTLM_SSP_based_including_secure_RPC_clients_is_set_to_Require_NTLMv2_session_security_Require_128-bit_encryption" do
   title "(L1) Ensure 'Network security: Minimum session security for NTLM SSP based (including secure RPC) clients' is set to 'Require NTLMv2 session security, Require 128-bit encryption'"
   desc  "
     This policy setting determines which behaviors are allowed for applications using the NTLM Security Support Provider (SSP). The SSP Interface (SSPI) is used by applications that need authentication services. The setting does not modify how the authentication sequence works but instead require certain behaviors in applications that use the SSPI.
@@ -1883,7 +1883,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.11.9_L1_Ensure_Network_securit
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.11.10_L1_Ensure_Network_security_Minimum_session_security_for_NTLM_SSP_based_including_secure_RPC_servers_is_set_to_Require_NTLMv2_session_security_Require_128-bit_encryption" do
+control "2.3.11.10_L1_Ensure_Network_security_Minimum_session_security_for_NTLM_SSP_based_including_secure_RPC_servers_is_set_to_Require_NTLMv2_session_security_Require_128-bit_encryption" do
   title "(L1) Ensure 'Network security: Minimum session security for NTLM SSP based (including secure RPC) servers' is set to 'Require NTLMv2 session security, Require 128-bit encryption'"
   desc  "
     This policy setting determines which behaviors are allowed for applications using the NTLM Security Support Provider (SSP). The SSP Interface (SSPI) is used by applications that need authentication services. The setting does not modify how the authentication sequence works but instead require certain behaviors in applications that use the SSPI.
@@ -1908,7 +1908,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.11.10_L1_Ensure_Network_securi
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.14.1_L2_Ensure_System_cryptography_Force_strong_key_protection_for_user_keys_stored_on_the_computer_is_set_to_User_is_prompted_when_the_key_is_first_used_or_higher" do
+control "2.3.14.1_L2_Ensure_System_cryptography_Force_strong_key_protection_for_user_keys_stored_on_the_computer_is_set_to_User_is_prompted_when_the_key_is_first_used_or_higher" do
   title "(L2) Ensure 'System cryptography: Force strong key protection for user keys stored on the computer' is set to 'User is prompted when the key is first used' or higher"
   desc  "
     This policy setting determines whether users' private keys (such as their S-MIME keys) require a password to be used. If you configure this policy setting so that users must provide a password#x2014;distinct from their domain password#x2014;every time that they use a key, then it will be more difficult for an attacker to access locally stored keys, even an attacker who discovers logon passwords.
@@ -1925,7 +1925,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.14.1_L2_Ensure_System_cryptogr
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.15.1_L1_Ensure_System_objects_Require_case_insensitivity_for_non-Windows_subsystems_is_set_to_Enabled" do
+control "2.3.15.1_L1_Ensure_System_objects_Require_case_insensitivity_for_non-Windows_subsystems_is_set_to_Enabled" do
   title "(L1) Ensure 'System objects: Require case insensitivity for non-Windows subsystems' is set to 'Enabled'"
   desc  "
     This policy setting determines whether case insensitivity is enforced for all subsystems. The Microsoft Win32' subsystem is case insensitive. However, the kernel supports case sensitivity for other subsystems, such as the Portable Operating System Interface for UNIX (POSIX). Because Windows is case insensitive (but the POSIX subsystem will support case sensitivity), failure to enforce this policy setting makes it possible for a user of the POSIX subsystem to create a file with the same name as another file by using mixed case to label it. Such a situation can block access to these files by another user who uses typical Win32 tools, because only one of the files will be available.
@@ -1942,7 +1942,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.15.1_L1_Ensure_System_objects_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.15.2_L1_Ensure_System_objects_Strengthen_default_permissions_of_internal_system_objects_e.g._Symbolic_Links_is_set_to_Enabled" do
+control "2.3.15.2_L1_Ensure_System_objects_Strengthen_default_permissions_of_internal_system_objects_e.g._Symbolic_Links_is_set_to_Enabled" do
   title "(L1) Ensure 'System objects: Strengthen default permissions of internal system objects (e.g. Symbolic Links)' is set to 'Enabled'"
   desc  "
     This policy setting determines the strength of the default discretionary access control list (DACL) for objects. The setting helps secure objects that can be located and shared among processes and its default configuration strengthens the DACL, because it allows users who are not administrators to read shared objects but does not allow them to modify any that they did not create.
@@ -1959,7 +1959,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.15.2_L1_Ensure_System_objects_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.17.1_L1_Ensure_User_Account_Control_Admin_Approval_Mode_for_the_Built-in_Administrator_account_is_set_to_Enabled" do
+control "2.3.17.1_L1_Ensure_User_Account_Control_Admin_Approval_Mode_for_the_Built-in_Administrator_account_is_set_to_Enabled" do
   title "(L1) Ensure 'User Account Control: Admin Approval Mode for the Built-in Administrator account' is set to 'Enabled'"
   desc  "
     This policy setting controls the behavior of Admin Approval Mode for the built-in Administrator account.
@@ -1985,7 +1985,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.17.1_L1_Ensure_User_Account_Co
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.17.2_L1_Ensure_User_Account_Control_Allow_UIAccess_applications_to_prompt_for_elevation_without_using_the_secure_desktop_is_set_to_Disabled" do
+control "2.3.17.2_L1_Ensure_User_Account_Control_Allow_UIAccess_applications_to_prompt_for_elevation_without_using_the_secure_desktop_is_set_to_Disabled" do
   title "(L1) Ensure 'User Account Control: Allow UIAccess applications to prompt for elevation without using the secure desktop' is set to 'Disabled'"
   desc  "
     This policy setting controls whether User Interface Accessibility (UIAccess or UIA) programs can automatically disable the secure desktop for elevation prompts used by a standard user.
@@ -2004,7 +2004,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.17.2_L1_Ensure_User_Account_Co
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.17.3_L1_Ensure_User_Account_Control_Behavior_of_the_elevation_prompt_for_administrators_in_Admin_Approval_Mode_is_set_to_Prompt_for_consent_on_the_secure_desktop" do
+control "2.3.17.3_L1_Ensure_User_Account_Control_Behavior_of_the_elevation_prompt_for_administrators_in_Admin_Approval_Mode_is_set_to_Prompt_for_consent_on_the_secure_desktop" do
   title "(L1) Ensure 'User Account Control: Behavior of the elevation prompt for administrators in Admin Approval Mode' is set to 'Prompt for consent on the secure desktop'"
   desc  "
     This policy setting controls the behavior of the elevation prompt for administrators.
@@ -2030,7 +2030,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.17.3_L1_Ensure_User_Account_Co
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.17.4_L1_Ensure_User_Account_Control_Behavior_of_the_elevation_prompt_for_standard_users_is_set_to_Automatically_deny_elevation_requests" do
+control "2.3.17.4_L1_Ensure_User_Account_Control_Behavior_of_the_elevation_prompt_for_standard_users_is_set_to_Automatically_deny_elevation_requests" do
   title "(L1) Ensure 'User Account Control: Behavior of the elevation prompt for standard users' is set to 'Automatically deny elevation requests'"
   desc  "
     This policy setting controls the behavior of the elevation prompt for standard users. The options are:
@@ -2050,7 +2050,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.17.4_L1_Ensure_User_Account_Co
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.17.5_L1_Ensure_User_Account_Control_Detect_application_installations_and_prompt_for_elevation_is_set_to_Enabled" do
+control "2.3.17.5_L1_Ensure_User_Account_Control_Detect_application_installations_and_prompt_for_elevation_is_set_to_Enabled" do
   title "(L1) Ensure 'User Account Control: Detect application installations and prompt for elevation' is set to 'Enabled'"
   desc  "
     This policy setting controls the behavior of application installation detection for the computer.
@@ -2071,7 +2071,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.17.5_L1_Ensure_User_Account_Co
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.17.6_L1_Ensure_User_Account_Control_Only_elevate_UIAccess_applications_that_are_installed_in_secure_locations_is_set_to_Enabled" do
+control "2.3.17.6_L1_Ensure_User_Account_Control_Only_elevate_UIAccess_applications_that_are_installed_in_secure_locations_is_set_to_Enabled" do
   title "(L1) Ensure 'User Account Control: Only elevate UIAccess applications that are installed in secure locations' is set to 'Enabled'"
   desc  "
     This policy setting controls whether applications that request to run with a User Interface Accessibility (UIAccess) integrity level must reside in a secure location in the file system. Secure locations are limited to the following:
@@ -2102,7 +2102,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.17.6_L1_Ensure_User_Account_Co
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.17.7_L1_Ensure_User_Account_Control_Run_all_administrators_in_Admin_Approval_Mode_is_set_to_Enabled" do
+control "2.3.17.7_L1_Ensure_User_Account_Control_Run_all_administrators_in_Admin_Approval_Mode_is_set_to_Enabled" do
   title "(L1) Ensure 'User Account Control: Run all administrators in Admin Approval Mode' is set to 'Enabled'"
   desc  "
     This policy setting controls the behavior of all User Account Control (UAC) policy settings for the computer. If you change this policy setting, you must restart your computer.
@@ -2123,7 +2123,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.17.7_L1_Ensure_User_Account_Co
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.17.8_L1_Ensure_User_Account_Control_Switch_to_the_secure_desktop_when_prompting_for_elevation_is_set_to_Enabled" do
+control "2.3.17.8_L1_Ensure_User_Account_Control_Switch_to_the_secure_desktop_when_prompting_for_elevation_is_set_to_Enabled" do
   title "(L1) Ensure 'User Account Control: Switch to the secure desktop when prompting for elevation' is set to 'Enabled'"
   desc  "
     This policy setting controls whether the elevation request prompt is displayed on the interactive user's desktop or the secure desktop.
@@ -2144,7 +2144,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.17.8_L1_Ensure_User_Account_Co
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_2.3.17.9_L1_Ensure_User_Account_Control_Virtualize_file_and_registry_write_failures_to_per-user_locations_is_set_to_Enabled" do
+control "2.3.17.9_L1_Ensure_User_Account_Control_Virtualize_file_and_registry_write_failures_to_per-user_locations_is_set_to_Enabled" do
   title "(L1) Ensure 'User Account Control: Virtualize file and registry write failures to per-user locations' is set to 'Enabled'"
   desc  "
     This policy setting controls whether application write failures are redirected to defined registry and file system locations. This policy setting mitigates applications that run as administrator and write run-time application data to %ProgramFiles%, %Windir%, %Windir%\\system32, or HKEY_LOCAL_MACHINE\\Software.
@@ -2165,7 +2165,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_2.3.17.9_L1_Ensure_User_Account_Co
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_9.1.1_L1_Ensure_Windows_Firewall_Domain_Firewall_state_is_set_to_On_recommended" do
+control "9.1.1_L1_Ensure_Windows_Firewall_Domain_Firewall_state_is_set_to_On_recommended" do
   title "(L1) Ensure 'Windows Firewall: Domain: Firewall state' is set to 'On (recommended)'"
   desc  "
     Select On (recommended) to have Windows Firewall with Advanced Security use the settings for this profile to filter network traffic. If you select Off, Windows Firewall with Advanced Security will not use any of the firewall rules or connection security rules for this profile.
@@ -2182,7 +2182,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_9.1.1_L1_Ensure_Windows_Firewall_D
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_9.1.2_L1_Ensure_Windows_Firewall_Domain_Inbound_connections_is_set_to_Block_default" do
+control "9.1.2_L1_Ensure_Windows_Firewall_Domain_Inbound_connections_is_set_to_Block_default" do
   title "(L1) Ensure 'Windows Firewall: Domain: Inbound connections' is set to 'Block (default)'"
   desc  "
     This setting determines the behavior for inbound connections that do not match an inbound firewall rule. The default behavior is to block connections unless there are firewall rules to allow the connection.
@@ -2199,7 +2199,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_9.1.2_L1_Ensure_Windows_Firewall_D
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_9.1.3_L1_Ensure_Windows_Firewall_Domain_Outbound_connections_is_set_to_Allow_default" do
+control "9.1.3_L1_Ensure_Windows_Firewall_Domain_Outbound_connections_is_set_to_Allow_default" do
   title "(L1) Ensure 'Windows Firewall: Domain: Outbound connections' is set to 'Allow (default)'"
   desc  "
     This setting determines the behavior for outbound connections that do not match an outbound firewall rule. In Windows Vista / Server 2008 and above, the default behavior is to allow connections unless there are firewall rules that block the connection.
@@ -2216,7 +2216,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_9.1.3_L1_Ensure_Windows_Firewall_D
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_9.1.4_L1_Ensure_Windows_Firewall_Domain_Settings_Display_a_notification_is_set_to_No" do
+control "9.1.4_L1_Ensure_Windows_Firewall_Domain_Settings_Display_a_notification_is_set_to_No" do
   title "(L1) Ensure 'Windows Firewall: Domain: Settings: Display a notification' is set to 'No'"
   desc  "
     Select this option to have Windows Firewall with Advanced Security display notifications to the user when a program is blocked from receiving inbound connections.
@@ -2235,7 +2235,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_9.1.4_L1_Ensure_Windows_Firewall_D
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_9.1.5_L1_Ensure_Windows_Firewall_Domain_Settings_Apply_local_firewall_rules_is_set_to_Yes_default" do
+control "9.1.5_L1_Ensure_Windows_Firewall_Domain_Settings_Apply_local_firewall_rules_is_set_to_Yes_default" do
   title "(L1) Ensure 'Windows Firewall: Domain: Settings: Apply local firewall rules' is set to 'Yes (default)'"
   desc  "
     This setting controls whether local administrators are allowed to create local firewall rules that apply together with firewall rules configured by Group Policy.
@@ -2252,7 +2252,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_9.1.5_L1_Ensure_Windows_Firewall_D
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_9.1.6_L1_Ensure_Windows_Firewall_Domain_Settings_Apply_local_connection_security_rules_is_set_to_Yes_default" do
+control "9.1.6_L1_Ensure_Windows_Firewall_Domain_Settings_Apply_local_connection_security_rules_is_set_to_Yes_default" do
   title "(L1) Ensure 'Windows Firewall: Domain: Settings: Apply local connection security rules' is set to 'Yes (default)'"
   desc  "
     This setting controls whether local administrators are allowed to create connection security rules that apply together with connection security rules configured by Group Policy.
@@ -2269,7 +2269,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_9.1.6_L1_Ensure_Windows_Firewall_D
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_9.1.7_L1_Ensure_Windows_Firewall_Domain_Logging_Name_is_set_to_SYSTEMROOTSystem32logfilesfirewalldomainfw.log" do
+control "9.1.7_L1_Ensure_Windows_Firewall_Domain_Logging_Name_is_set_to_SYSTEMROOTSystem32logfilesfirewalldomainfw.log" do
   title "(L1) Ensure 'Windows Firewall: Domain: Logging: Name' is set to '%SYSTEMROOT%\\System32\\logfiles\\firewall\\domainfw.log'"
   desc  "
     Use this option to specify the path and name of the file in which Windows Firewall will write its log information.
@@ -2286,7 +2286,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_9.1.7_L1_Ensure_Windows_Firewall_D
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_9.1.8_L1_Ensure_Windows_Firewall_Domain_Logging_Size_limit_KB_is_set_to_16384_KB_or_greater" do
+control "9.1.8_L1_Ensure_Windows_Firewall_Domain_Logging_Size_limit_KB_is_set_to_16384_KB_or_greater" do
   title "(L1) Ensure 'Windows Firewall: Domain: Logging: Size limit (KB)' is set to '16,384 KB or greater'"
   desc  "
     Use this option to specify the size limit of the file in which Windows Firewall will write its log information.
@@ -2303,7 +2303,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_9.1.8_L1_Ensure_Windows_Firewall_D
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_9.1.9_L1_Ensure_Windows_Firewall_Domain_Logging_Log_dropped_packets_is_set_to_Yes" do
+control "9.1.9_L1_Ensure_Windows_Firewall_Domain_Logging_Log_dropped_packets_is_set_to_Yes" do
   title "(L1) Ensure 'Windows Firewall: Domain: Logging: Log dropped packets' is set to 'Yes'"
   desc  "
     Use this option to log when Windows Firewall with Advanced Security discards an inbound packet for any reason. The log records why and when the packet was dropped. Look for entries with the word DROP in the action column of the log.
@@ -2320,7 +2320,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_9.1.9_L1_Ensure_Windows_Firewall_D
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_9.1.10_L1_Ensure_Windows_Firewall_Domain_Logging_Log_successful_connections_is_set_to_Yes" do
+control "9.1.10_L1_Ensure_Windows_Firewall_Domain_Logging_Log_successful_connections_is_set_to_Yes" do
   title "(L1) Ensure 'Windows Firewall: Domain: Logging: Log successful connections' is set to 'Yes'"
   desc  "
     Use this option to log when Windows Firewall with Advanced Security allows an inbound connection. The log records why and when the connection was formed. Look for entries with the word ALLOW in the action column of the log.
@@ -2337,7 +2337,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_9.1.10_L1_Ensure_Windows_Firewall_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_9.2.1_L1_Ensure_Windows_Firewall_Private_Firewall_state_is_set_to_On_recommended" do
+control "9.2.1_L1_Ensure_Windows_Firewall_Private_Firewall_state_is_set_to_On_recommended" do
   title "(L1) Ensure 'Windows Firewall: Private: Firewall state' is set to 'On (recommended)'"
   desc  "
     Select On (recommended) to have Windows Firewall with Advanced Security use the settings for this profile to filter network traffic. If you select Off, Windows Firewall with Advanced Security will not use any of the firewall rules or connection security rules for this profile.
@@ -2354,7 +2354,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_9.2.1_L1_Ensure_Windows_Firewall_P
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_9.2.2_L1_Ensure_Windows_Firewall_Private_Inbound_connections_is_set_to_Block_default" do
+control "9.2.2_L1_Ensure_Windows_Firewall_Private_Inbound_connections_is_set_to_Block_default" do
   title "(L1) Ensure 'Windows Firewall: Private: Inbound connections' is set to 'Block (default)'"
   desc  "
     This setting determines the behavior for inbound connections that do not match an inbound firewall rule. The default behavior is to block connections unless there are firewall rules to allow the connection.
@@ -2371,7 +2371,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_9.2.2_L1_Ensure_Windows_Firewall_P
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_9.2.3_L1_Ensure_Windows_Firewall_Private_Outbound_connections_is_set_to_Allow_default" do
+control "9.2.3_L1_Ensure_Windows_Firewall_Private_Outbound_connections_is_set_to_Allow_default" do
   title "(L1) Ensure 'Windows Firewall: Private: Outbound connections' is set to 'Allow (default)'"
   desc  "
     This setting determines the behavior for outbound connections that do not match an outbound firewall rule. The default behavior is to allow connections unless there are firewall rules that block the connection.
@@ -2390,7 +2390,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_9.2.3_L1_Ensure_Windows_Firewall_P
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_9.2.4_L1_Ensure_Windows_Firewall_Private_Settings_Display_a_notification_is_set_to_No" do
+control "9.2.4_L1_Ensure_Windows_Firewall_Private_Settings_Display_a_notification_is_set_to_No" do
   title "(L1) Ensure 'Windows Firewall: Private: Settings: Display a notification' is set to 'No'"
   desc  "
     Select this option to have Windows Firewall with Advanced Security display notifications to the user when a program is blocked from receiving inbound connections.
@@ -2409,7 +2409,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_9.2.4_L1_Ensure_Windows_Firewall_P
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_9.2.5_L1_Ensure_Windows_Firewall_Private_Settings_Apply_local_firewall_rules_is_set_to_Yes_default" do
+control "9.2.5_L1_Ensure_Windows_Firewall_Private_Settings_Apply_local_firewall_rules_is_set_to_Yes_default" do
   title "(L1) Ensure 'Windows Firewall: Private: Settings: Apply local firewall rules' is set to 'Yes (default)'"
   desc  "
     This setting controls whether local administrators are allowed to create local firewall rules that apply together with firewall rules configured by Group Policy.
@@ -2426,7 +2426,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_9.2.5_L1_Ensure_Windows_Firewall_P
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_9.2.6_L1_Ensure_Windows_Firewall_Private_Settings_Apply_local_connection_security_rules_is_set_to_Yes_default" do
+control "9.2.6_L1_Ensure_Windows_Firewall_Private_Settings_Apply_local_connection_security_rules_is_set_to_Yes_default" do
   title "(L1) Ensure 'Windows Firewall: Private: Settings: Apply local connection security rules' is set to 'Yes (default)'"
   desc  "
     This setting controls whether local administrators are allowed to create connection security rules that apply together with connection security rules configured by Group Policy.
@@ -2443,7 +2443,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_9.2.6_L1_Ensure_Windows_Firewall_P
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_9.2.7_L1_Ensure_Windows_Firewall_Private_Logging_Name_is_set_to_SYSTEMROOTSystem32logfilesfirewallprivatefw.log" do
+control "9.2.7_L1_Ensure_Windows_Firewall_Private_Logging_Name_is_set_to_SYSTEMROOTSystem32logfilesfirewallprivatefw.log" do
   title "(L1) Ensure 'Windows Firewall: Private: Logging: Name' is set to '%SYSTEMROOT%\\System32\\logfiles\\firewall\\privatefw.log'"
   desc  "
     Use this option to specify the path and name of the file in which Windows Firewall will write its log information.
@@ -2460,7 +2460,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_9.2.7_L1_Ensure_Windows_Firewall_P
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_9.2.8_L1_Ensure_Windows_Firewall_Private_Logging_Size_limit_KB_is_set_to_16384_KB_or_greater" do
+control "9.2.8_L1_Ensure_Windows_Firewall_Private_Logging_Size_limit_KB_is_set_to_16384_KB_or_greater" do
   title "(L1) Ensure 'Windows Firewall: Private: Logging: Size limit (KB)' is set to '16,384 KB or greater'"
   desc  "
     Use this option to specify the size limit of the file in which Windows Firewall will write its log information.
@@ -2477,7 +2477,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_9.2.8_L1_Ensure_Windows_Firewall_P
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_9.2.9_L1_Ensure_Windows_Firewall_Private_Logging_Log_dropped_packets_is_set_to_Yes" do
+control "9.2.9_L1_Ensure_Windows_Firewall_Private_Logging_Log_dropped_packets_is_set_to_Yes" do
   title "(L1) Ensure 'Windows Firewall: Private: Logging: Log dropped packets' is set to 'Yes'"
   desc  "
     Use this option to log when Windows Firewall with Advanced Security discards an inbound packet for any reason. The log records why and when the packet was dropped. Look for entries with the word DROP in the action column of the log.
@@ -2494,7 +2494,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_9.2.9_L1_Ensure_Windows_Firewall_P
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_9.2.10_L1_Ensure_Windows_Firewall_Private_Logging_Log_successful_connections_is_set_to_Yes" do
+control "9.2.10_L1_Ensure_Windows_Firewall_Private_Logging_Log_successful_connections_is_set_to_Yes" do
   title "(L1) Ensure 'Windows Firewall: Private: Logging: Log successful connections' is set to 'Yes'"
   desc  "
     Use this option to log when Windows Firewall with Advanced Security allows an inbound connection. The log records why and when the connection was formed. Look for entries with the word ALLOW in the action column of the log.
@@ -2511,7 +2511,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_9.2.10_L1_Ensure_Windows_Firewall_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_9.3.1_L1_Ensure_Windows_Firewall_Public_Firewall_state_is_set_to_On_recommended" do
+control "9.3.1_L1_Ensure_Windows_Firewall_Public_Firewall_state_is_set_to_On_recommended" do
   title "(L1) Ensure 'Windows Firewall: Public: Firewall state' is set to 'On (recommended)'"
   desc  "
     Select On (recommended) to have Windows Firewall with Advanced Security use the settings for this profile to filter network traffic. If you select Off, Windows Firewall with Advanced Security will not use any of the firewall rules or connection security rules for this profile.
@@ -2528,7 +2528,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_9.3.1_L1_Ensure_Windows_Firewall_P
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_9.3.2_L1_Ensure_Windows_Firewall_Public_Inbound_connections_is_set_to_Block_default" do
+control "9.3.2_L1_Ensure_Windows_Firewall_Public_Inbound_connections_is_set_to_Block_default" do
   title "(L1) Ensure 'Windows Firewall: Public: Inbound connections' is set to 'Block (default)'"
   desc  "
     This setting determines the behavior for inbound connections that do not match an inbound firewall rule. The default behavior is to block connections unless there are firewall rules to allow the connection.
@@ -2545,7 +2545,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_9.3.2_L1_Ensure_Windows_Firewall_P
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_9.3.3_L1_Ensure_Windows_Firewall_Public_Outbound_connections_is_set_to_Allow_default" do
+control "9.3.3_L1_Ensure_Windows_Firewall_Public_Outbound_connections_is_set_to_Allow_default" do
   title "(L1) Ensure 'Windows Firewall: Public: Outbound connections' is set to 'Allow (default)'"
   desc  "
     This setting determines the behavior for outbound connections that do not match an outbound firewall rule. The default behavior is to allow connections unless there are firewall rules that block the connection.
@@ -2564,7 +2564,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_9.3.3_L1_Ensure_Windows_Firewall_P
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_9.3.4_L1_Ensure_Windows_Firewall_Public_Settings_Display_a_notification_is_set_to_Yes" do
+control "9.3.4_L1_Ensure_Windows_Firewall_Public_Settings_Display_a_notification_is_set_to_Yes" do
   title "(L1) Ensure 'Windows Firewall: Public: Settings: Display a notification' is set to 'Yes'"
   desc  "
     Select this option to have Windows Firewall with Advanced Security display notifications to the user when a program is blocked from receiving inbound connections.
@@ -2583,7 +2583,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_9.3.4_L1_Ensure_Windows_Firewall_P
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_9.3.5_L1_Ensure_Windows_Firewall_Public_Settings_Apply_local_firewall_rules_is_set_to_No" do
+control "9.3.5_L1_Ensure_Windows_Firewall_Public_Settings_Apply_local_firewall_rules_is_set_to_No" do
   title "(L1) Ensure 'Windows Firewall: Public: Settings: Apply local firewall rules' is set to 'No'"
   desc  "
     This setting controls whether local administrators are allowed to create local firewall rules that apply together with firewall rules configured by Group Policy.
@@ -2600,7 +2600,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_9.3.5_L1_Ensure_Windows_Firewall_P
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_9.3.6_L1_Ensure_Windows_Firewall_Public_Settings_Apply_local_connection_security_rules_is_set_to_No" do
+control "9.3.6_L1_Ensure_Windows_Firewall_Public_Settings_Apply_local_connection_security_rules_is_set_to_No" do
   title "(L1) Ensure 'Windows Firewall: Public: Settings: Apply local connection security rules' is set to 'No'"
   desc  "
     This setting controls whether local administrators are allowed to create connection security rules that apply together with connection security rules configured by Group Policy.
@@ -2617,7 +2617,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_9.3.6_L1_Ensure_Windows_Firewall_P
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_9.3.7_L1_Ensure_Windows_Firewall_Public_Logging_Name_is_set_to_SYSTEMROOTSystem32logfilesfirewallpublicfw.log" do
+control "9.3.7_L1_Ensure_Windows_Firewall_Public_Logging_Name_is_set_to_SYSTEMROOTSystem32logfilesfirewallpublicfw.log" do
   title "(L1) Ensure 'Windows Firewall: Public: Logging: Name' is set to '%SYSTEMROOT%\\System32\\logfiles\\firewall\\publicfw.log'"
   desc  "
     Use this option to specify the path and name of the file in which Windows Firewall will write its log information.
@@ -2634,7 +2634,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_9.3.7_L1_Ensure_Windows_Firewall_P
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_9.3.8_L1_Ensure_Windows_Firewall_Public_Logging_Size_limit_KB_is_set_to_16384_KB_or_greater" do
+control "9.3.8_L1_Ensure_Windows_Firewall_Public_Logging_Size_limit_KB_is_set_to_16384_KB_or_greater" do
   title "(L1) Ensure 'Windows Firewall: Public: Logging: Size limit (KB)' is set to '16,384 KB or greater'"
   desc  "
     Use this option to specify the size limit of the file in which Windows Firewall will write its log information.
@@ -2651,7 +2651,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_9.3.8_L1_Ensure_Windows_Firewall_P
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_9.3.9_L1_Ensure_Windows_Firewall_Public_Logging_Log_dropped_packets_is_set_to_Yes" do
+control "9.3.9_L1_Ensure_Windows_Firewall_Public_Logging_Log_dropped_packets_is_set_to_Yes" do
   title "(L1) Ensure 'Windows Firewall: Public: Logging: Log dropped packets' is set to 'Yes'"
   desc  "
     Use this option to log when Windows Firewall with Advanced Security discards an inbound packet for any reason. The log records why and when the packet was dropped. Look for entries with the word DROP in the action column of the log.
@@ -2668,7 +2668,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_9.3.9_L1_Ensure_Windows_Firewall_P
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_9.3.10_L1_Ensure_Windows_Firewall_Public_Logging_Log_successful_connections_is_set_to_Yes" do
+control "9.3.10_L1_Ensure_Windows_Firewall_Public_Logging_Log_successful_connections_is_set_to_Yes" do
   title "(L1) Ensure 'Windows Firewall: Public: Logging: Log successful connections' is set to 'Yes'"
   desc  "
     Use this option to log when Windows Firewall with Advanced Security allows an inbound connection. The log records why and when the connection was formed. Look for entries with the word ALLOW in the action column of the log.
@@ -2685,7 +2685,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_9.3.10_L1_Ensure_Windows_Firewall_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_17.1.1_L1_Ensure_Audit_Credential_Validation_is_set_to_Success_and_Failure" do
+control "17.1.1_L1_Ensure_Audit_Credential_Validation_is_set_to_Success_and_Failure" do
   title "(L1) Ensure 'Audit Credential Validation' is set to 'Success and Failure'"
   desc  "
     This subcategory reports the results of validation tests on credentials submitted for a user account logon request. These events occur on the computer that is authoritative for the credentials. For domain accounts, the domain controller is authoritative, whereas for local accounts, the local computer is authoritative. In domain environments, most of the Account Logon events occur in the Security log of the domain controllers that are authoritative for the domain accounts. However, these events can occur on other computers in the organization when local accounts are used to log on. Events for this subcategory include:
@@ -2705,7 +2705,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_17.1.1_L1_Ensure_Audit_Credential_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_17.2.1_L1_Ensure_Audit_Application_Group_Management_is_set_to_Success_and_Failure" do
+control "17.2.1_L1_Ensure_Audit_Application_Group_Management_is_set_to_Success_and_Failure" do
   title "(L1) Ensure 'Audit Application Group Management' is set to 'Success and Failure'"
   desc  "
     This policy setting allows you to audit events generated by changes to application groups such as the following:
@@ -2725,7 +2725,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_17.2.1_L1_Ensure_Audit_Application
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_17.2.2_L1_Ensure_Audit_Computer_Account_Management_is_set_to_Success_and_Failure" do
+control "17.2.2_L1_Ensure_Audit_Computer_Account_Management_is_set_to_Success_and_Failure" do
   title "(L1) Ensure 'Audit Computer Account Management' is set to 'Success and Failure'"
   desc  "
     This subcategory reports each event of computer account management, such as when a computer account is created, changed, deleted, renamed, disabled, or enabled. Events for this subcategory include:
@@ -2744,7 +2744,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_17.2.2_L1_Ensure_Audit_Computer_Ac
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_17.2.3_L1_Ensure_Audit_Other_Account_Management_Events_is_set_to_Success_and_Failure" do
+control "17.2.3_L1_Ensure_Audit_Other_Account_Management_Events_is_set_to_Success_and_Failure" do
   title "(L1) Ensure 'Audit Other Account Management Events' is set to 'Success and Failure'"
   desc  "
     This subcategory reports other account management events. Events for this subcategory include:
@@ -2762,7 +2762,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_17.2.3_L1_Ensure_Audit_Other_Accou
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_17.2.4_L1_Ensure_Audit_Security_Group_Management_is_set_to_Success_and_Failure" do
+control "17.2.4_L1_Ensure_Audit_Security_Group_Management_is_set_to_Success_and_Failure" do
   title "(L1) Ensure 'Audit Security Group Management' is set to 'Success and Failure'"
   desc  "
     This subcategory reports each event of security group management, such as when a security group is created, changed, or deleted or when a member is added to or removed from a security group. If you enable this Audit policy setting, administrators can track events to detect malicious, accidental, and authorized creation of security group accounts. Events for this subcategory include:
@@ -2794,7 +2794,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_17.2.4_L1_Ensure_Audit_Security_Gr
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_17.2.5_L1_Ensure_Audit_User_Account_Management_is_set_to_Success_and_Failure" do
+control "17.2.5_L1_Ensure_Audit_User_Account_Management_is_set_to_Success_and_Failure" do
   title "(L1) Ensure 'Audit User Account Management' is set to 'Success and Failure'"
   desc  "
     This subcategory reports each event of user account management, such as when a user account is created, changed, or deleted; a user account is renamed, disabled, or enabled; or a password is set or changed. If you enable this Audit policy setting, administrators can track events to detect malicious, accidental, and authorized creation of user accounts. Events for this subcategory include:
@@ -2826,7 +2826,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_17.2.5_L1_Ensure_Audit_User_Accoun
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_17.3.1_L1_Ensure_Audit_PNP_Activity_is_set_to_Success" do
+control "17.3.1_L1_Ensure_Audit_PNP_Activity_is_set_to_Success" do
   title "(L1) Ensure 'Audit PNP Activity' is set to 'Success'"
   desc  "
     This policy setting allows you to audit when plug and play detects an external device.
@@ -2840,7 +2840,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_17.3.1_L1_Ensure_Audit_PNP_Activit
   impact 1.0
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_17.3.2_L1_Ensure_Audit_Process_Creation_is_set_to_Success" do
+control "17.3.2_L1_Ensure_Audit_Process_Creation_is_set_to_Success" do
   title "(L1) Ensure 'Audit Process Creation' is set to 'Success'"
   desc  "
     This subcategory reports the creation of a process and the name of the program or user that created it. Events for this subcategory include:
@@ -2860,7 +2860,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_17.3.2_L1_Ensure_Audit_Process_Cre
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_17.5.1_L1_Ensure_Audit_Account_Lockout_is_set_to_Success" do
+control "17.5.1_L1_Ensure_Audit_Account_Lockout_is_set_to_Success" do
   title "(L1) Ensure 'Audit Account Lockout' is set to 'Success'"
   desc  "
     This subcategory reports when a user's account is locked out as a result of too many failed logon attempts. Events for this subcategory include:
@@ -2877,7 +2877,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_17.5.1_L1_Ensure_Audit_Account_Loc
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_17.5.2_L1_Ensure_Audit_Group_Membership_is_set_to_Success" do
+control "17.5.2_L1_Ensure_Audit_Group_Membership_is_set_to_Success" do
   title "(L1) Ensure 'Audit Group Membership' is set to 'Success'"
   desc  "
     This policy allows you to audit the group membership information in the user#x2019;s logon token. Events in this subcategory are generated on the computer on which a logon session is created. For an interactive logon, the security audit event is generated on the computer that the user logged on to. For a network logon, such as accessing a shared folder on the network, the security audit event is generated on the computer hosting the resource.
@@ -2891,7 +2891,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_17.5.2_L1_Ensure_Audit_Group_Membe
   impact 1.0
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_17.5.3_L1_Ensure_Audit_Logoff_is_set_to_Success" do
+control "17.5.3_L1_Ensure_Audit_Logoff_is_set_to_Success" do
   title "(L1) Ensure 'Audit Logoff' is set to 'Success'"
   desc  "
     This subcategory reports when a user logs off from the system. These events occur on the accessed computer. For interactive logons, the generation of these events occurs on the computer that is logged on to. If a network logon takes place to access a share, these events generate on the computer that hosts the accessed resource. If you configure this setting to No auditing, it is difficult or impossible to determine which user has accessed or attempted to access organization computers. Events for this subcategory include:
@@ -2909,7 +2909,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_17.5.3_L1_Ensure_Audit_Logoff_is_s
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_17.5.4_L1_Ensure_Audit_Logon_is_set_to_Success_and_Failure" do
+control "17.5.4_L1_Ensure_Audit_Logon_is_set_to_Success_and_Failure" do
   title "(L1) Ensure 'Audit Logon' is set to 'Success and Failure'"
   desc  "
     This subcategory reports when a user attempts to log on to the system. These events occur on the accessed computer. For interactive logons, the generation of these events occurs on the computer that is logged on to. If a network logon takes place to access a share, these events generate on the computer that hosts the accessed resource. If you configure this setting to No auditing, it is difficult or impossible to determine which user has accessed or attempted to access organization computers. Events for this subcategory include:
@@ -2929,7 +2929,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_17.5.4_L1_Ensure_Audit_Logon_is_se
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_17.5.5_L1_Ensure_Audit_Other_LogonLogoff_Events_is_set_to_Success_and_Failure" do
+control "17.5.5_L1_Ensure_Audit_Other_LogonLogoff_Events_is_set_to_Success_and_Failure" do
   title "(L1) Ensure 'Audit Other Logon/Logoff Events' is set to 'Success and Failure'"
   desc  "
     This subcategory reports other logon/logoff-related events, such as Terminal Services session disconnects and reconnects, using RunAs to run processes under a different account, and locking and unlocking a workstation. Events for this subcategory include:
@@ -2955,7 +2955,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_17.5.5_L1_Ensure_Audit_Other_Logon
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_17.5.6_L1_Ensure_Audit_Special_Logon_is_set_to_Success" do
+control "17.5.6_L1_Ensure_Audit_Special_Logon_is_set_to_Success" do
   title "(L1) Ensure 'Audit Special Logon' is set to 'Success'"
   desc  "
     This subcategory reports when a special logon is used. A special logon is a logon that has administrator-equivalent privileges and can be used to elevate a process to a higher level. Events for this subcategory include:
@@ -2972,7 +2972,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_17.5.6_L1_Ensure_Audit_Special_Log
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_17.6.1_L1_Ensure_Audit_Removable_Storage_is_set_to_Success_and_Failure" do
+control "17.6.1_L1_Ensure_Audit_Removable_Storage_is_set_to_Success_and_Failure" do
   title "(L1) Ensure 'Audit Removable Storage' is set to 'Success and Failure'"
   desc  "
     This policy setting allows you to audit user attempts to access file system objects on a removable storage device. A security audit event is generated only for all objects for all types of access requested. If you configure this policy setting, an audit event is generated each time an account accesses a file system object on a removable storage. Success audits record successful attempts and Failure audits record unsuccessful attempts. If you do not configure this policy setting, no audit event is generated when an account accesses a file system object on a removable storage.
@@ -2989,7 +2989,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_17.6.1_L1_Ensure_Audit_Removable_S
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_17.7.1_L1_Ensure_Audit_Audit_Policy_Change_is_set_to_Success_and_Failure" do
+control "17.7.1_L1_Ensure_Audit_Audit_Policy_Change_is_set_to_Success_and_Failure" do
   title "(L1) Ensure 'Audit Audit Policy Change' is set to 'Success and Failure'"
   desc  "
     This subcategory reports changes in audit policy including SACL changes. Events for this subcategory include:
@@ -3014,7 +3014,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_17.7.1_L1_Ensure_Audit_Audit_Polic
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_17.7.2_L1_Ensure_Audit_Authentication_Policy_Change_is_set_to_Success" do
+control "17.7.2_L1_Ensure_Audit_Authentication_Policy_Change_is_set_to_Success" do
   title "(L1) Ensure 'Audit Authentication Policy Change' is set to 'Success'"
   desc  "
     This subcategory reports changes in authentication policy. Events for this subcategory include:
@@ -3041,7 +3041,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_17.7.2_L1_Ensure_Audit_Authenticat
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_17.8.1_L1_Ensure_Audit_Sensitive_Privilege_Use_is_set_to_Success_and_Failure" do
+control "17.8.1_L1_Ensure_Audit_Sensitive_Privilege_Use_is_set_to_Success_and_Failure" do
   title "(L1) Ensure 'Audit Sensitive Privilege Use' is set to 'Success and Failure'"
   desc  "
     This subcategory reports when a user account or service uses a sensitive privilege. A sensitive privilege includes the following user rights: Act as part of the operating system, Back up files and directories, Create a token object, Debug programs, Enable computer and user accounts to be trusted for delegation, Generate security audits, Impersonate a client after authentication, Load and unload device drivers, Manage auditing and security log, Modify firmware environment values, Replace a process-level token, Restore files and directories, and Take ownership of files or other objects. Auditing this subcategory will create a high volume of events. Events for this subcategory include:
@@ -3060,7 +3060,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_17.8.1_L1_Ensure_Audit_Sensitive_P
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_17.9.1_L1_Ensure_Audit_IPsec_Driver_is_set_to_Success_and_Failure" do
+control "17.9.1_L1_Ensure_Audit_IPsec_Driver_is_set_to_Success_and_Failure" do
   title "(L1) Ensure 'Audit IPsec Driver' is set to 'Success and Failure'"
   desc  "
     This subcategory reports on the activities of the Internet Protocol security (IPsec) driver. Events for this subcategory include:
@@ -3087,7 +3087,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_17.9.1_L1_Ensure_Audit_IPsec_Drive
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_17.9.2_L1_Ensure_Audit_Other_System_Events_is_set_to_Success_and_Failure" do
+control "17.9.2_L1_Ensure_Audit_Other_System_Events_is_set_to_Success_and_Failure" do
   title "(L1) Ensure 'Audit Other System Events' is set to 'Success and Failure'"
   desc  "
     This subcategory reports on other system events. Events for this subcategory include:
@@ -3116,7 +3116,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_17.9.2_L1_Ensure_Audit_Other_Syste
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_17.9.3_L1_Ensure_Audit_Security_State_Change_is_set_to_Success" do
+control "17.9.3_L1_Ensure_Audit_Security_State_Change_is_set_to_Success" do
   title "(L1) Ensure 'Audit Security State Change' is set to 'Success'"
   desc  "
     This subcategory reports changes in security state of the system, such as when the security subsystem starts and stops. Events for this subcategory include:
@@ -3136,7 +3136,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_17.9.3_L1_Ensure_Audit_Security_St
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_17.9.4_L1_Ensure_Audit_Security_System_Extension_is_set_to_Success_and_Failure" do
+control "17.9.4_L1_Ensure_Audit_Security_System_Extension_is_set_to_Success_and_Failure" do
   title "(L1) Ensure 'Audit Security System Extension' is set to 'Success and Failure'"
   desc  "
     This subcategory reports the loading of extension code such as authentication packages by the security subsystem. Events for this subcategory include:
@@ -3157,7 +3157,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_17.9.4_L1_Ensure_Audit_Security_Sy
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_17.9.5_L1_Ensure_Audit_System_Integrity_is_set_to_Success_and_Failure" do
+control "17.9.5_L1_Ensure_Audit_System_Integrity_is_set_to_Success_and_Failure" do
   title "(L1) Ensure 'Audit System Integrity' is set to 'Success and Failure'"
   desc  "
     This subcategory reports on violations of integrity of the security subsystem. Events for this subcategory include:
@@ -3183,7 +3183,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_17.9.5_L1_Ensure_Audit_System_Inte
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.1.1.1_L1_Ensure_Prevent_enabling_lock_screen_camera_is_set_to_Enabled" do
+control "18.1.1.1_L1_Ensure_Prevent_enabling_lock_screen_camera_is_set_to_Enabled" do
   title "(L1) Ensure 'Prevent enabling lock screen camera' is set to 'Enabled'"
   desc  "
     Disables the lock screen camera toggle switch in PC Settings and prevents a camera from being invoked on the lock screen.
@@ -3200,7 +3200,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.1.1.1_L1_Ensure_Prevent_enablin
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.1.1.2_L1_Ensure_Prevent_enabling_lock_screen_slide_show_is_set_to_Enabled" do
+control "18.1.1.2_L1_Ensure_Prevent_enabling_lock_screen_slide_show_is_set_to_Enabled" do
   title "(L1) Ensure 'Prevent enabling lock screen slide show' is set to 'Enabled'"
   desc  "
     Disables the lock screen slide show settings in PC Settings and prevents a slide show from playing on the lock screen.
@@ -3217,7 +3217,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.1.1.2_L1_Ensure_Prevent_enablin
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.1.2.1_L1_Ensure_Allow_Input_Personalization_is_set_to_Disabled" do
+control "18.1.2.1_L1_Ensure_Allow_Input_Personalization_is_set_to_Disabled" do
   title "(L1) Ensure 'Allow Input Personalization' is set to 'Disabled'"
   desc  "
     This policy enables the automatic learning component of input personalization that includes speech, inking, and typing. Automatic learning enables the collection of speech and handwriting patterns, typing history, contacts, and recent calendar information. It is required for the use of Cortana. Some of this collected information may be stored on the user's OneDrive, in the case of inking and typing; some of the information will be uploaded to Microsoft to personalize speech.
@@ -3234,7 +3234,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.1.2.1_L1_Ensure_Allow_Input_Per
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.2.1_L1_Ensure_LAPS_AdmPwd_GPO_Extension__CSE_is_installed" do
+control "18.2.1_L1_Ensure_LAPS_AdmPwd_GPO_Extension__CSE_is_installed" do
   title "(L1) Ensure LAPS AdmPwd GPO Extension / CSE is installed"
   desc  "
     In May 2015, Microsoft released the Local Administrator Password Solution (LAPS) tool, which is free and supported software that allows an organization to automatically set randomized and unique local Administrator account passwords on domain-attached workstations and member servers. The passwords are stored in a confidential attribute of the domain computer account and can be retrieved from Active Directory by approved Sysadmins when needed.
@@ -3254,7 +3254,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.2.1_L1_Ensure_LAPS_AdmPwd_GPO_E
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.2.2_L1_Ensure_Do_not_allow_password_expiration_time_longer_than_required_by_policy_is_set_to_Enabled" do
+control "18.2.2_L1_Ensure_Do_not_allow_password_expiration_time_longer_than_required_by_policy_is_set_to_Enabled" do
   title "(L1) Ensure 'Do not allow password expiration time longer than required by policy' is set to 'Enabled'"
   desc  "
     In May 2015, Microsoft released the Local Administrator Password Solution (LAPS) tool, which is free and supported software that allows an organization to automatically set randomized and unique local Administrator account passwords on domain-attached workstations and member servers. The passwords are stored in a confidential attribute of the domain computer account and can be retrieved from Active Directory by approved Sysadmins when needed.
@@ -3276,7 +3276,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.2.2_L1_Ensure_Do_not_allow_pass
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.2.3_L1_Ensure_Enable_Local_Admin_Password_Management_is_set_to_Enabled" do
+control "18.2.3_L1_Ensure_Enable_Local_Admin_Password_Management_is_set_to_Enabled" do
   title "(L1) Ensure 'Enable Local Admin Password Management' is set to 'Enabled'"
   desc  "
     In May 2015, Microsoft released the Local Administrator Password Solution (LAPS) tool, which is free and supported software that allows an organization to automatically set randomized and unique local Administrator account passwords on domain-attached workstations and member servers. The passwords are stored in a confidential attribute of the domain computer account and can be retrieved from Active Directory by approved Sysadmins when needed.
@@ -3298,7 +3298,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.2.3_L1_Ensure_Enable_Local_Admi
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.2.4_L1_Ensure_Password_Settings_Password_Complexity_is_set_to_Enabled_Large_letters__small_letters__numbers__special_characters" do
+control "18.2.4_L1_Ensure_Password_Settings_Password_Complexity_is_set_to_Enabled_Large_letters__small_letters__numbers__special_characters" do
   title "(L1) Ensure 'Password Settings: Password Complexity' is set to 'Enabled: Large letters + small letters + numbers + special characters'"
   desc  "
     In May 2015, Microsoft released the Local Administrator Password Solution (LAPS) tool, which is free and supported software that allows an organization to automatically set randomized and unique local Administrator account passwords on domain-attached workstations and member servers. The passwords are stored in a confidential attribute of the domain computer account and can be retrieved from Active Directory by approved Sysadmins when needed.
@@ -3320,7 +3320,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.2.4_L1_Ensure_Password_Settings
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.2.5_L1_Ensure_Password_Settings_Password_Length_is_set_to_Enabled_15_or_more" do
+control "18.2.5_L1_Ensure_Password_Settings_Password_Length_is_set_to_Enabled_15_or_more" do
   title "(L1) Ensure 'Password Settings: Password Length' is set to 'Enabled: 15 or more'"
   desc  "
     In May 2015, Microsoft released the Local Administrator Password Solution (LAPS) tool, which is free and supported software that allows an organization to automatically set randomized and unique local Administrator account passwords on domain-attached workstations and member servers. The passwords are stored in a confidential attribute of the domain computer account and can be retrieved from Active Directory by approved Sysadmins when needed.
@@ -3342,7 +3342,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.2.5_L1_Ensure_Password_Settings
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.2.6_L1_Ensure_Password_Settings_Password_Age_Days_is_set_to_Enabled_30_or_fewer" do
+control "18.2.6_L1_Ensure_Password_Settings_Password_Age_Days_is_set_to_Enabled_30_or_fewer" do
   title "(L1) Ensure 'Password Settings: Password Age (Days)' is set to 'Enabled: 30 or fewer'"
   desc  "
     In May 2015, Microsoft released the Local Administrator Password Solution (LAPS) tool, which is free and supported software that allows an organization to automatically set randomized and unique local Administrator account passwords on domain-attached workstations and member servers. The passwords are stored in a confidential attribute of the domain computer account and can be retrieved from Active Directory by approved Sysadmins when needed.
@@ -3364,7 +3364,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.2.6_L1_Ensure_Password_Settings
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.3.1_L1_Ensure_MSS_AutoAdminLogon_Enable_Automatic_Logon_not_recommended_is_set_to_Disabled" do
+control "18.3.1_L1_Ensure_MSS_AutoAdminLogon_Enable_Automatic_Logon_not_recommended_is_set_to_Disabled" do
   title "(L1) Ensure 'MSS: (AutoAdminLogon) Enable Automatic Logon (not recommended)' is set to 'Disabled'"
   desc  "
     This setting is separate from the Welcome screen feature in Windows XP and Windows Vista; if that feature is disabled, this setting is not disabled. If you configure a computer for automatic logon, anyone who can physically gain access to the computer can also gain access to everything that is on the computer, including any network or networks to which the computer is connected. Also, if you enable automatic logon, the password is stored in the registry in plaintext, and the specific registry key that stores this value is remotely readable by the Authenticated Users group.
@@ -3383,7 +3383,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.3.1_L1_Ensure_MSS_AutoAdminLogo
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.3.2_L1_Ensure_MSS_DisableIPSourceRouting_IPv6_IP_source_routing_protection_level_protects_against_packet_spoofing_is_set_to_Enabled_Highest_protection_source_routing_is_completely_disabled" do
+control "18.3.2_L1_Ensure_MSS_DisableIPSourceRouting_IPv6_IP_source_routing_protection_level_protects_against_packet_spoofing_is_set_to_Enabled_Highest_protection_source_routing_is_completely_disabled" do
   title "(L1) Ensure 'MSS: (DisableIPSourceRouting IPv6) IP source routing protection level (protects against packet spoofing)' is set to 'Enabled: Highest protection, source routing is completely disabled'"
   desc  "
     IP source routing is a mechanism that allows the sender to determine the IP route that a datagram should follow through the network.
@@ -3400,7 +3400,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.3.2_L1_Ensure_MSS_DisableIPSour
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.3.3_L1_Ensure_MSS_DisableIPSourceRouting_IP_source_routing_protection_level_protects_against_packet_spoofing_is_set_to_Enabled_Highest_protection_source_routing_is_completely_disabled" do
+control "18.3.3_L1_Ensure_MSS_DisableIPSourceRouting_IP_source_routing_protection_level_protects_against_packet_spoofing_is_set_to_Enabled_Highest_protection_source_routing_is_completely_disabled" do
   title "(L1) Ensure 'MSS: (DisableIPSourceRouting) IP source routing protection level (protects against packet spoofing)' is set to 'Enabled: Highest protection, source routing is completely disabled'"
   desc  "
     IP source routing is a mechanism that allows the sender to determine the IP route that a datagram should take through the network. It is recommended to configure this setting to Not Defined for enterprise environments and to Highest Protection for high security environments to completely disable source routing.
@@ -3417,7 +3417,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.3.3_L1_Ensure_MSS_DisableIPSour
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.3.4_L2_Ensure_MSS_DisableSavePassword_Prevent_the_dial-up_password_from_being_saved_is_set_to_Enabled" do
+control "18.3.4_L2_Ensure_MSS_DisableSavePassword_Prevent_the_dial-up_password_from_being_saved_is_set_to_Enabled" do
   title "(L2) Ensure 'MSS: (DisableSavePassword) Prevent the dial-up password from being saved' is set to 'Enabled'"
   desc  "
     When you dial a phonebook or VPN entry in Dial-Up Networking, you can use the \"Save Password\" option so that your Dial-Up Networking password is cached and you will not need to enter it on successive dial attempts. For security, administrators may want to prevent users from caching passwords.
@@ -3433,7 +3433,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.3.4_L2_Ensure_MSS_DisableSavePa
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.3.5_L1_Ensure_MSS_EnableICMPRedirect_Allow_ICMP_redirects_to_override_OSPF_generated_routes_is_set_to_Disabled" do
+control "18.3.5_L1_Ensure_MSS_EnableICMPRedirect_Allow_ICMP_redirects_to_override_OSPF_generated_routes_is_set_to_Disabled" do
   title "(L1) Ensure 'MSS: (EnableICMPRedirect) Allow ICMP redirects to override OSPF generated routes' is set to 'Disabled'"
   desc  "
     Internet Control Message Protocol (ICMP) redirects cause the IPv4 stack to plumb host routes. These routes override the Open Shortest Path First (OSPF) generated routes.
@@ -3450,7 +3450,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.3.5_L1_Ensure_MSS_EnableICMPRed
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.3.6_L2_Ensure_MSS_KeepAliveTime_How_often_keep-alive_packets_are_sent_in_milliseconds_is_set_to_Enabled_300000_or_5_minutes_recommended" do
+control "18.3.6_L2_Ensure_MSS_KeepAliveTime_How_often_keep-alive_packets_are_sent_in_milliseconds_is_set_to_Enabled_300000_or_5_minutes_recommended" do
   title "(L2) Ensure 'MSS: (KeepAliveTime) How often keep-alive packets are sent in milliseconds' is set to 'Enabled: 300,000 or 5 minutes (recommended)'"
   desc  "
     This value controls how often TCP attempts to verify that an idle connection is still intact by sending a keep-alive packet. If the remote computer is still reachable, it acknowledges the keep-alive packet.
@@ -3467,7 +3467,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.3.6_L2_Ensure_MSS_KeepAliveTime
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.3.7_L1_Ensure_MSS_NoNameReleaseOnDemand_Allow_the_computer_to_ignore_NetBIOS_name_release_requests_except_from_WINS_servers_is_set_to_Enabled" do
+control "18.3.7_L1_Ensure_MSS_NoNameReleaseOnDemand_Allow_the_computer_to_ignore_NetBIOS_name_release_requests_except_from_WINS_servers_is_set_to_Enabled" do
   title "(L1) Ensure 'MSS: (NoNameReleaseOnDemand) Allow the computer to ignore NetBIOS name release requests except from WINS servers' is set to 'Enabled'"
   desc  "
     NetBIOS over TCP/IP is a network protocol that among other things provides a way to easily resolve NetBIOS names that are registered on Windows-based systems to the IP addresses that are configured on those systems. This setting determines whether the computer releases its NetBIOS name when it receives a name-release request.
@@ -3486,7 +3486,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.3.7_L1_Ensure_MSS_NoNameRelease
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.3.8_L2_Ensure_MSS_PerformRouterDiscovery_Allow_IRDP_to_detect_and_configure_Default_Gateway_addresses_could_lead_to_DoS_is_set_to_Disabled" do
+control "18.3.8_L2_Ensure_MSS_PerformRouterDiscovery_Allow_IRDP_to_detect_and_configure_Default_Gateway_addresses_could_lead_to_DoS_is_set_to_Disabled" do
   title "(L2) Ensure 'MSS: (PerformRouterDiscovery) Allow IRDP to detect and configure Default Gateway addresses (could lead to DoS)' is set to 'Disabled'"
   desc  "
     This setting is used to enable or disable the Internet Router Discovery Protocol (IRDP), which allows the system to detect and configure default gateway addresses automatically as described in RFC 1256 on a per-interface basis.
@@ -3503,7 +3503,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.3.8_L2_Ensure_MSS_PerformRouter
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.3.9_L1_Ensure_MSS_SafeDllSearchMode_Enable_Safe_DLL_search_mode_recommended_is_set_to_Enabled" do
+control "18.3.9_L1_Ensure_MSS_SafeDllSearchMode_Enable_Safe_DLL_search_mode_recommended_is_set_to_Enabled" do
   title "(L1) Ensure 'MSS: (SafeDllSearchMode) Enable Safe DLL search mode (recommended)' is set to 'Enabled'"
   desc  "
     The DLL search order can be configured to search for DLLs that are requested by running processes in one of two ways:
@@ -3524,7 +3524,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.3.9_L1_Ensure_MSS_SafeDllSearch
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.3.10_L1_Ensure_MSS_ScreenSaverGracePeriod_The_time_in_seconds_before_the_screen_saver_grace_period_expires_0_recommended_is_set_to_Enabled_5_or_fewer_seconds" do
+control "18.3.10_L1_Ensure_MSS_ScreenSaverGracePeriod_The_time_in_seconds_before_the_screen_saver_grace_period_expires_0_recommended_is_set_to_Enabled_5_or_fewer_seconds" do
   title "(L1) Ensure 'MSS: (ScreenSaverGracePeriod) The time in seconds before the screen saver grace period expires (0 recommended)' is set to 'Enabled: 5 or fewer seconds'"
   desc  "
     Windows includes a grace period between when the screen saver is launched and when the console is actually locked automatically when screen saver locking is enabled.
@@ -3541,7 +3541,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.3.10_L1_Ensure_MSS_ScreenSaverG
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.3.11_L2_Ensure_MSS_TcpMaxDataRetransmissions_IPv6_How_many_times_unacknowledged_data_is_retransmitted_is_set_to_Enabled_3" do
+control "18.3.11_L2_Ensure_MSS_TcpMaxDataRetransmissions_IPv6_How_many_times_unacknowledged_data_is_retransmitted_is_set_to_Enabled_3" do
   title "(L2) Ensure 'MSS: (TcpMaxDataRetransmissions IPv6) How many times unacknowledged data is retransmitted' is set to 'Enabled: 3'"
   desc  "
     This setting controls the number of times that TCP retransmits an individual data segment (non-connect segment) before the connection is aborted. The retransmission time-out is doubled with each successive retransmission on a connection. It is reset when responses resume. The base time-out value is dynamically determined by the measured round-trip time on the connection.
@@ -3558,7 +3558,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.3.11_L2_Ensure_MSS_TcpMaxDataRe
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.3.12_L2_Ensure_MSS_TcpMaxDataRetransmissions_How_many_times_unacknowledged_data_is_retransmitted_is_set_to_Enabled_3" do
+control "18.3.12_L2_Ensure_MSS_TcpMaxDataRetransmissions_How_many_times_unacknowledged_data_is_retransmitted_is_set_to_Enabled_3" do
   title "(L2) Ensure 'MSS: (TcpMaxDataRetransmissions) How many times unacknowledged data is retransmitted' is set to 'Enabled: 3'"
   desc  "
     This setting controls the number of times that TCP retransmits an individual data segment (non-connect segment) before the connection is aborted. The retransmission time-out is doubled with each successive retransmission on a connection. It is reset when responses resume. The base time-out value is dynamically determined by the measured round-trip time on the connection.
@@ -3575,7 +3575,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.3.12_L2_Ensure_MSS_TcpMaxDataRe
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.3.13_L1_Ensure_MSS_WarningLevel_Percentage_threshold_for_the_security_event_log_at_which_the_system_will_generate_a_warning_is_set_to_Enabled_90_or_less" do
+control "18.3.13_L1_Ensure_MSS_WarningLevel_Percentage_threshold_for_the_security_event_log_at_which_the_system_will_generate_a_warning_is_set_to_Enabled_90_or_less" do
   title "(L1) Ensure 'MSS: (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning' is set to 'Enabled: 90% or less'"
   desc  "
     This setting can generate a security audit in the Security event log when the log reaches a user-defined threshold.
@@ -3594,7 +3594,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.3.13_L1_Ensure_MSS_WarningLevel
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.4.7.1_L1_Ensure_Enable_insecure_guest_logons_is_set_to_Disabled" do
+control "18.4.7.1_L1_Ensure_Enable_insecure_guest_logons_is_set_to_Disabled" do
   title "(L1) Ensure 'Enable insecure guest logons' is set to 'Disabled'"
   desc  "
     This policy setting determines if the SMB client will allow insecure guest logons to an SMB server.
@@ -3610,7 +3610,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.4.7.1_L1_Ensure_Enable_insecure
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.4.8.1_L2_Ensure_Turn_on_Mapper_IO_LLTDIO_driver_is_set_to_Disabled" do
+control "18.4.8.1_L2_Ensure_Turn_on_Mapper_IO_LLTDIO_driver_is_set_to_Disabled" do
   title "(L2) Ensure 'Turn on Mapper I/O (LLTDIO) driver' is set to 'Disabled'"
   desc  "
     This policy setting changes the operational behavior of the Mapper I/O network protocol driver.
@@ -3641,7 +3641,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.4.8.1_L2_Ensure_Turn_on_Mapper_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.4.8.2_L2_Ensure_Turn_on_Responder_RSPNDR_driver_is_set_to_Disabled" do
+control "18.4.8.2_L2_Ensure_Turn_on_Responder_RSPNDR_driver_is_set_to_Disabled" do
   title "(L2) Ensure 'Turn on Responder (RSPNDR) driver' is set to 'Disabled'"
   desc  "
     This policy setting changes the operational behavior of the Responder network protocol driver.
@@ -3672,7 +3672,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.4.8.2_L2_Ensure_Turn_on_Respond
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.4.9.2_L2_Ensure_Turn_off_Microsoft_Peer-to-Peer_Networking_Services_is_set_to_Enabled" do
+control "18.4.9.2_L2_Ensure_Turn_off_Microsoft_Peer-to-Peer_Networking_Services_is_set_to_Enabled" do
   title "(L2) Ensure 'Turn off Microsoft Peer-to-Peer Networking Services' is set to 'Enabled'"
   desc  "
     The Peer Name Resolution Protocol (PNRP) allows for distributed resolution of a name to an IPV6 address and port number. The protocol operates in the context of **clouds**. A cloud is a set of peer computers that can communicate with each other by using the same IPv6 scope.
@@ -3691,7 +3691,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.4.9.2_L2_Ensure_Turn_off_Micros
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.4.10.2_L1_Ensure_Prohibit_installation_and_configuration_of_Network_Bridge_on_your_DNS_domain_network_is_set_to_Enabled" do
+control "18.4.10.2_L1_Ensure_Prohibit_installation_and_configuration_of_Network_Bridge_on_your_DNS_domain_network_is_set_to_Enabled" do
   title "(L1) Ensure 'Prohibit installation and configuration of Network Bridge on your DNS domain network' is set to 'Enabled'"
   desc  "
     You can use this procedure to enable or disable the user's ability to install and configure a network bridge.
@@ -3708,7 +3708,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.4.10.2_L1_Ensure_Prohibit_insta
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.4.10.3_L1_Ensure_Require_domain_users_to_elevate_when_setting_a_networks_location_is_set_to_Enabled" do
+control "18.4.10.3_L1_Ensure_Require_domain_users_to_elevate_when_setting_a_networks_location_is_set_to_Enabled" do
   title "(L1) Ensure 'Require domain users to elevate when setting a network's location' is set to 'Enabled'"
   desc  "
     This policy setting determines whether to require domain users to elevate when setting a network's location.
@@ -3725,7 +3725,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.4.10.3_L1_Ensure_Require_domain
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.4.13.1_L1_Ensure_Hardened_UNC_Paths_is_set_to_Enabled_with_Require_Mutual_Authentication_and_Require_Integrity_set_for_all_NETLOGON_and_SYSVOL_shares" do
+control "18.4.13.1_L1_Ensure_Hardened_UNC_Paths_is_set_to_Enabled_with_Require_Mutual_Authentication_and_Require_Integrity_set_for_all_NETLOGON_and_SYSVOL_shares" do
   title "(L1) Ensure 'Hardened UNC Paths' is set to 'Enabled, with \"Require Mutual Authentication\" and \"Require Integrity\" set for all NETLOGON and SYSVOL shares'"
   desc  "
     This policy setting configures secure access to UNC paths.
@@ -3755,7 +3755,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.4.13.1_L1_Ensure_Hardened_UNC_P
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.4.18.2.1_L2_Disable_IPv6_Ensure_TCPIP6_Parameter_DisabledComponents_is_set_to_0xff_255" do
+control "18.4.18.2.1_L2_Disable_IPv6_Ensure_TCPIP6_Parameter_DisabledComponents_is_set_to_0xff_255" do
   title "(L2) Disable IPv6 (Ensure TCPIP6 Parameter 'DisabledComponents' is set to '0xff (255)')"
   desc  "
     Internet Protocol version 6 (IPv6) is a set of protocols that computers use to exchange information over the Internet and over home and business networks. IPv6 allows for many more IP addresses to be assigned than IPv4 did. Older networking, hosts and operating systems may not support IPv6 natively.
@@ -3771,7 +3771,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.4.18.2.1_L2_Disable_IPv6_Ensure
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.4.19.1_L2_Ensure_Configuration_of_wireless_settings_using_Windows_Connect_Now_is_set_to_Disabled" do
+control "18.4.19.1_L2_Ensure_Configuration_of_wireless_settings_using_Windows_Connect_Now_is_set_to_Disabled" do
   title "(L2) Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled'"
   desc  "
     This policy setting allows the configuration of wireless settings using Windows Connect Now (WCN). The WCN Registrar enables the discovery and configuration of devices over Ethernet (UPnP) over In-band 802.11 Wi-Fi through the Windows Portable Device API (WPD) and via USB Flash drives. Additional options are available to allow discovery and configuration over a specific medium.
@@ -3804,7 +3804,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.4.19.1_L2_Ensure_Configuration_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.4.19.2_L2_Ensure_Prohibit_access_of_the_Windows_Connect_Now_wizards_is_set_to_Enabled" do
+control "18.4.19.2_L2_Ensure_Prohibit_access_of_the_Windows_Connect_Now_wizards_is_set_to_Enabled" do
   title "(L2) Ensure 'Prohibit access of the Windows Connect Now wizards' is set to 'Enabled'"
   desc  "
     This policy setting prohibits access to Windows Connect Now (WCN) wizards.
@@ -3821,7 +3821,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.4.19.2_L2_Ensure_Prohibit_acces
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.4.20.1_L1_Ensure_Minimize_the_number_of_simultaneous_connections_to_the_Internet_or_a_Windows_Domain_is_set_to_Enabled" do
+control "18.4.20.1_L1_Ensure_Minimize_the_number_of_simultaneous_connections_to_the_Internet_or_a_Windows_Domain_is_set_to_Enabled" do
   title "(L1) Ensure 'Minimize the number of simultaneous connections to the Internet or a Windows Domain' is set to 'Enabled'"
   desc  "
     This policy setting prevents computers from establishing multiple simultaneous connections to either the Internet or to a Windows domain.
@@ -3838,7 +3838,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.4.20.1_L1_Ensure_Minimize_the_n
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.4.20.2_L1_Ensure_Prohibit_connection_to_non-domain_networks_when_connected_to_domain_authenticated_network_is_set_to_Enabled" do
+control "18.4.20.2_L1_Ensure_Prohibit_connection_to_non-domain_networks_when_connected_to_domain_authenticated_network_is_set_to_Enabled" do
   title "(L1) Ensure 'Prohibit connection to non-domain networks when connected to domain authenticated network' is set to 'Enabled'"
   desc  "
     This policy setting prevents computers from connecting to both a domain based network and a non-domain based network at the same time.
@@ -3855,7 +3855,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.4.20.2_L1_Ensure_Prohibit_conne
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.4.22.2.1_L1_Ensure_Allow_Windows_to_automatically_connect_to_suggested_open_hotspots_to_networks_shared_by_contacts_and_to_hotspots_offering_paid_services_is_set_to_Disabled" do
+control "18.4.22.2.1_L1_Ensure_Allow_Windows_to_automatically_connect_to_suggested_open_hotspots_to_networks_shared_by_contacts_and_to_hotspots_offering_paid_services_is_set_to_Disabled" do
   title "(L1) Ensure 'Allow Windows to automatically connect to suggested open hotspots, to networks shared by contacts, and to hotspots offering paid services' is set to 'Disabled'"
   desc  "
     This policy setting determines whether users can enable the following WLAN settings: \"Connect to suggested open hotspots,\" \"Connect to networks shared by my contacts,\" and \"Enable paid services\".
@@ -3880,7 +3880,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.4.22.2.1_L1_Ensure_Allow_Window
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.6.1_L1_Ensure_Apply_UAC_restrictions_to_local_accounts_on_network_logons_is_set_to_Enabled" do
+control "18.6.1_L1_Ensure_Apply_UAC_restrictions_to_local_accounts_on_network_logons_is_set_to_Enabled" do
   title "(L1) Ensure 'Apply UAC restrictions to local accounts on network logons' is set to 'Enabled'"
   desc  "
     This setting controls whether local accounts can be used for remote administration via network logon (e.g., NET USE, connecting to C$, etc.). Local accounts are at high risk for credential theft when the same account and password is configured on multiple systems. Enabling this policy significantly reduces that risk.
@@ -3905,7 +3905,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.6.1_L1_Ensure_Apply_UAC_restric
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.6.2_L1_Ensure_WDigest_Authentication_is_set_to_Disabled" do
+control "18.6.2_L1_Ensure_WDigest_Authentication_is_set_to_Disabled" do
   title "(L1) Ensure 'WDigest Authentication' is set to 'Disabled'"
   desc  "
     When WDigest authentication is enabled, Lsass.exe retains a copy of the user's plaintext password in memory, where it can be at risk of theft. If this setting is not configured, WDigest authentication is disabled in Windows 8.1 and in Windows Server 2012 R2; it is enabled by default in earlier versions of Windows and Windows Server.
@@ -3926,7 +3926,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.6.2_L1_Ensure_WDigest_Authentic
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.2.1_L1_Ensure_Include_command_line_in_process_creation_events_is_set_to_Disabled" do
+control "18.8.2.1_L1_Ensure_Include_command_line_in_process_creation_events_is_set_to_Disabled" do
   title "(L1) Ensure 'Include command line in process creation events' is set to 'Disabled'"
   desc  "
     This policy setting determines what information is logged in security audit events when a new process has been created.
@@ -3943,7 +3943,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.2.1_L1_Ensure_Include_command
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.11.1_L1_Ensure_Boot-Start_Driver_Initialization_Policy_is_set_to_Enabled_Good_unknown_and_bad_but_critical" do
+control "18.8.11.1_L1_Ensure_Boot-Start_Driver_Initialization_Policy_is_set_to_Enabled_Good_unknown_and_bad_but_critical" do
   title "(L1) Ensure 'Boot-Start Driver Initialization Policy' is set to 'Enabled: Good, unknown and bad but critical'"
   desc  "
     This policy setting allows you to specify which boot-start drivers are initialized based on a classification determined by an Early Launch Antimalware boot-start driver. The Early Launch Antimalware boot-start driver can return the following classifications for each boot-start driver:
@@ -3970,7 +3970,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.11.1_L1_Ensure_Boot-Start_Dri
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.18.2_L1_Ensure_Configure_registry_policy_processing_Do_not_apply_during_periodic_background_processing_is_set_to_Enabled_FALSE" do
+control "18.8.18.2_L1_Ensure_Configure_registry_policy_processing_Do_not_apply_during_periodic_background_processing_is_set_to_Enabled_FALSE" do
   title "(L1) Ensure 'Configure registry policy processing: Do not apply during periodic background processing' is set to 'Enabled: FALSE'"
   desc  "
     The \"Do not apply during periodic background processing\" option prevents the system from updating affected policies in the background while the computer is in use. When background updates are disabled, policy changes will not take effect until the next user logon or system restart.
@@ -3987,7 +3987,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.18.2_L1_Ensure_Configure_regi
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.18.3_L1_Ensure_Configure_registry_policy_processing_Process_even_if_the_Group_Policy_objects_have_not_changed_is_set_to_Enabled_TRUE" do
+control "18.8.18.3_L1_Ensure_Configure_registry_policy_processing_Process_even_if_the_Group_Policy_objects_have_not_changed_is_set_to_Enabled_TRUE" do
   title "(L1) Ensure 'Configure registry policy processing: Process even if the Group Policy objects have not changed' is set to 'Enabled: TRUE'"
   desc  "
     The \"Process even if the Group Policy objects have not changed\" option updates and reapplies policies even if the policies have not changed.
@@ -4004,7 +4004,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.18.3_L1_Ensure_Configure_regi
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.18.4_L1_Ensure_Turn_off_background_refresh_of_Group_Policy_is_set_to_Disabled" do
+control "18.8.18.4_L1_Ensure_Turn_off_background_refresh_of_Group_Policy_is_set_to_Disabled" do
   title "(L1) Ensure 'Turn off background refresh of Group Policy' is set to 'Disabled'"
   desc  "
     This policy setting prevents Group Policy from being updated while the computer is in use. This policy setting applies to Group Policy for computers, users and domain controllers.
@@ -4020,7 +4020,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.18.4_L1_Ensure_Turn_off_backg
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.19.1.1_L2_Ensure_Turn_off_access_to_the_Store_is_set_to_Enabled" do
+control "18.8.19.1.1_L2_Ensure_Turn_off_access_to_the_Store_is_set_to_Enabled" do
   title "(L2) Ensure 'Turn off access to the Store' is set to 'Enabled'"
   desc  "
     This policy setting specifies whether to use the Store service for finding an application to open a file with an unhandled file type or protocol association. When a user opens a file type or protocol that is not associated with any applications on the computer, the user is given the choice to select a local application or use the Store service to find an application.
@@ -4037,7 +4037,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.19.1.1_L2_Ensure_Turn_off_acc
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.19.1.2_L2_Ensure_Turn_off_downloading_of_print_drivers_over_HTTP_is_set_to_Enabled" do
+control "18.8.19.1.2_L2_Ensure_Turn_off_downloading_of_print_drivers_over_HTTP_is_set_to_Enabled" do
   title "(L2) Ensure 'Turn off downloading of print drivers over HTTP' is set to 'Enabled'"
   desc  "
     This policy setting controls whether the computer can download print driver packages over HTTP. To set up HTTP printing, printer drivers that are not available in the standard operating system installation might need to be downloaded over HTTP.
@@ -4054,7 +4054,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.19.1.2_L2_Ensure_Turn_off_dow
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.19.1.3_L2_Ensure_Turn_off_handwriting_personalization_data_sharing_is_set_to_Enabled" do
+control "18.8.19.1.3_L2_Ensure_Turn_off_handwriting_personalization_data_sharing_is_set_to_Enabled" do
   title "(L2) Ensure 'Turn off handwriting personalization data sharing' is set to 'Enabled'"
   desc  "
     This setting turns off data sharing from the handwriting recognition personalization tool.
@@ -4073,7 +4073,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.19.1.3_L2_Ensure_Turn_off_han
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.19.1.4_L2_Ensure_Turn_off_handwriting_recognition_error_reporting_is_set_to_Enabled" do
+control "18.8.19.1.4_L2_Ensure_Turn_off_handwriting_recognition_error_reporting_is_set_to_Enabled" do
   title "(L2) Ensure 'Turn off handwriting recognition error reporting' is set to 'Enabled'"
   desc  "
     Turns off the handwriting recognition error reporting tool.
@@ -4092,7 +4092,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.19.1.4_L2_Ensure_Turn_off_han
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.19.1.5_L2_Ensure_Turn_off_Internet_Connection_Wizard_if_URL_connection_is_referring_to_Microsoft.com_is_set_to_Enabled" do
+control "18.8.19.1.5_L2_Ensure_Turn_off_Internet_Connection_Wizard_if_URL_connection_is_referring_to_Microsoft.com_is_set_to_Enabled" do
   title "(L2) Ensure 'Turn off Internet Connection Wizard if URL connection is referring to Microsoft.com' is set to 'Enabled'"
   desc  "
     This policy setting specifies whether the Internet Connection Wizard can connect to Microsoft to download a list of Internet Service Providers (ISPs).
@@ -4109,7 +4109,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.19.1.5_L2_Ensure_Turn_off_Int
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.19.1.6_L2_Ensure_Turn_off_Internet_download_for_Web_publishing_and_online_ordering_wizards_is_set_to_Enabled" do
+control "18.8.19.1.6_L2_Ensure_Turn_off_Internet_download_for_Web_publishing_and_online_ordering_wizards_is_set_to_Enabled" do
   title "(L2) Ensure 'Turn off Internet download for Web publishing and online ordering wizards' is set to 'Enabled'"
   desc  "
     This policy setting controls whether Windows will download a list of providers for the Web publishing and online ordering wizards.
@@ -4126,7 +4126,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.19.1.6_L2_Ensure_Turn_off_Int
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.19.1.7_L2_Ensure_Turn_off_printing_over_HTTP_is_set_to_Enabled" do
+control "18.8.19.1.7_L2_Ensure_Turn_off_printing_over_HTTP_is_set_to_Enabled" do
   title "(L2) Ensure 'Turn off printing over HTTP' is set to 'Enabled'"
   desc  "
     This policy setting allows you to disable the client computer's ability to print over HTTP, which allows the computer to print to printers on the intranet as well as the Internet.
@@ -4143,7 +4143,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.19.1.7_L2_Ensure_Turn_off_pri
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.19.1.8_L2_Ensure_Turn_off_Registration_if_URL_connection_is_referring_to_Microsoft.com_is_set_to_Enabled" do
+control "18.8.19.1.8_L2_Ensure_Turn_off_Registration_if_URL_connection_is_referring_to_Microsoft.com_is_set_to_Enabled" do
   title "(L2) Ensure 'Turn off Registration if URL connection is referring to Microsoft.com' is set to 'Enabled'"
   desc  "
     This policy setting specifies whether the Windows Registration Wizard connects to Microsoft.com for online registration.
@@ -4160,7 +4160,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.19.1.8_L2_Ensure_Turn_off_Reg
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.19.1.9_L2_Ensure_Turn_off_Search_Companion_content_file_updates_is_set_to_Enabled" do
+control "18.8.19.1.9_L2_Ensure_Turn_off_Search_Companion_content_file_updates_is_set_to_Enabled" do
   title "(L2) Ensure 'Turn off Search Companion content file updates' is set to 'Enabled'"
   desc  "
     This policy setting specifies whether Search Companion should automatically download content updates during local and Internet searches.
@@ -4177,7 +4177,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.19.1.9_L2_Ensure_Turn_off_Sea
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.19.1.10_L2_Ensure_Turn_off_the_Order_Prints_picture_task_is_set_to_Enabled" do
+control "18.8.19.1.10_L2_Ensure_Turn_off_the_Order_Prints_picture_task_is_set_to_Enabled" do
   title "(L2) Ensure 'Turn off the \"Order Prints\" picture task' is set to 'Enabled'"
   desc  "
     This policy setting specifies whether the \"Order Prints Online\" task is available from Picture Tasks in Windows folders.
@@ -4196,7 +4196,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.19.1.10_L2_Ensure_Turn_off_th
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.19.1.11_L2_Ensure_Turn_off_the_Publish_to_Web_task_for_files_and_folders_is_set_to_Enabled" do
+control "18.8.19.1.11_L2_Ensure_Turn_off_the_Publish_to_Web_task_for_files_and_folders_is_set_to_Enabled" do
   title "(L2) Ensure 'Turn off the \"Publish to Web\" task for files and folders' is set to 'Enabled'"
   desc  "
     This policy setting specifies whether the tasks Publish this file to the Web, Publish this folder to the Web, and Publish the selected items to the Web are available from File and Folder Tasks in Windows folders.
@@ -4213,7 +4213,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.19.1.11_L2_Ensure_Turn_off_th
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.19.1.12_L2_Ensure_Turn_off_the_Windows_Messenger_Customer_Experience_Improvement_Program_is_set_to_Enabled" do
+control "18.8.19.1.12_L2_Ensure_Turn_off_the_Windows_Messenger_Customer_Experience_Improvement_Program_is_set_to_Enabled" do
   title "(L2) Ensure 'Turn off the Windows Messenger Customer Experience Improvement Program' is set to 'Enabled'"
   desc  "
     This policy setting specifies whether Windows Messenger can collect anonymous information about how the Windows Messenger software and service is used.
@@ -4230,7 +4230,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.19.1.12_L2_Ensure_Turn_off_th
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.19.1.13_L2_Ensure_Turn_off_Windows_Customer_Experience_Improvement_Program_is_set_to_Enabled" do
+control "18.8.19.1.13_L2_Ensure_Turn_off_Windows_Customer_Experience_Improvement_Program_is_set_to_Enabled" do
   title "(L2) Ensure 'Turn off Windows Customer Experience Improvement Program' is set to 'Enabled'"
   desc  "
     This policy setting specifies whether Windows Messenger can collect anonymous information about how the Windows Messenger software and service is used.
@@ -4247,7 +4247,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.19.1.13_L2_Ensure_Turn_off_Wi
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.19.1.14_L2_Ensure_Turn_off_Windows_Error_Reporting_is_set_to_Enabled" do
+control "18.8.19.1.14_L2_Ensure_Turn_off_Windows_Error_Reporting_is_set_to_Enabled" do
   title "(L2) Ensure 'Turn off Windows Error Reporting' is set to 'Enabled'"
   desc  "
     This policy setting controls whether or not errors are reported to Microsoft.
@@ -4266,7 +4266,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.19.1.14_L2_Ensure_Turn_off_Wi
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.22.1_L2_Ensure_Support_device_authentication_using_certificate_is_set_to_Enabled_Automatic" do
+control "18.8.22.1_L2_Ensure_Support_device_authentication_using_certificate_is_set_to_Enabled_Automatic" do
   title "(L2) Ensure 'Support device authentication using certificate' is set to 'Enabled: Automatic'"
   desc  "
     This policy setting allows you to set support for Kerberos to attempt authentication using the certificate for the device to the domain.
@@ -4289,7 +4289,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.22.1_L2_Ensure_Support_device
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.23.1_L2_Ensure_Disallow_copying_of_user_input_methods_to_the_system_account_for_sign-in_is_set_to_Enabled" do
+control "18.8.23.1_L2_Ensure_Disallow_copying_of_user_input_methods_to_the_system_account_for_sign-in_is_set_to_Enabled" do
   title "(L2) Ensure 'Disallow copying of user input methods to the system account for sign-in' is set to 'Enabled'"
   desc  "
     This policy prevents automatic copying of user input methods to the system account for use on the sign-in screen. The user is restricted to the set of input methods that are enabled in the system account.
@@ -4306,7 +4306,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.23.1_L2_Ensure_Disallow_copyi
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.24.1_L1_Ensure_Do_not_display_network_selection_UI_is_set_to_Enabled" do
+control "18.8.24.1_L1_Ensure_Do_not_display_network_selection_UI_is_set_to_Enabled" do
   title "(L1) Ensure 'Do not display network selection UI' is set to 'Enabled'"
   desc  "
     This policy setting allows you to control whether anyone can interact with available networks UI on the logon screen.
@@ -4323,7 +4323,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.24.1_L1_Ensure_Do_not_display
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.24.2_L1_Ensure_Do_not_enumerate_connected_users_on_domain-joined_computers_is_set_to_Enabled" do
+control "18.8.24.2_L1_Ensure_Do_not_enumerate_connected_users_on_domain-joined_computers_is_set_to_Enabled" do
   title "(L1) Ensure 'Do not enumerate connected users on domain-joined computers' is set to 'Enabled'"
   desc  "
     This policy setting prevents connected users from being enumerated on domain-joined computers.
@@ -4344,7 +4344,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.24.2_L1_Ensure_Do_not_enumera
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.24.3_L1_Ensure_Enumerate_local_users_on_domain-joined_computers_is_set_to_Disabled" do
+control "18.8.24.3_L1_Ensure_Enumerate_local_users_on_domain-joined_computers_is_set_to_Disabled" do
   title "(L1) Ensure 'Enumerate local users on domain-joined computers' is set to 'Disabled'"
   desc  "
     This policy setting allows local users to be enumerated on domain-joined computers.
@@ -4365,7 +4365,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.24.3_L1_Ensure_Enumerate_loca
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.24.4_L1_Ensure_Turn_off_app_notifications_on_the_lock_screen_is_set_to_Enabled" do
+control "18.8.24.4_L1_Ensure_Turn_off_app_notifications_on_the_lock_screen_is_set_to_Enabled" do
   title "(L1) Ensure 'Turn off app notifications on the lock screen' is set to 'Enabled'"
   desc  "
     This policy setting allows you to prevent app notifications from appearing on the lock screen.
@@ -4386,7 +4386,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.24.4_L1_Ensure_Turn_off_app_n
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.24.5_L1_Ensure_Turn_on_convenience_PIN_sign-in_is_set_to_Disabled" do
+control "18.8.24.5_L1_Ensure_Turn_on_convenience_PIN_sign-in_is_set_to_Disabled" do
   title "(L1) Ensure 'Turn on convenience PIN sign-in' is set to 'Disabled'"
   desc  "
     This policy setting allows you to control whether a domain user can sign in using a convenience PIN. In Windows 10, convenience PIN was replaced with Passport, which has stronger security properties. To configure Passport for domain users, use the policies under Computer configuration\\Administrative Templates\\Windows Components\\Microsoft Passport for Work.
@@ -4409,7 +4409,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.24.5_L1_Ensure_Turn_on_conven
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.25.1_L1_Ensure_Untrusted_Font_Blocking_is_set_to_Enabled_Block_untrusted_fonts_and_log_events" do
+control "18.8.25.1_L1_Ensure_Untrusted_Font_Blocking_is_set_to_Enabled_Block_untrusted_fonts_and_log_events" do
   title "(L1) Ensure 'Untrusted Font Blocking' is set to 'Enabled: Block untrusted fonts and log events'"
   desc  "
     This security feature provides a global setting to prevent programs from loading untrusted fonts. Untrusted fonts are any font installed outside of the %windir%\\Fonts directory. This feature can be configured to be in 3 modes: On, Off, and Audit.
@@ -4426,7 +4426,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.25.1_L1_Ensure_Untrusted_Font
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.28.4.3_L1_Ensure_Require_a_password_when_a_computer_wakes_on_battery_is_set_to_Enabled" do
+control "18.8.28.4.3_L1_Ensure_Require_a_password_when_a_computer_wakes_on_battery_is_set_to_Enabled" do
   title "(L1) Ensure 'Require a password when a computer wakes (on battery)' is set to 'Enabled'"
   desc  "
     Specifies whether or not the user is prompted for a password when the system resumes from sleep.
@@ -4443,7 +4443,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.28.4.3_L1_Ensure_Require_a_pa
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.28.4.4_L1_Ensure_Require_a_password_when_a_computer_wakes_plugged_in_is_set_to_Enabled" do
+control "18.8.28.4.4_L1_Ensure_Require_a_password_when_a_computer_wakes_plugged_in_is_set_to_Enabled" do
   title "(L1) Ensure 'Require a password when a computer wakes (plugged in)' is set to 'Enabled'"
   desc  "
     Specifies whether or not the user is prompted for a password when the system resumes from sleep.
@@ -4460,7 +4460,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.28.4.4_L1_Ensure_Require_a_pa
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.30.1_L1_Ensure_Configure_Offer_Remote_Assistance_is_set_to_Disabled" do
+control "18.8.30.1_L1_Ensure_Configure_Offer_Remote_Assistance_is_set_to_Disabled" do
   title "(L1) Ensure 'Configure Offer Remote Assistance' is set to 'Disabled'"
   desc  "
     This policy setting allows you to turn on or turn off Offer (Unsolicited) Remote Assistance on this computer.
@@ -4510,7 +4510,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.30.1_L1_Ensure_Configure_Offe
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.30.2_L1_Ensure_Configure_Solicited_Remote_Assistance_is_set_to_Disabled" do
+control "18.8.30.2_L1_Ensure_Configure_Solicited_Remote_Assistance_is_set_to_Disabled" do
   title "(L1) Ensure 'Configure Solicited Remote Assistance' is set to 'Disabled'"
   desc  "
     This policy setting allows you to turn on or turn off Solicited (Ask for) Remote Assistance on this computer.
@@ -4541,7 +4541,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.30.2_L1_Ensure_Configure_Soli
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.31.1_L1_Ensure_Enable_RPC_Endpoint_Mapper_Client_Authentication_is_set_to_Enabled" do
+control "18.8.31.1_L1_Ensure_Enable_RPC_Endpoint_Mapper_Client_Authentication_is_set_to_Enabled" do
   title "(L1) Ensure 'Enable RPC Endpoint Mapper Client Authentication' is set to 'Enabled'"
   desc  "
     This policy setting controls whether RPC clients authenticate with the Endpoint Mapper Service when the call they are making contains authentication information. The Endpoint Mapper Service on computers running Windows NT4 (all service packs) cannot process authentication information supplied in this manner.
@@ -4566,7 +4566,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.31.1_L1_Ensure_Enable_RPC_End
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.31.2_L1_Ensure_Restrict_Unauthenticated_RPC_clients_is_set_to_Enabled_Authenticated" do
+control "18.8.31.2_L1_Ensure_Restrict_Unauthenticated_RPC_clients_is_set_to_Enabled_Authenticated" do
   title "(L1) Ensure 'Restrict Unauthenticated RPC clients' is set to 'Enabled: Authenticated'"
   desc  "
     This policy setting controls how the RPC server runtime handles unauthenticated RPC clients connecting to RPC servers.
@@ -4597,7 +4597,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.31.2_L1_Ensure_Restrict_Unaut
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.38.5.1_L2_Ensure_Microsoft_Support_Diagnostic_Tool_Turn_on_MSDT_interactive_communication_with_support_provider_is_set_to_Disabled" do
+control "18.8.38.5.1_L2_Ensure_Microsoft_Support_Diagnostic_Tool_Turn_on_MSDT_interactive_communication_with_support_provider_is_set_to_Disabled" do
   title "(L2) Ensure 'Microsoft Support Diagnostic Tool: Turn on MSDT interactive communication with support provider' is set to 'Disabled'"
   desc  "
     This policy setting configures Microsoft Support Diagnostic Tool (MSDT) interactive communication with the support provider. MSDT gathers diagnostic data for analysis by support professionals.
@@ -4614,7 +4614,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.38.5.1_L2_Ensure_Microsoft_Su
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.38.11.1_L2_Ensure_EnableDisable_PerfTrack_is_set_to_Disabled" do
+control "18.8.38.11.1_L2_Ensure_EnableDisable_PerfTrack_is_set_to_Disabled" do
   title "(L2) Ensure 'Enable/Disable PerfTrack' is set to 'Disabled'"
   desc  "
     This policy setting specifies whether to enable or disable tracking of responsiveness events.
@@ -4631,7 +4631,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.38.11.1_L2_Ensure_EnableDisab
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.43.1.1_L2_Ensure_Enable_Windows_NTP_Client_is_set_to_Enabled" do
+control "18.8.43.1.1_L2_Ensure_Enable_Windows_NTP_Client_is_set_to_Enabled" do
   title "(L2) Ensure 'Enable Windows NTP Client' is set to 'Enabled'"
   desc  "
     This policy setting specifies whether the Windows NTP Client is enabled. Enabling the Windows NTP Client allows your computer to synchronize its computer clock with other NTP servers. You might want to disable this service if you decide to use a third-party time provider.
@@ -4648,7 +4648,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.43.1.1_L2_Ensure_Enable_Windo
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.8.43.1.2_L2_Ensure_Enable_Windows_NTP_Server_is_set_to_Disabled" do
+control "18.8.43.1.2_L2_Ensure_Enable_Windows_NTP_Server_is_set_to_Disabled" do
   title "(L2) Ensure 'Enable Windows NTP Server' is set to 'Disabled'"
   desc  "
     This policy setting allows you to specify whether the Windows NTP Server is enabled.
@@ -4665,7 +4665,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.8.43.1.2_L2_Ensure_Enable_Windo
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.4.1_L2_Ensure_Allow_a_Windows_app_to_share_application_data_between_users_is_set_to_Disabled" do
+control "18.9.4.1_L2_Ensure_Allow_a_Windows_app_to_share_application_data_between_users_is_set_to_Disabled" do
   title "(L2) Ensure 'Allow a Windows app to share application data between users' is set to 'Disabled'"
   desc  "
     Manages a Windows app's ability to share data between users who have installed the app. If you enable this policy, a Windows app can share app data with other instances of that app. Data is shared through the SharedLocal folder. This folder is available through the Windows.Storage API.
@@ -4682,7 +4682,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.4.1_L2_Ensure_Allow_a_Windows
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.5.1_L2_Ensure_Let_Windows_apps__is_set_to_Enabled_Force_Deny" do
+control "18.9.5.1_L2_Ensure_Let_Windows_apps__is_set_to_Enabled_Force_Deny" do
   title "(L2) Ensure 'Let Windows apps *' is set to 'Enabled: Force Deny'"
   desc  "
     These policy settings specify whether Windows apps can access personal data, resources or other applications. The following 13 settings are in scope:
@@ -4759,7 +4759,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.5.1_L2_Ensure_Let_Windows_app
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.6.1_L1_Ensure_Allow_Microsoft_accounts_to_be_optional_is_set_to_Enabled" do
+control "18.9.6.1_L1_Ensure_Allow_Microsoft_accounts_to_be_optional_is_set_to_Enabled" do
   title "(L1) Ensure 'Allow Microsoft accounts to be optional' is set to 'Enabled'"
   desc  "
     This policy setting lets you control whether Microsoft accounts are optional for Windows Store apps that require an account to sign in. This policy only affects Windows Store apps that support it. If you enable this policy setting, Windows Store apps that typically require a Microsoft account to sign in will allow users to sign in with an enterprise account instead. If you disable or do not configure this policy setting, users will need to sign in with a Microsoft account.
@@ -4776,7 +4776,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.6.1_L1_Ensure_Allow_Microsoft
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.6.2_L2_Ensure_Block_launching_Windows_Store_apps_with_Windows_Runtime_API_access_from_hosted_content._is_set_to_Enabled" do
+control "18.9.6.2_L2_Ensure_Block_launching_Windows_Store_apps_with_Windows_Runtime_API_access_from_hosted_content._is_set_to_Enabled" do
   title "(L2) Ensure 'Block launching Windows Store apps with Windows Runtime API access from hosted content.' is set to 'Enabled'"
   desc  "
     This policy setting controls whether Windows Store apps with Windows Runtime API access directly from web content can be launched.
@@ -4793,7 +4793,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.6.2_L2_Ensure_Block_launching
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.8.1_L1_Ensure_Disallow_Autoplay_for_non-volume_devices_is_set_to_Enabled" do
+control "18.9.8.1_L1_Ensure_Disallow_Autoplay_for_non-volume_devices_is_set_to_Enabled" do
   title "(L1) Ensure 'Disallow Autoplay for non-volume devices' is set to 'Enabled'"
   desc  "
     This policy setting disallows AutoPlay for MTP devices like cameras or phones.
@@ -4810,7 +4810,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.8.1_L1_Ensure_Disallow_Autopl
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.8.2_L1_Ensure_Set_the_default_behavior_for_AutoRun_is_set_to_Enabled_Do_not_execute_any_autorun_commands" do
+control "18.9.8.2_L1_Ensure_Set_the_default_behavior_for_AutoRun_is_set_to_Enabled_Do_not_execute_any_autorun_commands" do
   title "(L1) Ensure 'Set the default behavior for AutoRun' is set to 'Enabled: Do not execute any autorun commands'"
   desc  "
     This policy setting sets the default behavior for Autorun commands. Autorun commands are generally stored in autorun.inf files. They often launch the installation program or other routines.
@@ -4827,7 +4827,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.8.2_L1_Ensure_Set_the_default
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.8.3_L1_Ensure_Turn_off_Autoplay_is_set_to_Enabled_All_drives" do
+control "18.9.8.3_L1_Ensure_Turn_off_Autoplay_is_set_to_Enabled_All_drives" do
   title "(L1) Ensure 'Turn off Autoplay' is set to 'Enabled: All drives'"
   desc  "
     Autoplay starts to read from a drive as soon as you insert media in the drive, which causes the setup file for programs or audio media to start immediately. An attacker could use this feature to launch a program to damage the computer or data on the computer. You can enable the Turn off Autoplay setting to disable the Autoplay feature. Autoplay is disabled by default on some removable drive types, such as floppy disk and network drives, but not on CD-ROM drives.
@@ -4846,7 +4846,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.8.3_L1_Ensure_Turn_off_Autopl
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.10.1.1_L1_Ensure_Use_enhanced_anti-spoofing_when_available_is_set_to_Enabled" do
+control "18.9.10.1.1_L1_Ensure_Use_enhanced_anti-spoofing_when_available_is_set_to_Enabled" do
   title "(L1) Ensure 'Use enhanced anti-spoofing when available' is set to 'Enabled'"
   desc  "
     This policy setting determines whether enhanced anti-spoofing is configured for devices which support it.
@@ -4862,7 +4862,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.10.1.1_L1_Ensure_Use_enhanced
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.12.1_L1_Ensure_Turn_off_Microsoft_consumer_experiences_is_set_to_Enabled" do
+control "18.9.12.1_L1_Ensure_Turn_off_Microsoft_consumer_experiences_is_set_to_Enabled" do
   title "(L1) Ensure 'Turn off Microsoft consumer experiences' is set to 'Enabled'"
   desc  "
     This policy setting turns off experiences that help consumers make the most of their devices and Microsoft account.
@@ -4878,7 +4878,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.12.1_L1_Ensure_Turn_off_Micro
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.13.1_L1_Ensure_Do_not_display_the_password_reveal_button_is_set_to_Enabled" do
+control "18.9.13.1_L1_Ensure_Do_not_display_the_password_reveal_button_is_set_to_Enabled" do
   title "(L1) Ensure 'Do not display the password reveal button' is set to 'Enabled'"
   desc  "
     This policy setting allows you to configure the display of the password reveal button in password entry user experiences.
@@ -4895,7 +4895,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.13.1_L1_Ensure_Do_not_display
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.13.2_L1_Ensure_Enumerate_administrator_accounts_on_elevation_is_set_to_Disabled" do
+control "18.9.13.2_L1_Ensure_Enumerate_administrator_accounts_on_elevation_is_set_to_Disabled" do
   title "(L1) Ensure 'Enumerate administrator accounts on elevation' is set to 'Disabled'"
   desc  "
     By default, all administrator accounts are displayed when you attempt to elevate a running application.
@@ -4912,7 +4912,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.13.2_L1_Ensure_Enumerate_admi
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.14.1_L1_Ensure_Allow_Telemetry_is_set_to_Enabled_0_-_Security_Enterprise_Only" do
+control "18.9.14.1_L1_Ensure_Allow_Telemetry_is_set_to_Enabled_0_-_Security_Enterprise_Only" do
   title "(L1) Ensure 'Allow Telemetry' is set to 'Enabled: 0 - Security [Enterprise Only]'"
   desc  "
     This policy setting determines the amount of diagnostic and usage data reported to Microsoft.
@@ -4933,7 +4933,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.14.1_L1_Ensure_Allow_Telemetr
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.14.2_L1_Ensure_Disable_pre-release_features_or_settings_is_set_to_Disabled" do
+control "18.9.14.2_L1_Ensure_Disable_pre-release_features_or_settings_is_set_to_Disabled" do
   title "(L1) Ensure 'Disable pre-release features or settings' is set to 'Disabled'"
   desc  "
     This policy setting determines the level that Microsoft can experiment with the product to study user preferences or device behavior. A value of 1 permits Microsoft to configure device settings only. A value of 2 allows Microsoft to conduct full experimentations.
@@ -4950,7 +4950,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.14.2_L1_Ensure_Disable_pre-re
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.14.3_L1_Ensure_Do_not_show_feedback_notifications_is_set_to_Enabled" do
+control "18.9.14.3_L1_Ensure_Do_not_show_feedback_notifications_is_set_to_Enabled" do
   title "(L1) Ensure 'Do not show feedback notifications' is set to 'Enabled'"
   desc  "
     This policy setting allows an organization to prevent its devices from showing feedback questions from Microsoft.
@@ -4966,7 +4966,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.14.3_L1_Ensure_Do_not_show_fe
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.14.4_L1_Ensure_Toggle_user_control_over_Insider_builds_is_set_to_Disabled" do
+control "18.9.14.4_L1_Ensure_Toggle_user_control_over_Insider_builds_is_set_to_Disabled" do
   title "(L1) Ensure 'Toggle user control over Insider builds' is set to 'Disabled'"
   desc  "
     This policy setting determines whether users can access the Insider build controls in the Advanced Options for Windows Update. These controls are located under \"Get Insider builds,\" and enable users to make their devices available for downloading and installing Windows preview software.
@@ -4985,7 +4985,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.14.4_L1_Ensure_Toggle_user_co
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.15.1_L1_Ensure_Download_Mode_is_set_to_Enabled_None_or_LAN_or_Group_or_Disabled" do
+control "18.9.15.1_L1_Ensure_Download_Mode_is_set_to_Enabled_None_or_LAN_or_Group_or_Disabled" do
   title "(L1) Ensure 'Download Mode' is set to 'Enabled: None or LAN or Group' or 'Disabled'"
   desc  "
     Set this policy to configure the use of Windows Update Delivery Optimization in downloads of Windows Apps and Updates. Available mode are: 0=disable 1=peers on same NAT only 2=Local Network / Private Peering (PCs in the same domain by default) 3= Internet Peering
@@ -5006,7 +5006,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.15.1_L1_Ensure_Download_Mode_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.22.1_L1_Ensure_EMET_5.5_or_higher_is_installed" do
+control "18.9.22.1_L1_Ensure_EMET_5.5_or_higher_is_installed" do
   title "(L1) Ensure 'EMET 5.5' or higher is installed"
   desc  "
     The Enhanced Mitigation Experience Toolkit (EMET) is free, supported, software developed by Microsoft that allows an enterprise to apply exploit mitigations to applications that run on Windows.
@@ -5020,7 +5020,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.22.1_L1_Ensure_EMET_5.5_or_hi
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.22.2_L1_Ensure_Default_Action_and_Mitigation_Settings_is_set_to_Enabled_plus_subsettings" do
+control "18.9.22.2_L1_Ensure_Default_Action_and_Mitigation_Settings_is_set_to_Enabled_plus_subsettings" do
   title "(L1) Ensure 'Default Action and Mitigation Settings' is set to 'Enabled' (plus subsettings)"
   desc  "
     This setting configures the default action after detection and advanced ROP mitigation.
@@ -5058,7 +5058,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.22.2_L1_Ensure_Default_Action
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.22.3_L1_Ensure_Default_Protections_for_Internet_Explorer_is_set_to_Enabled" do
+control "18.9.22.3_L1_Ensure_Default_Protections_for_Internet_Explorer_is_set_to_Enabled" do
   title "(L1) Ensure 'Default Protections for Internet Explorer' is set to 'Enabled'"
   desc  "
     This settings determine if EMET mitigations are applied to Internet Explorer.
@@ -5075,7 +5075,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.22.3_L1_Ensure_Default_Protec
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.22.4_L1_Ensure_Default_Protections_for_Popular_Software_is_set_to_Enabled" do
+control "18.9.22.4_L1_Ensure_Default_Protections_for_Popular_Software_is_set_to_Enabled" do
   title "(L1) Ensure 'Default Protections for Popular Software' is set to 'Enabled'"
   desc  "
     This settings determine if EMET mitigations are applied to other popular software.
@@ -5216,7 +5216,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.22.4_L1_Ensure_Default_Protec
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.22.5_L1_Ensure_Default_Protections_for_Recommended_Software_is_set_to_Enabled" do
+control "18.9.22.5_L1_Ensure_Default_Protections_for_Recommended_Software_is_set_to_Enabled" do
   title "(L1) Ensure 'Default Protections for Recommended Software' is set to 'Enabled'"
   desc  "
     This settings determine if recommended EMET mitigations are applied to WordPad, applications that are part of the Microsoft Office suite, Adobe Acrobat, Adobe Reader, and Oracle Java.
@@ -5313,7 +5313,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.22.5_L1_Ensure_Default_Protec
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.22.6_L1_Ensure_System_ASLR_is_set_to_Enabled_Application_Opt-In" do
+control "18.9.22.6_L1_Ensure_System_ASLR_is_set_to_Enabled_Application_Opt-In" do
   title "(L1) Ensure 'System ASLR' is set to 'Enabled: Application Opt-In'"
   desc  "
     This setting determines how applications become enrolled in address space layout randomization (ASLR).
@@ -5330,7 +5330,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.22.6_L1_Ensure_System_ASLR_is
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.22.7_L1_Ensure_System_DEP_is_set_to_Enabled_Application_Opt-Out" do
+control "18.9.22.7_L1_Ensure_System_DEP_is_set_to_Enabled_Application_Opt-Out" do
   title "(L1) Ensure 'System DEP' is set to 'Enabled: Application Opt-Out'"
   desc  "
     This setting determines how applications become enrolled in data execution protection (DEP).
@@ -5347,7 +5347,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.22.7_L1_Ensure_System_DEP_is_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.22.8_L1_Ensure_System_SEHOP_is_set_to_Enabled_Application_Opt-Out" do
+control "18.9.22.8_L1_Ensure_System_SEHOP_is_set_to_Enabled_Application_Opt-Out" do
   title "(L1) Ensure 'System SEHOP' is set to 'Enabled: Application Opt-Out'"
   desc  "
     This setting determines how applications become enrolled in structured exception handler overwrite protection (SEHOP).
@@ -5364,7 +5364,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.22.8_L1_Ensure_System_SEHOP_i
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.24.1.1_L1_Ensure_Application_Control_Event_Log_behavior_when_the_log_file_reaches_its_maximum_size_is_set_to_Disabled" do
+control "18.9.24.1.1_L1_Ensure_Application_Control_Event_Log_behavior_when_the_log_file_reaches_its_maximum_size_is_set_to_Disabled" do
   title "(L1) Ensure 'Application: Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
   desc  "
     This policy setting controls Event Log behavior when the log file reaches its maximum size. If you enable this policy setting and a log file reaches its maximum size, new events are not written to the log and are lost. If you disable or do not configure this policy setting and a log file reaches its maximum size, new events overwrite old events.
@@ -5383,7 +5383,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.24.1.1_L1_Ensure_Application_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.24.1.2_L1_Ensure_Application_Specify_the_maximum_log_file_size_KB_is_set_to_Enabled_32768_or_greater" do
+control "18.9.24.1.2_L1_Ensure_Application_Specify_the_maximum_log_file_size_KB_is_set_to_Enabled_32768_or_greater" do
   title "(L1) Ensure 'Application: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater'"
   desc  "
     This policy setting specifies the maximum size of the log file in kilobytes. If you enable this policy setting, you can configure the maximum log file size to be between 1 megabyte (1,024 kilobytes) and 2 terabytes (2,147,483,647 kilobytes) in kilobyte increments. If you disable or do not configure this policy setting, the maximum size of the log file will be set to the locally configured value. This value can be changed by the local administrator using the Log Properties dialog and it defaults to 20 megabytes.
@@ -5400,7 +5400,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.24.1.2_L1_Ensure_Application_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.24.2.1_L1_Ensure_Security_Control_Event_Log_behavior_when_the_log_file_reaches_its_maximum_size_is_set_to_Disabled" do
+control "18.9.24.2.1_L1_Ensure_Security_Control_Event_Log_behavior_when_the_log_file_reaches_its_maximum_size_is_set_to_Disabled" do
   title "(L1) Ensure 'Security: Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
   desc  "
     This policy setting controls Event Log behavior when the log file reaches its maximum size.
@@ -5423,7 +5423,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.24.2.1_L1_Ensure_Security_Con
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.24.2.2_L1_Ensure_Security_Specify_the_maximum_log_file_size_KB_is_set_to_Enabled_196608_or_greater" do
+control "18.9.24.2.2_L1_Ensure_Security_Specify_the_maximum_log_file_size_KB_is_set_to_Enabled_196608_or_greater" do
   title "(L1) Ensure 'Security: Specify the maximum log file size (KB)' is set to 'Enabled: 196,608 or greater'"
   desc  "
     This policy setting specifies the maximum size of the log file in kilobytes. If you enable this policy setting, you can configure the maximum log file size to be between 1 megabyte (1,024 kilobytes) and 2 terabytes (2,147,483,647 kilobytes) in kilobyte increments. If you disable or do not configure this policy setting, the maximum size of the log file will be set to the locally configured value. This value can be changed by the local administrator using the Log Properties dialog and it defaults to 20 megabytes.
@@ -5440,7 +5440,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.24.2.2_L1_Ensure_Security_Spe
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.24.3.1_L1_Ensure_Setup_Control_Event_Log_behavior_when_the_log_file_reaches_its_maximum_size_is_set_to_Disabled" do
+control "18.9.24.3.1_L1_Ensure_Setup_Control_Event_Log_behavior_when_the_log_file_reaches_its_maximum_size_is_set_to_Disabled" do
   title "(L1) Ensure 'Setup: Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
   desc  "
     This policy setting controls Event Log behavior when the log file reaches its maximum size.
@@ -5463,7 +5463,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.24.3.1_L1_Ensure_Setup_Contro
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.24.3.2_L1_Ensure_Setup_Specify_the_maximum_log_file_size_KB_is_set_to_Enabled_32768_or_greater" do
+control "18.9.24.3.2_L1_Ensure_Setup_Specify_the_maximum_log_file_size_KB_is_set_to_Enabled_32768_or_greater" do
   title "(L1) Ensure 'Setup: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater'"
   desc  "
     This policy setting specifies the maximum size of the log file in kilobytes. If you enable this policy setting, you can configure the maximum log file size to be between 1 megabyte (1,024 kilobytes) and 2 terabytes (2,147,483,647 kilobytes) in kilobyte increments. If you disable or do not configure this policy setting, the maximum size of the log file will be set to the locally configured value. This value can be changed by the local administrator using the Log Properties dialog and it defaults to 20 megabytes.
@@ -5480,7 +5480,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.24.3.2_L1_Ensure_Setup_Specif
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.24.4.1_L1_Ensure_System_Control_Event_Log_behavior_when_the_log_file_reaches_its_maximum_size_is_set_to_Disabled" do
+control "18.9.24.4.1_L1_Ensure_System_Control_Event_Log_behavior_when_the_log_file_reaches_its_maximum_size_is_set_to_Disabled" do
   title "(L1) Ensure 'System: Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
   desc  "
     This policy setting controls Event Log behavior when the log file reaches its maximum size.
@@ -5503,7 +5503,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.24.4.1_L1_Ensure_System_Contr
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.24.4.2_L1_Ensure_System_Specify_the_maximum_log_file_size_KB_is_set_to_Enabled_32768_or_greater" do
+control "18.9.24.4.2_L1_Ensure_System_Specify_the_maximum_log_file_size_KB_is_set_to_Enabled_32768_or_greater" do
   title "(L1) Ensure 'System: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater'"
   desc  "
     This policy setting specifies the maximum size of the log file in kilobytes. If you enable this policy setting, you can configure the maximum log file size to be between 1 megabyte (1,024 kilobytes) and 2 terabytes (2,147,483,647 kilobytes) in kilobyte increments. If you disable or do not configure this policy setting, the maximum size of the log file will be set to the locally configured value. This value can be changed by the local administrator using the Log Properties dialog and it defaults to 20 megabytes.
@@ -5520,7 +5520,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.24.4.2_L1_Ensure_System_Speci
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.28.2_L1_Ensure_Configure_Windows_SmartScreen_is_set_to_Enabled_Require_approval_from_an_administrator_before_running_downloaded_unknown_software" do
+control "18.9.28.2_L1_Ensure_Configure_Windows_SmartScreen_is_set_to_Enabled_Require_approval_from_an_administrator_before_running_downloaded_unknown_software" do
   title "(L1) Ensure 'Configure Windows SmartScreen' is set to 'Enabled: Require approval from an administrator before running downloaded unknown software'"
   desc  "
     This policy setting allows you to manage the behavior of Windows SmartScreen. Windows SmartScreen helps keep PCs safer by warning users before running unrecognized programs downloaded from the Internet. Some information is sent to Microsoft about files and programs run on PCs with this feature enabled.
@@ -5544,7 +5544,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.28.2_L1_Ensure_Configure_Wind
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.28.3_L1_Ensure_Turn_off_Data_Execution_Prevention_for_Explorer_is_set_to_Disabled" do
+control "18.9.28.3_L1_Ensure_Turn_off_Data_Execution_Prevention_for_Explorer_is_set_to_Disabled" do
   title "(L1) Ensure 'Turn off Data Execution Prevention for Explorer' is set to 'Disabled'"
   desc  "
     Disabling data execution prevention can allow certain legacy plug-in applications to function without terminating Explorer.
@@ -5561,7 +5561,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.28.3_L1_Ensure_Turn_off_Data_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.28.4_L1_Ensure_Turn_off_heap_termination_on_corruption_is_set_to_Disabled" do
+control "18.9.28.4_L1_Ensure_Turn_off_heap_termination_on_corruption_is_set_to_Disabled" do
   title "(L1) Ensure 'Turn off heap termination on corruption' is set to 'Disabled'"
   desc  "
     Legacy plug-in applications may continue to function when a File Explorer session has become corrupt. Disabling this feature will prevent this.
@@ -5578,7 +5578,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.28.4_L1_Ensure_Turn_off_heap_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.28.5_L1_Ensure_Turn_off_shell_protocol_protected_mode_is_set_to_Disabled" do
+control "18.9.28.5_L1_Ensure_Turn_off_shell_protocol_protected_mode_is_set_to_Disabled" do
   title "(L1) Ensure 'Turn off shell protocol protected mode' is set to 'Disabled'"
   desc  "
     This policy setting allows you to configure the amount of functionality that the shell protocol can have. When using the full functionality of this protocol applications can open folders and launch files. The protected mode reduces the functionality of this protocol allowing applications to only open a limited set of folders. Applications are not able to open files with this protocol when it is in the protected mode. It is recommended to leave this protocol in the protected mode to increase the security of Windows.
@@ -5595,7 +5595,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.28.5_L1_Ensure_Turn_off_shell
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.31.1_L1_Ensure_Prevent_the_computer_from_joining_a_homegroup_is_set_to_Enabled" do
+control "18.9.31.1_L1_Ensure_Prevent_the_computer_from_joining_a_homegroup_is_set_to_Enabled" do
   title "(L1) Ensure 'Prevent the computer from joining a homegroup' is set to 'Enabled'"
   desc  "
     By default, users can add their computer to a homegroup on a home network.
@@ -5616,7 +5616,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.31.1_L1_Ensure_Prevent_the_co
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.35.1_L2_Ensure_Turn_off_location_is_set_to_Enabled" do
+control "18.9.35.1_L2_Ensure_Turn_off_location_is_set_to_Enabled" do
   title "(L2) Ensure 'Turn off location' is set to 'Enabled'"
   desc  "
     This policy setting turns off the location feature for this computer.
@@ -5633,7 +5633,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.35.1_L2_Ensure_Turn_off_locat
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.38.1_L1_Ensure_Configure_Cookies_is_set_to_Enabled_Block_only_3rd-party_cookies._or_higher" do
+control "18.9.38.1_L1_Ensure_Configure_Cookies_is_set_to_Enabled_Block_only_3rd-party_cookies._or_higher" do
   title "(L1) Ensure 'Configure Cookies' is set to 'Enabled: Block only 3rd-party cookies.' or higher"
   desc  "
     This setting lets you configure how your company deals with cookies.
@@ -5649,7 +5649,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.38.1_L1_Ensure_Configure_Cook
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.38.2_L2_Ensure_Dont_allow_SmartScreen_Filter_warning_overrides_is_set_to_Enabled" do
+control "18.9.38.2_L2_Ensure_Dont_allow_SmartScreen_Filter_warning_overrides_is_set_to_Enabled" do
   title "(L2) Ensure 'Don't allow SmartScreen Filter warning overrides' is set to 'Enabled'"
   desc  "
     This setting lets you decide whether employees can override the SmartScreen Filter warnings about potentially malicious websites.
@@ -5665,7 +5665,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.38.2_L2_Ensure_Dont_allow_Sma
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.38.3_L2_Ensure_Dont_allow_SmartScreen_Filter_warning_overrides_for_unverified_files_is_set_to_Enabled" do
+control "18.9.38.3_L2_Ensure_Dont_allow_SmartScreen_Filter_warning_overrides_for_unverified_files_is_set_to_Enabled" do
   title "(L2) Ensure 'Don't allow SmartScreen Filter warning overrides for unverified files' is set to 'Enabled'"
   desc  "
     This setting lets you decide whether employees can override the SmartScreen Filter warnings about downloading unverified files.
@@ -5681,7 +5681,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.38.3_L2_Ensure_Dont_allow_Sma
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.38.4_L1_Ensure_Dont_allow_WebRTC_to_share_the_LocalHost_IP_address_is_set_to_Enabled" do
+control "18.9.38.4_L1_Ensure_Dont_allow_WebRTC_to_share_the_LocalHost_IP_address_is_set_to_Enabled" do
   title "(L1) Ensure 'Don't allow WebRTC to share the LocalHost IP address' is set to 'Enabled'"
   desc  "
     This setting lets you decide whether an employee's LocalHost IP address shows while making phone calls using the WebRTC protocol.
@@ -5697,7 +5697,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.38.4_L1_Ensure_Dont_allow_Web
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.38.5_L1_Ensure_Turn_off_address_bar_search_suggestions_is_set_to_Disabled" do
+control "18.9.38.5_L1_Ensure_Turn_off_address_bar_search_suggestions_is_set_to_Disabled" do
   title "(L1) Ensure 'Turn off address bar search suggestions' is set to 'Disabled'"
   desc  "
     This setting lets you decide whether search suggestions should appear in the Address bar of Microsoft Edge.
@@ -5713,7 +5713,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.38.5_L1_Ensure_Turn_off_addre
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.38.6_L2_Ensure_Turn_off_InPrivate_browsing_is_set_to_Disabled" do
+control "18.9.38.6_L2_Ensure_Turn_off_InPrivate_browsing_is_set_to_Disabled" do
   title "(L2) Ensure 'Turn off InPrivate browsing' is set to 'Disabled'"
   desc  "
     This setting lets you decide whether employees can browse using InPrivate website browsing.
@@ -5729,7 +5729,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.38.6_L2_Ensure_Turn_off_InPri
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.38.7_L1_Ensure_Turn_off_Password_Manager_is_set_to_Disabled" do
+control "18.9.38.7_L1_Ensure_Turn_off_Password_Manager_is_set_to_Disabled" do
   title "(L1) Ensure 'Turn off Password Manager' is set to 'Disabled'"
   desc  "
     This setting lets you decide whether employees can save their passwords locally, using Password Manager.
@@ -5745,7 +5745,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.38.7_L1_Ensure_Turn_off_Passw
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.38.8_L2_Ensure_Turn_off_Pop-up_Blocker_is_set_to_Enabled" do
+control "18.9.38.8_L2_Ensure_Turn_off_Pop-up_Blocker_is_set_to_Enabled" do
   title "(L2) Ensure 'Turn off Pop-up Blocker' is set to 'Enabled'"
   desc  "
     This setting lets you decide whether to turn on Pop-up Blocker and whether to allow pop-ups to appear in secondary windows.
@@ -5761,7 +5761,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.38.8_L2_Ensure_Turn_off_Pop-u
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.38.9_L1_Ensure_Turn_off_the_SmartScreen_Filter_is_set_to_Enabled" do
+control "18.9.38.9_L1_Ensure_Turn_off_the_SmartScreen_Filter_is_set_to_Enabled" do
   title "(L1) Ensure 'Turn off the SmartScreen Filter' is set to 'Enabled'"
   desc  "
     This setting lets you decide whether to turn on SmartScreen Filter. SmartScreen Filter provides warning messages to help protect your employees from potential phishing scams and malicious software.
@@ -5777,7 +5777,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.38.9_L1_Ensure_Turn_off_the_S
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.43.1_L1_Ensure_Prevent_the_usage_of_OneDrive_for_file_storage_is_set_to_Enabled" do
+control "18.9.43.1_L1_Ensure_Prevent_the_usage_of_OneDrive_for_file_storage_is_set_to_Enabled" do
   title "(L1) Ensure 'Prevent the usage of OneDrive for file storage' is set to 'Enabled'"
   desc  "
     This policy setting lets you prevent apps and features from working with files on OneDrive.
@@ -5794,7 +5794,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.43.1_L1_Ensure_Prevent_the_us
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.48.2.2_L1_Ensure_Do_not_allow_passwords_to_be_saved_is_set_to_Enabled" do
+control "18.9.48.2.2_L1_Ensure_Do_not_allow_passwords_to_be_saved_is_set_to_Enabled" do
   title "(L1) Ensure 'Do not allow passwords to be saved' is set to 'Enabled'"
   desc  "
     This policy setting helps prevent Remote Desktop Services / Terminal Services clients from saving passwords on a computer. Note If this policy setting was previously configured as Disabled or Not configured, any previously saved passwords will be deleted the first time a Terminal Services client disconnects from any server.
@@ -5811,7 +5811,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.48.2.2_L1_Ensure_Do_not_allow
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.48.3.2.1_L2_Ensure_Allow_users_to_connect_remotely_by_using_Remote_Desktop_Services_is_set_to_Disabled" do
+control "18.9.48.3.2.1_L2_Ensure_Allow_users_to_connect_remotely_by_using_Remote_Desktop_Services_is_set_to_Disabled" do
   title "(L2) Ensure 'Allow users to connect remotely by using Remote Desktop Services' is set to 'Disabled'"
   desc  "
     This policy setting allows you to configure remote access to computers by using Remote Desktop Services.
@@ -5838,7 +5838,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.48.3.2.1_L2_Ensure_Allow_user
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.48.3.3.2_L1_Ensure_Do_not_allow_drive_redirection_is_set_to_Enabled" do
+control "18.9.48.3.3.2_L1_Ensure_Do_not_allow_drive_redirection_is_set_to_Enabled" do
   title "(L1) Ensure 'Do not allow drive redirection' is set to 'Enabled'"
   desc  "
     This policy setting prevents users from sharing the local drives on their client computers to Terminal Servers that they access. Mapped drives appear in the session folder tree in Windows Explorer in the following format:
@@ -5864,7 +5864,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.48.3.3.2_L1_Ensure_Do_not_all
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.48.3.3.1_L2_Ensure_Do_not_allow_COM_port_redirection_is_set_to_Enabled" do
+control "18.9.48.3.3.1_L2_Ensure_Do_not_allow_COM_port_redirection_is_set_to_Enabled" do
   title "(L2) Ensure 'Do not allow COM port redirection' is set to 'Enabled'"
   desc  "
     This policy setting specifies whether to prevent the redirection of data to client COM ports from the remote computer in a Remote Desktop Services session.
@@ -5881,7 +5881,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.48.3.3.1_L2_Ensure_Do_not_all
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.48.3.3.4_L2_Ensure_Do_not_allow_supported_Plug_and_Play_device_redirection_is_set_to_Enabled" do
+control "18.9.48.3.3.4_L2_Ensure_Do_not_allow_supported_Plug_and_Play_device_redirection_is_set_to_Enabled" do
   title "(L2) Ensure 'Do not allow supported Plug and Play device redirection' is set to 'Enabled'"
   desc  "
     This policy setting allows you to control the redirection of supported Plug and Play devices, such as Windows Portable Devices, to the remote computer in a Remote Desktop Services session.
@@ -5898,7 +5898,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.48.3.3.4_L2_Ensure_Do_not_all
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.48.3.3.3_L2_Ensure_Do_not_allow_LPT_port_redirection_is_set_to_Enabled" do
+control "18.9.48.3.3.3_L2_Ensure_Do_not_allow_LPT_port_redirection_is_set_to_Enabled" do
   title "(L2) Ensure 'Do not allow LPT port redirection' is set to 'Enabled'"
   desc  "
     This policy setting specifies whether to prevent the redirection of data to client LPT ports during a Remote Desktop Services session.
@@ -5915,7 +5915,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.48.3.3.3_L2_Ensure_Do_not_all
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.48.3.9.1_L1_Ensure_Always_prompt_for_password_upon_connection_is_set_to_Enabled" do
+control "18.9.48.3.9.1_L1_Ensure_Always_prompt_for_password_upon_connection_is_set_to_Enabled" do
   title "(L1) Ensure 'Always prompt for password upon connection' is set to 'Enabled'"
   desc  "
     This policy setting specifies whether Terminal Services always prompts the client computer for a password upon connection. You can use this policy setting to enforce a password prompt for users who log on to Terminal Services, even if they already provided the password in the Remote Desktop Connection client. By default, Terminal Services allows users to automatically log on if they enter a password in the Remote Desktop Connection client.
@@ -5934,7 +5934,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.48.3.9.1_L1_Ensure_Always_pro
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.48.3.9.3_L1_Ensure_Set_client_connection_encryption_level_is_set_to_Enabled_High_Level" do
+control "18.9.48.3.9.3_L1_Ensure_Set_client_connection_encryption_level_is_set_to_Enabled_High_Level" do
   title "(L1) Ensure 'Set client connection encryption level' is set to 'Enabled: High Level'"
   desc  "
     This policy setting specifies whether the computer that is about to host the remote connection will enforce an encryption level for all data sent between it and the client computer for the remote session.
@@ -5951,7 +5951,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.48.3.9.3_L1_Ensure_Set_client
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.48.3.9.2_L1_Ensure_Require_secure_RPC_communication_is_set_to_Enabled" do
+control "18.9.48.3.9.2_L1_Ensure_Require_secure_RPC_communication_is_set_to_Enabled" do
   title "(L1) Ensure 'Require secure RPC communication' is set to 'Enabled'"
   desc  "
     This policy setting allows you to specify whether a terminal server requires secure remote procedure call (RPC) communication with all clients or allows unsecured communication.
@@ -5970,7 +5970,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.48.3.9.2_L1_Ensure_Require_se
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.48.3.10.2_L2_Ensure_Set_time_limit_for_disconnected_sessions_is_set_to_Enabled_1_minute" do
+control "18.9.48.3.10.2_L2_Ensure_Set_time_limit_for_disconnected_sessions_is_set_to_Enabled_1_minute" do
   title "(L2) Ensure 'Set time limit for disconnected sessions' is set to 'Enabled: 1 minute'"
   desc  "
     This policy setting allows you to configure a time limit for disconnected Remote Desktop Services sessions.
@@ -5987,7 +5987,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.48.3.10.2_L2_Ensure_Set_time_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.48.3.10.1_L2_Ensure_Set_time_limit_for_active_but_idle_Remote_Desktop_Services_sessions_is_set_to_Enabled_15_minutes_or_less" do
+control "18.9.48.3.10.1_L2_Ensure_Set_time_limit_for_active_but_idle_Remote_Desktop_Services_sessions_is_set_to_Enabled_15_minutes_or_less" do
   title "(L2) Ensure 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less'"
   desc  "
     This policy setting allows you to specify the maximum amount of time that an active Remote Desktop Services session can be idle (without user input) before it is automatically disconnected.
@@ -6008,7 +6008,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.48.3.10.1_L2_Ensure_Set_time_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.48.3.11.1_L1_Ensure_Do_not_delete_temp_folders_upon_exit_is_set_to_Disabled" do
+control "18.9.48.3.11.1_L1_Ensure_Do_not_delete_temp_folders_upon_exit_is_set_to_Disabled" do
   title "(L1) Ensure 'Do not delete temp folders upon exit' is set to 'Disabled'"
   desc  "
     This policy setting specifies whether Remote Desktop Services retains a user's per-session temporary folders at logoff.
@@ -6025,7 +6025,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.48.3.11.1_L1_Ensure_Do_not_de
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.48.3.11.2_L1_Ensure_Do_not_use_temporary_folders_per_session_is_set_to_Disabled" do
+control "18.9.48.3.11.2_L1_Ensure_Do_not_use_temporary_folders_per_session_is_set_to_Disabled" do
   title "(L1) Ensure 'Do not use temporary folders per session' is set to 'Disabled'"
   desc  "
     By default, Remote Desktop Services creates a separate temporary folder on the RD Session Host server for each active session that a user maintains on the RD Session Host server. The temporary folder is created on the RD Session Host server in a Temp folder under the user's profile folder and is named with the \"sessionid.\" This temporary folder is used to store individual temporary files.
@@ -6044,7 +6044,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.48.3.11.2_L1_Ensure_Do_not_us
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.49.1_L1_Ensure_Prevent_downloading_of_enclosures_is_set_to_Enabled" do
+control "18.9.49.1_L1_Ensure_Prevent_downloading_of_enclosures_is_set_to_Enabled" do
   title "(L1) Ensure 'Prevent downloading of enclosures' is set to 'Enabled'"
   desc  "
     This policy setting prevents the user from having enclosures (file attachments) downloaded from a feed to the user's computer.
@@ -6061,7 +6061,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.49.1_L1_Ensure_Prevent_downlo
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.50.2_L1_Ensure_Allow_Cortana_is_set_to_Disabled" do
+control "18.9.50.2_L1_Ensure_Allow_Cortana_is_set_to_Disabled" do
   title "(L1) Ensure 'Allow Cortana' is set to 'Disabled'"
   desc  "
     This policy setting specifies whether Cortana is allowed on the device.
@@ -6078,7 +6078,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.50.2_L1_Ensure_Allow_Cortana_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.50.3_L1_Ensure_Allow_indexing_of_encrypted_files_is_set_to_Disabled" do
+control "18.9.50.3_L1_Ensure_Allow_indexing_of_encrypted_files_is_set_to_Disabled" do
   title "(L1) Ensure 'Allow indexing of encrypted files' is set to 'Disabled'"
   desc  "
     This policy setting allows encrypted items to be indexed. If you enable this policy setting, indexing will attempt to decrypt and index the content (access restrictions will still apply). If you disable this policy setting, the search service components (including non-Microsoft components) are expected not to index encrypted items or encrypted stores. This policy setting is not configured by default. If you do not configure this policy setting, the local setting, configured through Control Panel, will be used. By default, the Control Panel setting is set to not index encrypted content. When this setting is enabled or disabled, the index is rebuilt completely. Full volume encryption (such as BitLocker Drive Encryption or a non-Microsoft solution) must be used for the location of the index to maintain security for encrypted files.
@@ -6095,7 +6095,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.50.3_L1_Ensure_Allow_indexing
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.50.4_L1_Ensure_Allow_search_and_Cortana_to_use_location_is_set_to_Disabled" do
+control "18.9.50.4_L1_Ensure_Allow_search_and_Cortana_to_use_location_is_set_to_Disabled" do
   title "(L1) Ensure 'Allow search and Cortana to use location' is set to 'Disabled'"
   desc  "
     This policy setting specifies whether search and Cortana can provide location aware search and Cortana results.
@@ -6112,7 +6112,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.50.4_L1_Ensure_Allow_search_a
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.56.1_L2_Ensure_Turn_off_KMS_Client_Online_AVS_Validation_is_set_to_Enabled" do
+control "18.9.56.1_L2_Ensure_Turn_off_KMS_Client_Online_AVS_Validation_is_set_to_Enabled" do
   title "(L2) Ensure 'Turn off KMS Client Online AVS Validation' is set to 'Enabled'"
   desc  "
     The Key Management Service (KMS) is a Microsoft license activation method that entails setting up a local server that stores the licenses. The server itself needs to connect to Microsoft to activate the KMS service, but subsequent on-network clients can activate Microsoft Windows OS and/or their Microsoft Office via the KMS server instead of connecting directly to Microsoft. This policy setting lets you opt-out of sending KMS client activation data to Microsoft automatically.
@@ -6128,7 +6128,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.56.1_L2_Ensure_Turn_off_KMS_C
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.58.1_L2_Ensure_Disable_all_apps_from_Windows_Store_is_set_to_Enabled" do
+control "18.9.58.1_L2_Ensure_Disable_all_apps_from_Windows_Store_is_set_to_Enabled" do
   title "(L2) Ensure 'Disable all apps from Windows Store' is set to 'Enabled'"
   desc  "
     This setting configures the launch of all apps from the Windows Store that came pre-installed or were downloaded.
@@ -6144,7 +6144,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.58.1_L2_Ensure_Disable_all_ap
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.58.2_L1_Ensure_Turn_off_Automatic_Download_and_Install_of_updates_is_set_to_Disabled" do
+control "18.9.58.2_L1_Ensure_Turn_off_Automatic_Download_and_Install_of_updates_is_set_to_Disabled" do
   title "(L1) Ensure 'Turn off Automatic Download and Install of updates' is set to 'Disabled'"
   desc  "
     This setting enables or disables the automatic download and installation of app updates.
@@ -6161,7 +6161,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.58.2_L1_Ensure_Turn_off_Autom
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.58.3_L1_Ensure_Turn_off_the_offer_to_update_to_the_latest_version_of_Windows_is_set_to_Enabled" do
+control "18.9.58.3_L1_Ensure_Turn_off_the_offer_to_update_to_the_latest_version_of_Windows_is_set_to_Enabled" do
   title "(L1) Ensure 'Turn off the offer to update to the latest version of Windows' is set to 'Enabled'"
   desc  "
     Enables or disables the Store offer to update to the latest version of Windows.
@@ -6178,7 +6178,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.58.3_L1_Ensure_Turn_off_the_o
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.58.4_L2_Ensure_Turn_off_the_Store_application_is_set_to_Enabled" do
+control "18.9.58.4_L2_Ensure_Turn_off_the_Store_application_is_set_to_Enabled" do
   title "(L2) Ensure 'Turn off the Store application' is set to 'Enabled'"
   desc  "
     This setting denies or allows access to the Store application.
@@ -6195,7 +6195,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.58.4_L2_Ensure_Turn_off_the_S
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.66.3.1_L2_Ensure_Join_Microsoft_MAPS_is_set_to_Disabled" do
+control "18.9.66.3.1_L2_Ensure_Join_Microsoft_MAPS_is_set_to_Disabled" do
   title "(L2) Ensure 'Join Microsoft MAPS' is set to 'Disabled'"
   desc  "
     This policy setting allows you to join Microsoft MAPS. Microsoft MAPS is the online community that helps you choose how to respond to potential threats. The community also helps stop the spread of new malicious software infections. You can choose to send basic or additional information about detected software. Additional information helps Microsoft create new definitions and help it to protect your computer.
@@ -6218,7 +6218,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.66.3.1_L2_Ensure_Join_Microso
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.68.1_L1_Ensure_Enables_or_disables_Windows_Game_Recording_and_Broadcasting_is_set_to_Disabled" do
+control "18.9.68.1_L1_Ensure_Enables_or_disables_Windows_Game_Recording_and_Broadcasting_is_set_to_Disabled" do
   title "(L1) Ensure 'Enables or disables Windows Game Recording and Broadcasting' is set to 'Disabled'"
   desc  "
     This setting enables or disables the Windows Game Recording and Broadcasting features. If you disable this setting, Windows Game Recording will not be allowed. If the setting is enabled or not configured, then Recording and Broadcasting (streaming) will be allowed.
@@ -6234,7 +6234,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.68.1_L1_Ensure_Enables_or_dis
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.69.1_L1_Ensure_Allow_user_control_over_installs_is_set_to_Disabled" do
+control "18.9.69.1_L1_Ensure_Allow_user_control_over_installs_is_set_to_Disabled" do
   title "(L1) Ensure 'Allow user control over installs' is set to 'Disabled'"
   desc  "
     Permits users to change installation options that typically are available only to system administrators. The security features of Windows Installer prevent users from changing installation options typically reserved for system administrators, such as specifying the directory to which files are installed. If Windows Installer detects that an installation package has permitted the user to change a protected option, it stops the installation and displays a message. These security features operate only when the installation program is running in a privileged security context in which it has access to directories denied to the user.
@@ -6251,7 +6251,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.69.1_L1_Ensure_Allow_user_con
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.69.2_L1_Ensure_Always_install_with_elevated_privileges_is_set_to_Disabled" do
+control "18.9.69.2_L1_Ensure_Always_install_with_elevated_privileges_is_set_to_Disabled" do
   title "(L1) Ensure 'Always install with elevated privileges' is set to 'Disabled'"
   desc  "
     Directs Windows Installer to use system permissions when it installs any program on the system.
@@ -6276,7 +6276,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.69.2_L1_Ensure_Always_install
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.69.3_L2_Ensure_Prevent_Internet_Explorer_security_prompt_for_Windows_Installer_scripts_is_set_to_Disabled" do
+control "18.9.69.3_L2_Ensure_Prevent_Internet_Explorer_security_prompt_for_Windows_Installer_scripts_is_set_to_Disabled" do
   title "(L2) Ensure 'Prevent Internet Explorer security prompt for Windows Installer scripts' is set to 'Disabled'"
   desc  "
     This policy setting allows Web-based programs to install software on the computer without notifying the user.
@@ -6293,7 +6293,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.69.3_L2_Ensure_Prevent_Intern
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.70.1_L1_Ensure_Sign-in_last_interactive_user_automatically_after_a_system-initiated_restart_is_set_to_Disabled" do
+control "18.9.70.1_L1_Ensure_Sign-in_last_interactive_user_automatically_after_a_system-initiated_restart_is_set_to_Disabled" do
   title "(L1) Ensure 'Sign-in last interactive user automatically after a system-initiated restart' is set to 'Disabled'"
   desc  "
     This policy setting controls whether a device will automatically sign-in the last interactive user after Windows Update restarts the system. If you enable or do not configure this policy setting the device securely saves the user's credentials (including the user name domain and encrypted password) to configure automatic sign-in after a Windows Update restart. After the Windows Update restart the user is automatically signed-in and the session is automatically locked with all the lock screen apps configured for that user. If you disable this policy setting the device does not store the user's credentials for automatic sign-in after a Windows Update restart. The users' lock screen apps are not restarted after the system restarts.
@@ -6310,7 +6310,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.70.1_L1_Ensure_Sign-in_last_i
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.79.1_L1_Ensure_Turn_on_PowerShell_Script_Block_Logging_is_set_to_Disabled" do
+control "18.9.79.1_L1_Ensure_Turn_on_PowerShell_Script_Block_Logging_is_set_to_Disabled" do
   title "(L1) Ensure 'Turn on PowerShell Script Block Logging' is set to 'Disabled'"
   desc  "
     This policy setting enables logging of all PowerShell script input to the Microsoft-Windows-PowerShell/Operational event log.
@@ -6326,7 +6326,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.79.1_L1_Ensure_Turn_on_PowerS
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.79.2_L1_Ensure_Turn_on_PowerShell_Transcription_is_set_to_Disabled" do
+control "18.9.79.2_L1_Ensure_Turn_on_PowerShell_Transcription_is_set_to_Disabled" do
   title "(L1) Ensure 'Turn on PowerShell Transcription' is set to 'Disabled'"
   desc  "
     This Policy setting lets you capture the input and output of Windows PowerShell commands into text-based transcripts.
@@ -6342,7 +6342,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.79.2_L1_Ensure_Turn_on_PowerS
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.81.1.1_L1_Ensure_Allow_Basic_authentication_is_set_to_Disabled" do
+control "18.9.81.1.1_L1_Ensure_Allow_Basic_authentication_is_set_to_Disabled" do
   title "(L1) Ensure 'Allow Basic authentication' is set to 'Disabled'"
   desc  "
     This policy setting allows you to manage whether the Windows Remote Management (WinRM) client uses Basic authentication.
@@ -6363,7 +6363,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.81.1.1_L1_Ensure_Allow_Basic_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.81.1.2_L1_Ensure_Allow_unencrypted_traffic_is_set_to_Disabled" do
+control "18.9.81.1.2_L1_Ensure_Allow_unencrypted_traffic_is_set_to_Disabled" do
   title "(L1) Ensure 'Allow unencrypted traffic' is set to 'Disabled'"
   desc  "
     This policy setting allows you to manage whether the Windows Remote Management (WinRM) client sends and receives unencrypted messages over the network.
@@ -6384,7 +6384,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.81.1.2_L1_Ensure_Allow_unencr
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.81.1.3_L1_Ensure_Disallow_Digest_authentication_is_set_to_Enabled" do
+control "18.9.81.1.3_L1_Ensure_Disallow_Digest_authentication_is_set_to_Enabled" do
   title "(L1) Ensure 'Disallow Digest authentication' is set to 'Enabled'"
   desc  "
     This policy setting allows you to manage whether the Windows Remote Management (WinRM) client will not use Digest authentication.
@@ -6405,7 +6405,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.81.1.3_L1_Ensure_Disallow_Dig
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.81.2.1_L1_Ensure_Allow_Basic_authentication_is_set_to_Disabled" do
+control "18.9.81.2.1_L1_Ensure_Allow_Basic_authentication_is_set_to_Disabled" do
   title "(L1) Ensure 'Allow Basic authentication' is set to 'Disabled'"
   desc  "
     This policy setting allows you to manage whether the Windows Remote Management (WinRM) service accepts Basic authentication from a remote client.
@@ -6426,7 +6426,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.81.2.1_L1_Ensure_Allow_Basic_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.81.2.2_L1_Ensure_Allow_unencrypted_traffic_is_set_to_Disabled" do
+control "18.9.81.2.2_L1_Ensure_Allow_unencrypted_traffic_is_set_to_Disabled" do
   title "(L1) Ensure 'Allow unencrypted traffic' is set to 'Disabled'"
   desc  "
     This policy setting allows you to manage whether the Windows Remote Management (WinRM) service sends and receives unencrypted messages over the network.
@@ -6447,7 +6447,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.81.2.2_L1_Ensure_Allow_unencr
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.81.2.3_L1_Ensure_Disallow_WinRM_from_storing_RunAs_credentials_is_set_to_Enabled" do
+control "18.9.81.2.3_L1_Ensure_Disallow_WinRM_from_storing_RunAs_credentials_is_set_to_Enabled" do
   title "(L1) Ensure 'Disallow WinRM from storing RunAs credentials' is set to 'Enabled'"
   desc  "
     This policy setting allows you to manage whether the Windows Remote Management (WinRM) service will not allow RunAs credentials to be stored for any plug-ins.
@@ -6470,7 +6470,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.81.2.3_L1_Ensure_Disallow_Win
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.82.1_L2_Ensure_Allow_Remote_Shell_Access_is_set_to_Disabled" do
+control "18.9.82.1_L2_Ensure_Allow_Remote_Shell_Access_is_set_to_Disabled" do
   title "(L2) Ensure 'Allow Remote Shell Access' is set to 'Disabled'"
   desc  "
     This policy setting allows you to manage configuration of remote access to all supported shells to execute scripts and commands.
@@ -6487,7 +6487,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.82.1_L2_Ensure_Allow_Remote_S
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.85.1_L1_Ensure_Configure_Automatic_Updates_is_set_to_Enabled" do
+control "18.9.85.1_L1_Ensure_Configure_Automatic_Updates_is_set_to_Enabled" do
   title "(L1) Ensure 'Configure Automatic Updates' is set to 'Enabled'"
   desc  "
     This policy setting specifies whether computers in your environment will receive security updates from Windows Update or WSUS. If you configure this policy setting to Enabled, the operating system will recognize when a network connection is available and then use the network connection to search Windows Update or your designated intranet site for updates that apply to them.
@@ -6511,7 +6511,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.85.1_L1_Ensure_Configure_Auto
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.85.2_L1_Ensure_Configure_Automatic_Updates_Scheduled_install_day_is_set_to_0_-_Every_day" do
+control "18.9.85.2_L1_Ensure_Configure_Automatic_Updates_Scheduled_install_day_is_set_to_0_-_Every_day" do
   title "(L1) Ensure 'Configure Automatic Updates: Scheduled install day' is set to '0 - Every day'"
   desc  "
     This policy setting specifies whether computers in your environment will receive security updates from Windows Update or WSUS. If you configure this policy setting to Enabled, the operating system will recognize when a network connection is available and then use the network connection to search Windows Update or your designated intranet site for updates that apply to them.
@@ -6535,7 +6535,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.85.2_L1_Ensure_Configure_Auto
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.85.3_L1_Ensure_Defer_Upgrades_and_Updates_is_set_to_Enabled_8_months_0_weeks" do
+control "18.9.85.3_L1_Ensure_Defer_Upgrades_and_Updates_is_set_to_Enabled_8_months_0_weeks" do
   title "(L1) Ensure 'Defer Upgrades and Updates' is set to 'Enabled: 8 months, 0 weeks'"
   desc  "
     If you enable this policy setting, in Pro and Enterprise SKUs you can defer upgrades till the next upgrade period (at least a few months). If you do not have it set you will receive upgrades once they are available that will be installed as part of your update policies. Security updates will not be impacted by this policy. For more information on available upgrades see [windows.com/itpro](http://windows.com/itpro).
@@ -6568,7 +6568,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.85.3_L1_Ensure_Defer_Upgrades
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_18.9.85.4_L1_Ensure_No_auto-restart_with_logged_on_users_for_scheduled_automatic_updates_installations_is_set_to_Disabled" do
+control "18.9.85.4_L1_Ensure_No_auto-restart_with_logged_on_users_for_scheduled_automatic_updates_installations_is_set_to_Disabled" do
   title "(L1) Ensure 'No auto-restart with logged on users for scheduled automatic updates installations' is set to 'Disabled'"
   desc  "
     This policy setting specifies that Automatic Updates will wait for computers to be restarted by the users who are logged on to them to complete a scheduled installation.
@@ -6594,7 +6594,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_18.9.85.4_L1_Ensure_No_auto-restar
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_19.1.3.1_L1_Ensure_Enable_screen_saver_is_set_to_Enabled" do
+control "19.1.3.1_L1_Ensure_Enable_screen_saver_is_set_to_Enabled" do
   title "(L1) Ensure 'Enable screen saver' is set to 'Enabled'"
   desc  "
     This policy setting allows you to manage whether or not screen savers run. If the Screen Saver setting is disabled screen savers do not run and the screen saver section of the Screen Saver tab in Display in Control Panel is disabled. If this setting is enabled a screen saver will run if the following two conditions are met: first, that a valid screen saver is specified on the client via the Screen Saver Executable Name group policy setting or Control Panel on the client. Second, the screensaver timeout is set to a value greater than zero via the Screen Saver Timeout group policy setting or Control Panel on the client.
@@ -6612,7 +6612,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_19.1.3.1_L1_Ensure_Enable_screen_s
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_19.1.3.2_L1_Ensure_Force_specific_screen_saver_Screen_saver_executable_name_is_set_to_Enabled_scrnsave.scr" do
+control "19.1.3.2_L1_Ensure_Force_specific_screen_saver_Screen_saver_executable_name_is_set_to_Enabled_scrnsave.scr" do
   title "(L1) Ensure 'Force specific screen saver: Screen saver executable name' is set to 'Enabled: scrnsave.scr'"
   desc  "
     This policy setting allows you to manage whether or not screen savers run. If the Screen Saver setting is disabled screen savers do not run and the screen saver section of the Screen Saver tab in Display in Control Panel is disabled. If this setting is enabled a screen saver will run if the following two conditions are met: first, that a valid screen saver is specified on the client via the Screen Saver Executable Name group policy setting or Control Panel on the client. Second, the screensaver timeout is set to a value greater than zero via the Screen Saver Timeout group policy setting or Control Panel on the client.
@@ -6630,7 +6630,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_19.1.3.2_L1_Ensure_Force_specific_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_19.1.3.3_L1_Ensure_Password_protect_the_screen_saver_is_set_to_Enabled" do
+control "19.1.3.3_L1_Ensure_Password_protect_the_screen_saver_is_set_to_Enabled" do
   title "(L1) Ensure 'Password protect the screen saver' is set to 'Enabled'"
   desc  "
     If the Password protect the screen saver setting is enabled, then all screen savers are password protected, if it is disabled then password protection cannot be set on any screen saver.
@@ -6648,7 +6648,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_19.1.3.3_L1_Ensure_Password_protec
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_19.1.3.4_L1_Ensure_Screen_saver_timeout_is_set_to_Enabled_900_seconds_or_fewer_but_not_0" do
+control "19.1.3.4_L1_Ensure_Screen_saver_timeout_is_set_to_Enabled_900_seconds_or_fewer_but_not_0" do
   title "(L1) Ensure 'Screen saver timeout' is set to 'Enabled: 900 seconds or fewer, but not 0'"
   desc  "
     If the Screen Saver Timeout setting is enabled, then the screen saver will be launched when the specified amount of time has passed since the last user action. Valid values range from 1 to 89,400 seconds (24 hours). The setting has no effect if the wait time is set to zero or no screen saver has been specified.
@@ -6671,7 +6671,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_19.1.3.4_L1_Ensure_Screen_saver_ti
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_19.5.1.1_L1_Ensure_Turn_off_toast_notifications_on_the_lock_screen_is_set_to_Enabled" do
+control "19.5.1.1_L1_Ensure_Turn_off_toast_notifications_on_the_lock_screen_is_set_to_Enabled" do
   title "(L1) Ensure 'Turn off toast notifications on the lock screen' is set to 'Enabled'"
   desc  "
     This policy setting turns off toast notifications on the lock screen. If you enable this policy setting, applications will not be able to raise toast notifications on the lock screen. If you disable or do not configure this policy setting, toast notifications on the lock screen are enabled and can be turned off by the administrator or user. No reboots or service restarts are required for this policy setting to take effect.
@@ -6689,7 +6689,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_19.5.1.1_L1_Ensure_Turn_off_toast_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_19.6.5.1.1_L2_Ensure_Turn_off_Help_Experience_Improvement_Program_is_set_to_Enabled" do
+control "19.6.5.1.1_L2_Ensure_Turn_off_Help_Experience_Improvement_Program_is_set_to_Enabled" do
   title "(L2) Ensure 'Turn off Help Experience Improvement Program' is set to 'Enabled'"
   desc  "
     This policy setting specifies whether users can participate in the Help Experience Improvement program. The Help Experience Improvement program collects information about how customers use Windows Help so that Microsoft can improve it.
@@ -6707,7 +6707,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_19.6.5.1.1_L2_Ensure_Turn_off_Help
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_19.7.4.1_L1_Ensure_Do_not_preserve_zone_information_in_file_attachments_is_set_to_Disabled" do
+control "19.7.4.1_L1_Ensure_Do_not_preserve_zone_information_in_file_attachments_is_set_to_Disabled" do
   title "(L1) Ensure 'Do not preserve zone information in file attachments' is set to 'Disabled'"
   desc  "
     This policy setting allows you to manage whether Windows marks file attachments from Internet Explorer or Microsoft Outlook' Express with information about their zone of origin (such as restricted, Internet, intranet, or local). This policy setting requires that files be downloaded to NTFS disk partitions to function correctly. If zone information is not preserved, Windows cannot make proper risk assessments based on the zone where the attachment came from.
@@ -6727,7 +6727,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_19.7.4.1_L1_Ensure_Do_not_preserve
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_19.7.4.2_L1_Ensure_Notify_antivirus_programs_when_opening_attachments_is_set_to_Enabled" do
+control "19.7.4.2_L1_Ensure_Notify_antivirus_programs_when_opening_attachments_is_set_to_Enabled" do
   title "(L1) Ensure 'Notify antivirus programs when opening attachments' is set to 'Enabled'"
   desc  "
     Antivirus programs are mandatory in many environments and provide a strong defense against attack.
@@ -6749,7 +6749,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_19.7.4.2_L1_Ensure_Notify_antiviru
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_19.7.25.1_L1_Ensure_Prevent_users_from_sharing_files_within_their_profile._is_set_to_Enabled" do
+control "19.7.25.1_L1_Ensure_Prevent_users_from_sharing_files_within_their_profile._is_set_to_Enabled" do
   title "(L1) Ensure 'Prevent users from sharing files within their profile.' is set to 'Enabled'"
   desc  "
     This policy setting specifies whether users can share files within their profile. By default users are allowed to share files within their profile to other users on their network after an administrator opts in the computer. An administrator can opt in the computer by using the sharing wizard to share a file within their profile.
@@ -6767,7 +6767,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_19.7.25.1_L1_Ensure_Prevent_users_
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_19.7.37.1_L1_Ensure_Always_install_with_elevated_privileges_is_set_to_Disabled" do
+control "19.7.37.1_L1_Ensure_Always_install_with_elevated_privileges_is_set_to_Disabled" do
   title "(L1) Ensure 'Always install with elevated privileges' is set to 'Disabled'"
   desc  "
     Directs Windows Installer to use system permissions when it installs any program on the system.
@@ -6793,7 +6793,7 @@ control "xccdf_org.cisecurity.benchmarks_rule_19.7.37.1_L1_Ensure_Always_install
   end
 end
 
-control "xccdf_org.cisecurity.benchmarks_rule_19.7.41.2.1_L2_Ensure_Prevent_Codec_Download_is_set_to_Enabled" do
+control "19.7.41.2.1_L2_Ensure_Prevent_Codec_Download_is_set_to_Enabled" do
   title "(L2) Ensure 'Prevent Codec Download' is set to 'Enabled'"
   desc  "
     This setting controls whether Windows Media Player is allowed to download additional codecs for decoding media files it does not already understand.
