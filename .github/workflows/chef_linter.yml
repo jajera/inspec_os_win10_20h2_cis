@@ -31,4 +31,4 @@ jobs:
         fi
         git commit -m "Chef Cookstyle job"
         git push github HEAD:${GITHUB_REF}     
-      if: always()
+      if: failure()
