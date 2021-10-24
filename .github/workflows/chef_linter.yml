@@ -22,8 +22,7 @@ jobs:
       run: cookstyle . -a
 
     - name: test
-      run: |
-        pwd
+      run: pwd
         
     - name: Push code
       run: |
