@@ -23,10 +23,15 @@ jobs:
     - name: Run cookstyle
       run: cookstyle . -a
 
-    - name: Promote code
+    - name: Push code
       run: |
-        git config --global user.name 'jajera'
-        git config --global user.email 'jajera@users.noreply.github.com'
-        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-        git commit -am "Chef Cookstyle job"
-        git push
+        git config --local user.email "$(git log --format='%ae' HEAD^!)"
+        git config --local user.name "$(git log --format='%an' HEAD^!)"
+        git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
+        git pull github ${GITHUB_REF} --ff-only
+        git add .
+        if [ -z "$(git status --porcelain)" ]; then
+          exit 0
+        fi
+        git commit -m "Chef Cookstyle job"
+        git push github HEAD:${GITHUB_REF}
