@@ -1,4 +1,6 @@
 name: Run Chef Cookstyle
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 on: push
 
@@ -20,3 +22,11 @@ jobs:
 
     - name: Run cookstyle
       run: cookstyle . -a
+
+    - name: Promote code
+      run: |
+        git config --global user.name 'jajera'
+        git config --global user.email 'jajera@users.noreply.github.com'
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+        git commit -am "Chef Cookstyle job"
+        git push
