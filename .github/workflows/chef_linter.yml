@@ -23,7 +23,9 @@ jobs:
 
     - name: test
       run: pwd
+      if: always()
         
     - name: Push code
       run: |
         git status
+
