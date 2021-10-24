@@ -21,11 +21,16 @@ jobs:
     - name: Run cookstyle
       run: cookstyle . -a
 
-    - name: test
-      run: pwd
-      if: always()
-        
     - name: Push code
       run: |
-        git status
-
+        git config --local user.email "$(git log --format='%ae' HEAD^!)"
+        git config --local user.name "$(git log --format='%an' HEAD^!)"
+        git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
+        git pull github ${GITHUB_REF} --ff-only
+        git add .
+        if [ -z "$(git status --porcelain)" ]; then
+          exit 0
+        fi
+        git commit -m "Chef Cookstyle job"
+        git push github HEAD:${GITHUB_REF}
+      if: always()
