@@ -21,6 +21,10 @@ jobs:
     - name: Run cookstyle
       run: cookstyle . -a
 
+    - name: test
+      run: |
+        pwd
+        
     - name: Push code
       run: |
         git status
