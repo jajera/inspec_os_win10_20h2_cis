@@ -1,7 +1,7 @@
 ---
-name: inspec_os_win10_20h2_cis
-title: CIS Microsoft Windows 10 Enterprise (20H2) Benchmark
-summary: CIS Microsoft Windows 10 Enterprise (20H2) Benchmark
+name: inspec_os_win10_21h1_cis
+title: CIS Microsoft Windows 10 Enterprise (21H1) Benchmark
+summary: CIS Microsoft Windows 10 Enterprise (21H1) Benchmark
 version: 1.10.6
 maintainer: Chef Software, Inc.
 copyright: Chef Software, Inc.
