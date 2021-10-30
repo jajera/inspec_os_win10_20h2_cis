@@ -1,5 +1,5 @@
 #
-# Profile:: inspec_os_win10_20h2_cis
+# Profile:: inspec_os_win10_21h1_cis
 # Control:: section_18
 #
 # Copyright:: 2021, The Authors, All Rights Reserved.
