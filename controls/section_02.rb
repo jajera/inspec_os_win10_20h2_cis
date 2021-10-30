@@ -15,8 +15,9 @@ control '2.2.1_L1_Ensure_Access_Credential_Manager_as_a_trusted_caller_is_set_to
   "
   impact 1.0
   tag cce: 'CCE-35457-1'
-  describe security_policy(translate_sid: true) do
-    its('SeTrustedCredManAccessPrivilege') { should be_empty }
+  describe 'Security Policy SeTrustedCredManAccessPrivilege' do
+    subject { Array(security_policy(translate_sid: true).SeTrustedCredManAccessPrivilege) }
+      it { should be_empty }
   end
 end
 
@@ -31,9 +32,10 @@ control '2.2.2_L1_Ensure_Access_this_computer_from_the_network_is_set_to_Adminis
   "
   impact 1.0
   tag cce: 'CCE-32928-4'
-  describe security_policy(translate_sid: true) do
-    its('SeNetworkLogonRight') { should match_array ['BUILTIN\\Administrators', 'BUILTIN\\Remote Desktop Users'] }
-  end
+  describe 'Security Policy SeNetworkLogonRight' do
+    subject { Array(security_policy(translate_sid: true).SeNetworkLogonRight) }
+      it { should match_array ['BUILTIN\\Administrators', 'BUILTIN\\Remote Desktop Users'] }
+  end  
 end
 
 control '2.2.3_L1_Ensure_Act_as_part_of_the_operating_system_is_set_to_No_One' do
@@ -47,9 +49,10 @@ control '2.2.3_L1_Ensure_Act_as_part_of_the_operating_system_is_set_to_No_One' d
   "
   impact 1.0
   tag cce: 'CCE-35403-5'
-  describe security_policy(translate_sid: true) do
-    its('SeTcbPrivilege') { should be_empty }
-  end
+  describe 'Security Policy SeTcbPrivilege' do
+    subject { Array(security_policy(translate_sid: true).SeTcbPrivilege) }
+      it { should be_empty }
+  end  
 end
 
 control '2.2.4_L1_Ensure_Adjust_memory_quotas_for_a_process_is_set_to_Administrators_LOCAL_SERVICE_NETWORK_SERVICE' do
@@ -63,9 +66,10 @@ control '2.2.4_L1_Ensure_Adjust_memory_quotas_for_a_process_is_set_to_Administra
   "
   impact 1.0
   tag cce: 'CCE-35490-2'
-  describe security_policy(translate_sid: true) do
-    its('SeIncreaseQuotaPrivilege') { should match_array ['BUILTIN\\Administrators', 'NT AUTHORITY\\LOCAL SERVICE', 'NT AUTHORITY\\NETWORK SERVICE'] }
-  end
+  describe 'Security Policy SeIncreaseQuotaPrivilege' do
+    subject { Array(security_policy(translate_sid: true).SeIncreaseQuotaPrivilege) }
+      it { should match_array ['BUILTIN\\Administrators', 'NT AUTHORITY\\LOCAL SERVICE', 'NT AUTHORITY\\NETWORK SERVICE'] }
+  end    
 end
 
 control '2.2.5_L1_Ensure_Allow_log_on_locally_is_set_to_Administrators_Users' do
@@ -81,9 +85,10 @@ control '2.2.5_L1_Ensure_Allow_log_on_locally_is_set_to_Administrators_Users' do
   "
   impact 1.0
   tag cce: 'CCE-35640-2'
-  describe security_policy(translate_sid: true) do
-    its('SeInteractiveLogonRight') { should match_array ['BUILTIN\\Administrators', 'BUILTIN\\Users'] }
-  end
+  describe 'Security Policy SeInteractiveLogonRight' do
+    subject { Array(security_policy(translate_sid: true).SeInteractiveLogonRight) }
+      it { should match_array ['BUILTIN\\Administrators', 'BUILTIN\\Users'] }
+  end      
 end
 
 control '2.2.6_L1_Ensure_Allow_log_on_through_Remote_Desktop_Services_is_set_to_Administrators_Remote_Desktop_Users' do
@@ -99,9 +104,10 @@ control '2.2.6_L1_Ensure_Allow_log_on_through_Remote_Desktop_Services_is_set_to_
   "
   impact 1.0
   tag cce: 'CCE-33035-7'
-  describe security_policy(translate_sid: true) do
-    its('SeRemoteInteractiveLogonRight') { should match_array ['BUILTIN\\Administrators', 'BUILTIN\\Remote Desktop Users'] }    
-  end
+  describe 'Security Policy SeRemoteInteractiveLogonRight' do
+    subject { Array(security_policy(translate_sid: true).SeRemoteInteractiveLogonRight) }
+      it { should match_array ['BUILTIN\\Administrators', 'BUILTIN\\Remote Desktop Users'] }
+  end      
 end
 
 control '2.2.7_L1_Ensure_Back_up_files_and_directories_is_set_to_Administrators' do
@@ -115,9 +121,10 @@ control '2.2.7_L1_Ensure_Back_up_files_and_directories_is_set_to_Administrators'
   "
   impact 1.0
   tag cce: 'CCE-35699-8'
-  describe security_policy(translate_sid: true) do
-    its('SeBackupPrivilege') { should match_array ['BUILTIN\\Administrators'] }        
-  end
+  describe 'Security Policy SeBackupPrivilege' do
+    subject { Array(security_policy(translate_sid: true).SeBackupPrivilege) }
+      it { should match_array ['BUILTIN\\Administrators'] }
+  end        
 end
 
 control '2.2.8_L1_Ensure_Change_the_system_time_is_set_to_Administrators_LOCAL_SERVICE' do
@@ -143,9 +150,10 @@ control '2.2.8_L1_Ensure_Change_the_system_time_is_set_to_Administrators_LOCAL_S
   "
   impact 1.0
   tag cce: 'CCE-33094-4'
-  describe security_policy(translate_sid: true) do
-    its('SeSystemtimePrivilege') { should match_array ['BUILTIN\\Administrators', 'NT AUTHORITY\\LOCAL SERVICE'] }   
-  end
+  describe 'Security Policy SeSystemtimePrivilege' do
+    subject { Array(security_policy(translate_sid: true).SeSystemtimePrivilege) }
+      it { should match_array ['BUILTIN\\Administrators', 'NT AUTHORITY\\LOCAL SERVICE'] }
+  end     
 end
 
 control '2.2.9_L1_Ensure_Change_the_time_zone_is_set_to_Administrators_LOCAL_SERVICE_Users' do
@@ -159,9 +167,9 @@ control '2.2.9_L1_Ensure_Change_the_time_zone_is_set_to_Administrators_LOCAL_SER
   "
   impact 1.0
   tag cce: 'CCE-33431-8'
-  allowed_principals = 
-  describe security_policy(translate_sid: true) do
-    its('SeTimeZonePrivilege') { should match_array ((['BUILTIN\\Administrators', 'NT AUTHORITY\\LOCAL SERVICE', 'BUILTIN\\Users']) + (users.where { username.casecmp('Users') == 0 }.uids.entries + groups.where { name.casecmp('Users') == 0 }.gids.entries)) }
+  describe 'Security Policy SeTimeZonePrivilege' do
+    subject { Array(security_policy(translate_sid: true).SeTimeZonePrivilege) }
+      it { should match_array match_array(['BUILTIN\\Administrators', 'NT AUTHORITY\\LOCAL SERVICE', 'BUILTIN\\Users'] + (users.where { username.casecmp('Users') == 0 }.uids.entries + groups.where { name.casecmp('Users') == 0 }.gids.entries)) }
   end
 end
 
@@ -176,9 +184,10 @@ control '2.2.10_L1_Ensure_Create_a_pagefile_is_set_to_Administrators' do
   "
   impact 1.0
   tag cce: 'CCE-33051-4'
-  describe security_policy(translate_sid: true) do
-    its('SeCreatePagefilePrivilege') { should match_array ['BUILTIN\\Administrators'] }
-  end
+  describe 'Security Policy SeCreatePagefilePrivilege' do
+    subject { Array(security_policy(translate_sid: true).SeCreatePagefilePrivilege) }
+      it { should match_array ['BUILTIN\\Administrators'] }
+  end  
 end
 
 control '2.2.11_L1_Ensure_Create_a_token_object_is_set_to_No_One' do
@@ -194,9 +203,10 @@ control '2.2.11_L1_Ensure_Create_a_token_object_is_set_to_No_One' do
   "
   impact 1.0
   tag cce: 'CCE-33779-0'
-  describe security_policy(translate_sid: true) do
-    its('SeCreateTokenPrivilege') { should be_empty }
-  end
+  describe 'Security Policy SeCreatePagefilePrivilege' do
+    subject { Array(security_policy(translate_sid: true).SeCreatePagefilePrivilege) }
+      it { should be_empty }
+  end    
 end
 
 control '2.2.12_L1_Ensure_Create_global_objects_is_set_to_Administrators_LOCAL_SERVICE_NETWORK_SERVICE_SERVICE' do
@@ -212,9 +222,10 @@ control '2.2.12_L1_Ensure_Create_global_objects_is_set_to_Administrators_LOCAL_S
   "
   impact 1.0
   tag cce: 'CCE-33095-1'
-  describe security_policy(translate_sid: true) do
-    its('SeCreateGlobalPrivilege') { should match_array ['BUILTIN\\Administrators', 'NT AUTHORITY\\LOCAL SERVICE', 'NT AUTHORITY\\NETWORK SERVICE', 'NT AUTHORITY\\SERVICE'] }
-  end
+  describe 'Security Policy SeCreateGlobalPrivilege' do
+    subject { Array(security_policy(translate_sid: true).SeCreateGlobalPrivilege) }
+      it { match_array ['BUILTIN\\Administrators', 'NT AUTHORITY\\LOCAL SERVICE', 'NT AUTHORITY\\NETWORK SERVICE', 'NT AUTHORITY\\SERVICE'] }
+  end   
 end
 
 control '2.2.13_L1_Ensure_Create_permanent_shared_objects_is_set_to_No_One' do
@@ -228,9 +239,10 @@ control '2.2.13_L1_Ensure_Create_permanent_shared_objects_is_set_to_No_One' do
   "
   impact 1.0
   tag cce: 'CCE-33780-8'
-  describe security_policy(translate_sid: true) do
-    its('SeCreatePermanentPrivilege') { should be_empty }
-  end
+  describe 'Security Policy SeCreatePermanentPrivilege' do
+    subject { Array(security_policy(translate_sid: true).SeCreatePermanentPrivilege) }
+      it { should be_empty }
+  end    
 end
 
 control '2.2.14_L1_Ensure_Create_symbolic_links_is_set_to_Administrators' do
@@ -247,13 +259,15 @@ control '2.2.14_L1_Ensure_Create_symbolic_links_is_set_to_Administrators' do
   impact 1.0
   tag cce: 'CCE-33053-0'
   if powershell('(Get-WindowsOptionalFeature -FeatureName Microsoft-Hyper-V-All -Online).State').stdout.strip == 'Enabled'
-    describe security_policy(translate_sid: true) do
-        its('SeCreateSymbolicLinkPrivilege') { should match_array ['BUILTIN\\Administrators', 'NT VIRTUAL MACHINE\\Virtual Machines'] }
-    end    
-  else
-    describe security_policy(translate_sid: true) do
-      its('SeCreateSymbolicLinkPrivilege') { should match_array ['BUILTIN\\Administrators'] }
+    describe 'Security Policy SeCreateSymbolicLinkPrivilege' do
+      subject { Array(security_policy(translate_sid: true).SeCreateSymbolicLinkPrivilege) }
+        it { should match_array ['BUILTIN\\Administrators', 'NT VIRTUAL MACHINE\\Virtual Machines'] }
     end
+  else
+    describe 'Security Policy SeCreateSymbolicLinkPrivilege' do
+      subject { Array(security_policy(translate_sid: true).SeCreateSymbolicLinkPrivilege) }
+        it { should match_array ['BUILTIN\\Administrators'] }
+    end  
   end
 end
 
@@ -268,9 +282,10 @@ control '2.2.15_L1_Ensure_Debug_programs_is_set_to_Administrators' do
   "
   impact 1.0
   tag cce: 'CCE-33157-9'
-  describe security_policy(translate_sid: true) do
-    its('SeDebugPrivilege') { should match_array ['BUILTIN\\Administrators']}
-  end
+  describe 'Security Policy SeDebugPrivilege' do
+    subject { Array(security_policy(translate_sid: true).SeDebugPrivilege) }
+      it { should match_array ['BUILTIN\\Administrators'] }
+  end    
 end
 
 control '2.2.16_L1_Ensure_Deny_access_to_this_computer_from_the_network_to_include_Guests_Local_account' do
@@ -286,9 +301,10 @@ control '2.2.16_L1_Ensure_Deny_access_to_this_computer_from_the_network_to_inclu
   "
   impact 1.0
   tag cce: 'CCE-34173-5'
-  describe security_policy(translate_sid: true) do
-    its('SeDenyNetworkLogonRight') { should include ['BUILTIN\\Guests', 'BUILTIN\\Users'] }
-  end
+  describe 'Security Policy SeDenyNetworkLogonRight' do
+    subject { Array(security_policy(translate_sid: true).SeDenyNetworkLogonRight) }
+      it { should include ['BUILTIN\\Guests', 'BUILTIN\\Users'] }
+  end      
 end
 
 control '2.2.17_L1_Ensure_Deny_log_on_as_a_batch_job_to_include_Guests' do
@@ -304,8 +320,9 @@ control '2.2.17_L1_Ensure_Deny_log_on_as_a_batch_job_to_include_Guests' do
   "
   impact 1.0
   tag cce: 'CCE-35461-3'
-  describe security_policy(translate_sid: true) do
-    its('SeDenyBatchLogonRight') { should include ['BUILTIN\\Guests'] }
+  describe 'Security Policy SeDenyBatchLogonRight' do
+    subject { Array(security_policy(translate_sid: true).SeDenyBatchLogonRight) }
+      it { should include ['BUILTIN\\Guests'] }
   end
 end
 
@@ -322,9 +339,10 @@ control '2.2.18_L1_Ensure_Deny_log_on_as_a_service_to_include_Guests' do
   "
   impact 1.0
   tag cce: 'CCE-35404-3'
-  describe security_policy(translate_sid: true) do
-    its('SeDenyServiceLogonRight') { should include ['BUILTIN\\Guests'] }
-  end
+  describe 'Security Policy SeDenyServiceLogonRight' do
+    subject { Array(security_policy(translate_sid: true).SeDenyServiceLogonRight) }
+      it { should include ['BUILTIN\\Guests'] }
+  end  
 end
 
 control '2.2.19_L1_Ensure_Deny_log_on_locally_to_include_Guests' do
@@ -340,8 +358,9 @@ control '2.2.19_L1_Ensure_Deny_log_on_locally_to_include_Guests' do
   "
   impact 1.0
   tag cce: 'CCE-35293-0'
-  describe security_policy(translate_sid: true) do
-    its('SeDenyInteractiveLogonRight') { should include ['BUILTIN\\Guests'] }
+  describe 'Security Policy SeDenyRemoteInteractiveLogonRight' do
+    subject { Array(security_policy(translate_sid: true).SeDenyRemoteInteractiveLogonRight) }
+      it { should include ['BUILTIN\\Guests'] }
   end
 end
 
@@ -358,8 +377,9 @@ control '2.2.20_L1_Ensure_Deny_log_on_through_Remote_Desktop_Services_to_include
   "
   impact 1.0
   tag cce: 'CCE-33787-3'
-  describe security_policy(translate_sid: true) do
-    its('SeDenyRemoteInteractiveLogonRight') { should include ['BUILTIN\\Guests', 'BUILTIN\\Users'] }
+  describe 'Security Policy SeDenyRemoteInteractiveLogonRight' do
+    subject { Array(security_policy(translate_sid: true).SeDenyRemoteInteractiveLogonRight) }
+      it { should include ['BUILTIN\\Guests', 'BUILTIN\\Users'] }
   end
 end
 
@@ -374,8 +394,9 @@ control '2.2.21_L1_Ensure_Enable_computer_and_user_accounts_to_be_trusted_for_de
   "
   impact 1.0
   tag cce: 'CCE-33778-2'
-  describe security_policy(translate_sid: true) do
-    its('SeEnableDelegationPrivilege') { should be_empty }
+  describe 'Security Policy SeEnableDelegationPrivilege' do
+    subject { Array(security_policy(translate_sid: true).SeEnableDelegationPrivilege) }
+      it { should be_empty }
   end
 end
 
@@ -390,9 +411,10 @@ control '2.2.22_L1_Ensure_Force_shutdown_from_a_remote_system_is_set_to_Administ
   "
   impact 1.0
   tag cce: 'CCE-33715-4'
-  describe security_policy(translate_sid: true) do
-    its('SeRemoteShutdownPrivilege') { should match_array ['BUILTIN\\Administrators'] }
-  end
+  describe 'Security Policy SeRemoteShutdownPrivilege' do
+    subject { Array(security_policy(translate_sid: true).SeRemoteShutdownPrivilege) }
+      it { should match_array ['BUILTIN\\Administrators'] }
+  end  
 end
 
 control '2.2.23_L1_Ensure_Generate_security_audits_is_set_to_LOCAL_SERVICE_NETWORK_SERVICE' do
@@ -406,9 +428,10 @@ control '2.2.23_L1_Ensure_Generate_security_audits_is_set_to_LOCAL_SERVICE_NETWO
   "
   impact 1.0
   tag cce: 'CCE-35363-1'
-  describe security_policy(translate_sid: true) do
-    its('SeAuditPrivilege') { should match_array ['NT AUTHORITY\\LOCAL SERVICE', 'NT AUTHORITY\\NETWORK SERVICE'] }
-  end
+  describe 'Security Policy SeAuditPrivilege' do
+    subject { Array(security_policy(translate_sid: true).SeAuditPrivilege) }
+      it { should match_array ['NT AUTHORITY\\LOCAL SERVICE', 'NT AUTHORITY\\NETWORK SERVICE'] }
+  end    
 end
 
 control '2.2.24_L1_Ensure_Impersonate_a_client_after_authentication_is_set_to_Administrators_LOCAL_SERVICE_NETWORK_SERVICE_SERVICE' do
@@ -431,9 +454,10 @@ control '2.2.24_L1_Ensure_Impersonate_a_client_after_authentication_is_set_to_Ad
   "
   impact 1.0
   tag cce: 'CCE-34021-6'
-  describe security_policy(translate_sid: true) do
-    its('SeImpersonatePrivilege') { should match_array ['BUILTIN\\Administrators', 'NT AUTHORITY\\LOCAL SERVICE', 'NT AUTHORITY\\NETWORK SERVICE', 'NT AUTHORITY\\SERVICE'] }
-  end
+  describe 'Security Policy SeImpersonatePrivilege' do
+    subject { Array(security_policy(translate_sid: true).SeImpersonatePrivilege) }
+      it { should match_array ['BUILTIN\\Administrators', 'NT AUTHORITY\\LOCAL SERVICE', 'NT AUTHORITY\\NETWORK SERVICE', 'NT AUTHORITY\\SERVICE'] }
+  end      
 end
 
 control '2.2.25_L1_Ensure_Increase_scheduling_priority_is_set_to_Administrators_Window_Manager_Group' do
@@ -447,8 +471,9 @@ control '2.2.25_L1_Ensure_Increase_scheduling_priority_is_set_to_Administrators_
   "
   impact 1.0
   tag cce: 'CCE-35178-3'
-  describe security_policy(translate_sid: true) do
-    its('SeIncreaseBasePriorityPrivilege') { should match_array ['BUILTIN\\Administrators', 'Window Manager\\Window Manager Group'] }
+  describe 'Security Policy SeIncreaseBasePriorityPrivilege' do
+    subject { Array(security_policy(translate_sid: true).SeIncreaseBasePriorityPrivilege) }
+      it { should match_array ['BUILTIN\\Administrators', 'Window Manager\\Window Manager Group'] }
   end
 end
 
@@ -463,9 +488,10 @@ control '2.2.26_L1_Ensure_Load_and_unload_device_drivers_is_set_to_Administrator
   "
   impact 1.0
   tag cce: 'CCE-34903-5'
-  describe security_policy(translate_sid: true) do
-    its('SeLoadDriverPrivilege') { should match_array ['BUILTIN\\Administrators'] }
-  end
+  describe 'Security Policy SeLoadDriverPrivilege' do
+    subject { Array(security_policy(translate_sid: true).SeLoadDriverPrivilege) }
+      it { should match_array ['BUILTIN\\Administrators'] }
+  end  
 end
 
 control '2.2.27_L1_Ensure_Lock_pages_in_memory_is_set_to_No_One' do
@@ -479,9 +505,10 @@ control '2.2.27_L1_Ensure_Lock_pages_in_memory_is_set_to_No_One' do
   "
   impact 1.0
   tag cce: 'CCE-33807-9'
-  describe security_policy(translate_sid: true) do
-    its('SeLockMemoryPrivilege') { should be_empty }
-  end
+  describe 'Security Policy SeLockMemoryPrivilege' do
+    subject { Array(security_policy(translate_sid: true).SeLockMemoryPrivilege) }
+      it { should be_empty }
+  end    
 end
 
 control '2.2.28_L1_Ensure_Log_on_as_a_batch_job_is_set_to_Administrators' do
@@ -495,9 +522,10 @@ control '2.2.28_L1_Ensure_Log_on_as_a_batch_job_is_set_to_Administrators' do
   "
   impact 1.0
   tag cce: 'CCE-34903-5'
-  describe security_policy(translate_sid: true) do
-    its('SeBatchLogonRight') { should match_array ['BUILTIN\\Administrators'] }
-  end
+  describe 'Security Policy SeBatchLogonRight' do
+    subject { Array(security_policy(translate_sid: true).SeBatchLogonRight) }
+      it { should match_array ['BUILTIN\\Administrators'] }
+  end      
 end
 
 control '2.2.29_L2_Confgure_Log_on_as_as_a_service' do
@@ -512,14 +540,16 @@ control '2.2.29_L2_Confgure_Log_on_as_as_a_service' do
   impact 1.0
   tag cce: 'CCE-34903-5'
   if powershell('(Get-WindowsOptionalFeature -FeatureName Microsoft-Hyper-V-All -Online).State').stdout.strip == 'Enabled'
-    describe security_policy(translate_sid: true) do
-        its('SeLoadDriverPrivilege') { should match_array ['BUILTIN\\Administrators', 'NT VIRTUAL MACHINE\\Virtual Machines'] }
-    end    
-  else
-    describe security_policy(translate_sid: true) do
-      its('SeLoadDriverPrivilege') { should match_array ['BUILTIN\\Administrators'] }
+    describe 'Security Policy SeLoadDriverPrivilege' do
+      subject { Array(security_policy(translate_sid: true).SeLoadDriverPrivilege) }
+        it { should match_array ['BUILTIN\\Administrators', 'NT VIRTUAL MACHINE\\Virtual Machines'] }
     end
-  end  
+  else
+    describe 'Security Policy SeLoadDriverPrivilege' do
+      subject { Array(security_policy(translate_sid: true).SeLoadDriverPrivilege) }
+        it { should match_array ['BUILTIN\\Administrators'] }
+    end
+  end
 end
 
 control '2.2.30_L1_Ensure_Manage_auditing_and_security_log_is_set_to_Administrators' do
@@ -533,9 +563,10 @@ control '2.2.30_L1_Ensure_Manage_auditing_and_security_log_is_set_to_Administrat
   "
   impact 1.0
   tag cce: 'CCE-35275-7'
-  describe security_policy(translate_sid: true) do
-    its('SeLoadDriverPrivilege') { should match_array ['BUILTIN\\Administrators'] }  
-  end
+    describe 'Security Policy SeLoadDriverPrivilege' do
+      subject { Array(security_policy(translate_sid: true).SeLoadDriverPrivilege) }
+        it { should match_array ['BUILTIN\\Administrators'] }
+    end
 end
 
 control '2.2.31_L1_Ensure_Modify_an_object_label_is_set_to_No_One' do
@@ -549,9 +580,10 @@ control '2.2.31_L1_Ensure_Modify_an_object_label_is_set_to_No_One' do
   "
   impact 1.0
   tag cce: 'CCE-34913-4'
-  describe security_policy(translate_sid: true) do
-    its('SeRelabelPrivilege') { should be_empty }  
-  end
+  describe 'Security Policy SeRelabelPrivilege' do
+    subject { Array(security_policy(translate_sid: true).SeRelabelPrivilege) }
+      it { should be_empty }
+  end  
 end
 
 control '2.2.32_L1_Ensure_Modify_firmware_environment_values_is_set_to_Administrators' do
@@ -565,8 +597,9 @@ control '2.2.32_L1_Ensure_Modify_firmware_environment_values_is_set_to_Administr
   "
   impact 1.0
   tag cce: 'CCE-35183-3'
-  describe security_policy(translate_sid: true) do
-    its('SeSystemEnvironmentPrivilege') { should match_array ['BUILTIN\\Administrators'] }
+  describe 'Security Policy SeSystemEnvironmentPrivilege' do
+    subject { Array(security_policy(translate_sid: true).SeSystemEnvironmentPrivilege) }
+      it { should match_array ['BUILTIN\\Administrators'] }
   end
 end
 
@@ -581,9 +614,10 @@ control '2.2.33_L1_Ensure_Perform_volume_maintenance_tasks_is_set_to_Administrat
   "
   impact 1.0
   tag cce: 'CCE-35369-8'
-  describe security_policy(translate_sid: true) do
-    its('SeManageVolumePrivilege') { should match_array ['BUILTIN\\Administrators'] }
-  end
+  describe 'Security Policy SeManageVolumePrivilege' do
+    subject { Array(security_policy(translate_sid: true).SeManageVolumePrivilege) }
+      it { should match_array ['BUILTIN\\Administrators'] }
+  end  
 end
 
 control '2.2.34_L1_Ensure_Profile_single_process_is_set_to_Administrators' do
@@ -597,9 +631,10 @@ control '2.2.34_L1_Ensure_Profile_single_process_is_set_to_Administrators' do
   "
   impact 1.0
   tag cce: 'CCE-35000-9'
-  describe security_policy(translate_sid: true) do
-    its('SeProfileSingleProcessPrivilege') { should match_array ['BUILTIN\\Administrators'] }
-  end
+  describe 'Security Policy SeProfileSingleProcessPrivilege' do
+    subject { Array(security_policy(translate_sid: true).SeProfileSingleProcessPrivilege) }
+      it { should match_array ['BUILTIN\\Administrators'] }
+  end    
 end
 
 control '2.2.35_L1_Ensure_Profile_system_performance_is_set_to_Administrators_NT_SERVICEWdiServiceHost' do
@@ -613,8 +648,9 @@ control '2.2.35_L1_Ensure_Profile_system_performance_is_set_to_Administrators_NT
   "
   impact 1.0
   tag cce: 'CCE-35001-7'
-  describe security_policy(translate_sid: true) do
-    its('SeSystemProfilePrivilege') { should match_array ['BUILTIN\\Administrators', 'NT SERVICE\\WdiServiceHost'] }
+  describe 'Security Policy SeSystemProfilePrivilege' do
+    subject { Array(security_policy(translate_sid: true).SeSystemProfilePrivilege) }
+      it { should match_array ['BUILTIN\\Administrators', 'NT SERVICE\\WdiServiceHost'] }
   end
 end
 
@@ -629,9 +665,10 @@ control '2.2.36_L1_Ensure_Replace_a_process_level_token_is_set_to_LOCAL_SERVICE_
   "
   impact 1.0
   tag cce: 'CCE-35003-3'
-  describe security_policy(translate_sid: true) do
-    its('SeAssignPrimaryTokenPrivilege') { should match_array ['NT AUTHORITY\\LOCAL SERVICE', 'NT AUTHORITY\\NETWORK SERVICE'] }
-  end
+  describe 'Security Policy SeAssignPrimaryTokenPrivilege' do
+    subject { Array(security_policy(translate_sid: true).SeAssignPrimaryTokenPrivilege) }
+      it { should match_array ['NT AUTHORITY\\LOCAL SERVICE', 'NT AUTHORITY\\NETWORK SERVICE'] }
+  end  
 end
 
 control '2.2.37_L1_Ensure_Restore_files_and_directories_is_set_to_Administrators' do
@@ -647,9 +684,10 @@ control '2.2.37_L1_Ensure_Restore_files_and_directories_is_set_to_Administrators
   "
   impact 1.0
   tag cce: 'CCE-35067-8'
-  describe security_policy(translate_sid: true) do
-    its('SeRestorePrivilege') { should match_array ['BUILTIN\\Administrators'] }
-  end
+  describe 'Security Policy SeRestorePrivilege' do
+    subject { Array(security_policy(translate_sid: true).SeRestorePrivilege) }
+      it { should match_array ['BUILTIN\\Administrators'] }
+  end    
 end
 
 control '2.2.38_L1_Ensure_Shut_down_the_system_is_set_to_Administrators_Users' do
@@ -663,9 +701,10 @@ control '2.2.38_L1_Ensure_Shut_down_the_system_is_set_to_Administrators_Users' d
   "
   impact 1.0
   tag cce: 'CCE-35004-1'
-  describe security_policy(translate_sid: true) do
-    its('SeShutdownPrivilege') { should match_array ['BUILTIN\\Administrators', 'BUILTIN\\Users'] }
-  end
+  describe 'Security Policy SeShutdownPrivilege' do
+    subject { Array(security_policy(translate_sid: true).SeShutdownPrivilege) }
+      it { should match_array ['BUILTIN\\Administrators', 'BUILTIN\\Users'] }
+  end      
 end
 
 control '2.2.39_L1_Ensure_Take_ownership_of_files_or_other_objects_is_set_to_Administrators' do
@@ -679,8 +718,9 @@ control '2.2.39_L1_Ensure_Take_ownership_of_files_or_other_objects_is_set_to_Adm
   "
   impact 1.0
   tag cce: 'CCE-35009-0'
-  describe security_policy(translate_sid: true) do
-    its('SeTakeOwnershipPrivilege') { should match_array ['BUILTIN\\Administrators'] }
+  describe 'Security Policy SeTakeOwnershipPrivilege' do
+    subject { Array(security_policy(translate_sid: true).SeTakeOwnershipPrivilege) }
+      it { should match_array ['BUILTIN\\Administrators'] }
   end
 end
 
@@ -1011,7 +1051,7 @@ control '2.3.7.2_L1_Ensure_Interactive_logon_Do_not_display_last_user_name_is_se
 end
 
 control '2.3.7.3_L1_Ensure_Interactive_logon_Machine_account_lockout_threshold_is_set_to_10_or_fewer_invalid_logon_attempts_but_not_0' do
-  title "(L1) Ensure L1 Ensure Interactive logon Machine account lockout threshold is set to 10 or fewer invalid logon attempts but not 0"
+  title '(L1) Ensure L1 Ensure Interactive logon Machine account lockout threshold is set to 10 or fewer invalid logon attempts but not 0'
   desc  "
     This policy setting determines whether the account name of the last user to log on to the client computers in your organization will be displayed in each computer's respective Windows logon screen. Enable this policy setting to prevent intruders from collecting account names visually from the screens of desktop or laptop computers in your organization.
 

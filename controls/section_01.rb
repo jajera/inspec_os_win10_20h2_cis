@@ -107,21 +107,23 @@ control '1.1.5_L1_Ensure_Password_must_meet_complexity_requirements_is_set_to_En
   end
 end
 
-# control '1.1.6_Ensure_Relax_minimum_password_length_limits_is_set_to_Enabled' do
-#   title "(L1) Ensure 'Relax minimum password length limits' is set to 'Enabled'"
-#   desc  "
-#     This policy setting determines whether the minimum password length setting can be increased beyond the legacy limit of 14 characters.
+control '1.1.6_L1_Ensure_Relax_minimum_password_length_limits_is_set_to_Enabled' do
+  title "(L1) Ensure 'Relax minimum password length limits' is set to 'Enabled'"
+  desc  "
+    This policy setting determines whether the minimum password length setting can be increased beyond the legacy limit of 14 characters. For more information please see the following [Microsoft Security Blog](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/security-baseline-draft-windows-10-and-windows-server-version/ba-p/1419213) .
 
-#     The recommended state for this setting is: Enabled.
+    The recommended state for this setting is: Enabled .
 
-#     Rationale: This setting will enable the enforcement of longer and generally stronger passwords or passphrases where MFA is not in use.
-#   "
-#   impact 1.0
-#   tag cce: 'CCE-35370-6'
-#   describe security_policy do
-#     its('ClearTextPassword') { should eq 0 }
-#   end
-# end
+    **Note:** This setting only affects **local** accounts on the computer. Domain accounts are only affected by settings on the Domain Controllers, because that is where domain accounts are stored.
+
+    Rationale: This setting will enable the enforcement of longer and generally stronger passwords or passphrases where MFA is not in use.
+  "
+  impact 1.0
+  describe registry_key('HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\SAM') do
+    it { should have_property 'RelaxMinimumPasswordLengthLimits' }
+    its('RelaxMinimumPasswordLengthLimits') { should cmp == 1 }
+  end
+end
 
 control '1.1.7_L1_Ensure_Store_passwords_using_reversible_encryption_is_set_to_Disabled' do
   title "(L1) Ensure 'Store passwords using reversible encryption' is set to 'Disabled'"

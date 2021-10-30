@@ -122,7 +122,7 @@ control '17.3.1_L1_Ensure_Audit_PNP_Activity_is_set_to_include_Success' do
   impact 1.0
   describe audit_policy do
     its('Plug and Play Events') { should match /Success/ }
-  end    
+  end
 end
 
 control '17.3.2_L1_Ensure_Audit_Process_Creation_is_set_to_include_Success' do
@@ -158,7 +158,7 @@ control '17.5.1_L1_Ensure_Audit_Account_Lockout_is_set_to_include_Failure' do
   impact 1.0
   tag cce: 'CCE-35504-0'
   describe audit_policy do
-    its('Account Lockout') { should matchh /Failure/ }
+    its('Account Lockout') { should match /Failure/ }
   end
 end
 
@@ -176,7 +176,7 @@ control '17.5.2_L1_Ensure_Audit_Group_Membership_is_set_to_include_Success' do
   impact 1.0
   describe audit_policy do
     its('Group Membership') { should match /Success/ }
-  end    
+  end
 end
 
 control '17.5.3_L1_Ensure_Audit_Logoff_is_set_to_include_Success' do
@@ -276,7 +276,7 @@ control '17.6.1_L1_Ensure_Audit_Detailed_File_Share_is_set_to_include_Failure' d
   end
 end
 
-control '17.6.2_L1_Ensure_Audit_Audit_File_Share_is_set_to_Success_and_Failure' do
+control '17.6.2_L1_Ensure_Audit_File_Share_is_set_to_Success_and_Failure' do
   title "(L1) Ensure 'Audit File Share' is set to 'Success and Failure'"
   desc  "
     This policy setting allows you to audit user attempts to access file system objects on a removable storage device. A security audit event is generated only for all objects for all types of access requested. If you configure this policy setting, an audit event is generated each time an account accesses a file system object on a removable storage. Success audits record successful attempts and Failure audits record unsuccessful attempts. If you do not configure this policy setting, no audit event is generated when an account accesses a file system object on a removable storage.
@@ -288,7 +288,7 @@ control '17.6.2_L1_Ensure_Audit_Audit_File_Share_is_set_to_Success_and_Failure' 
   "
   impact 1.0
   describe audit_policy do
-    its('Audit File Share') { should eq 'Success and Failure' }
+    its('File Share') { should eq 'Success and Failure' }
   end
 end
 
