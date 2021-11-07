@@ -169,7 +169,7 @@ control '2.2.9_L1_Ensure_Change_the_time_zone_is_set_to_Administrators_LOCAL_SER
   tag cce: 'CCE-33431-8'
   describe 'Security Policy SeTimeZonePrivilege' do
     subject { Array(security_policy(translate_sid: true).SeTimeZonePrivilege) }
-      it { should match_array match_array(['BUILTIN\\Administrators', 'NT AUTHORITY\\LOCAL SERVICE', 'BUILTIN\\Users'] + (users.where { username.casecmp('Users') == 0 }.uids.entries + groups.where { name.casecmp('Users') == 0 }.gids.entries)) }
+      it { should match_array match_array(['BUILTIN\\Administrators', 'NT AUTHORITY\\LOCAL SERVICE', 'BUILTIN\\Users'] + (users.where { username.casecmp('Users') == 0 }.uids.entries + groups.where { name.casecmp('Users') == 0 }.gids.entries)
   end
 end
 
@@ -358,8 +358,8 @@ control '2.2.19_L1_Ensure_Deny_log_on_locally_to_include_Guests' do
   "
   impact 1.0
   tag cce: 'CCE-35293-0'
-  describe 'Security Policy SeDenyRemoteInteractiveLogonRight' do
-    subject { Array(security_policy(translate_sid: true).SeDenyRemoteInteractiveLogonRight) }
+  describe 'Security Policy SeDenyInteractiveLogonRight' do
+    subject { Array(security_policy(translate_sid: true).SeDenyInteractiveLogonRight) }
       it { should include ['BUILTIN\\Guests'] }
   end
 end
