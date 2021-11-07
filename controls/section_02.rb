@@ -917,7 +917,7 @@ control '2.3.6.1_L1_Ensure_Domain_member_Digitally_encrypt_or_sign_secure_channe
   tag cce: 'CCE-34892-0'
   describe registry_key('HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\Netlogon\\Parameters') do
     it { should have_property 'requiresignorseal' }
-    its('requiresignorseal') { should cmp == 1 }
+    its('RequireSignOrSeal') { should cmp == 1 }
   end
 end
 
@@ -934,7 +934,7 @@ control '2.3.6.2_L1_Ensure_Domain_member_Digitally_encrypt_secure_channel_data_w
   tag cce: 'CCE-35273-2'
   describe registry_key('HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\Netlogon\\Parameters') do
     it { should have_property 'sealsecurechannel' }
-    its('sealsecurechannel') { should cmp == 1 }
+    its('SealSecureChannel') { should cmp == 1 }
   end
 end
 
@@ -950,8 +950,8 @@ control '2.3.6.3_L1_Ensure_Domain_member_Digitally_sign_secure_channel_data_when
   impact 1.0
   tag cce: 'CCE-34893-8'
   describe registry_key('HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\Netlogon\\Parameters') do
-    it { should have_property 'signsecurechannel' }
-    its('signsecurechannel') { should cmp == 1 }
+    it { should have_property 'SignSecureChannel' }
+    its('SignSecureChannel') { should cmp == 1 }
   end
 end
 
@@ -967,8 +967,8 @@ control '2.3.6.4_L1_Ensure_Domain_member_Disable_machine_account_password_change
   impact 1.0
   tag cce: 'CCE-34986-0'
   describe registry_key('HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\Netlogon\\Parameters') do
-    it { should have_property 'disablepasswordchange' }
-    its('disablepasswordchange') { should cmp == 0 }
+    it { should have_property 'DisablePasswordChange' }
+    its('DisablePasswordChange') { should cmp == 0 }
   end
 end
 
@@ -986,12 +986,12 @@ control '2.3.6.5_L1_Ensure_Domain_member_Maximum_machine_account_password_age_is
   impact 1.0
   tag cce: 'CCE-34894-6'
   describe registry_key('HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\Netlogon\\Parameters') do
-    it { should have_property 'maximumpasswordage' }
-    its('maximumpasswordage') { should cmp > 0 }
+    it { should have_property 'MaximumPasswordAge' }
+    its('MaximumPasswordAge') { should cmp > 0 }
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\Netlogon\\Parameters') do
-    it { should have_property 'maximumpasswordage' }
-    its('maximumpasswordage') { should cmp <= 30 }
+    it { should have_property 'MaximumPasswordAge' }
+    its('MaximumPasswordAge') { should cmp <= 30 }
   end
 end
 
@@ -1009,8 +1009,8 @@ control '2.3.6.6_L1_Ensure_Domain_member_Require_strong_Windows_2000_or_later_se
   impact 1.0
   tag cce: 'CCE-35177-5'
   describe registry_key('HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\Netlogon\\Parameters') do
-    it { should have_property 'requirestrongkey' }
-    its('requirestrongkey') { should cmp == 1 }
+    it { should have_property 'RequireStrongKey' }
+    its('RequireStrongKey') { should cmp == 1 }
   end
 end
 
@@ -1062,9 +1062,13 @@ control '2.3.7.3_L1_Ensure_Interactive_logon_Machine_account_lockout_threshold_i
   impact 1.0
   tag cce: 'CCE-34898-7'
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\System') do
-    it { should have_property 'DontDisplayLastUserName' }
-    its('DontDisplayLastUserName') { should cmp == 1 }
+    it { should have_property 'MaxDevicePasswordFailedAttempts' }
+    its('MaxDevicePasswordFailedAttempts') { should cmp > 0 }
   end
+  describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\System') do
+    it { should have_property 'MaxDevicePasswordFailedAttempts' }
+    its('MaxDevicePasswordFailedAttempts') { should cmp <= 10 }
+  end  
 end
 
 control '2.3.7.4_L1_Ensure_Interactive_logon_Machine_inactivity_limit_is_set_to_900_or_fewer_seconds_but_not_0' do
@@ -1134,12 +1138,12 @@ control '2.3.7.8_L1_Ensure_Interactive_logon_Prompt_user_to_change_password_befo
   impact 1.0
   tag cce: 'CCE-35274-0'
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon') do
-    it { should have_property 'passwordexpirywarning' }
-    its('passwordexpirywarning') { should cmp <= 14 }
+    it { should have_property 'PasswordExpiryWarning' }
+    its('PasswordExpiryWarning') { should cmp <= 14 }
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon') do
-    it { should have_property 'passwordexpirywarning' }
-    its('passwordexpirywarning') { should cmp >= 5 }
+    it { should have_property 'PasswordExpiryWarning' }
+    its('PasswordExpiryWarning') { should cmp >= 5 }
   end
 end
 
@@ -1155,8 +1159,8 @@ control '2.3.7.9_L1_Ensure_Interactive_logon_Smart_card_removal_behavior_is_set_
   impact 1.0
   tag cce: 'CCE-34988-6'
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon') do
-    it { should have_property 'scremoveoption' }
-    its('scremoveoption') { should match(/^(1|2|3)$/) }
+    it { should have_property 'ScRemoveOption' }
+    its('ScRemoveOption') { should match(/^(1|2|3)$/) }
   end
 end
 
