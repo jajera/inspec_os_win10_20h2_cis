@@ -887,7 +887,7 @@ control '2.3.4.1_L1_Ensure_Devices_Allowed_to_format_and_eject_removable_media_i
   end
 end
 
-control '2.3.4.2_L1_Ensure_Devices_Prevent_users_from_installing_printer_drivers is set to "Enabled"' do
+control '2.3.4.2_L1_Ensure_Devices_Prevent_users_from_installing_printer_drivers_is_set_to_Enabled' do
   title "(L1) Ensure 'Devices: Prevent users from installing printer drivers' is set to 'Enabled'"
   desc  "
     This policy setting determines who is allowed to format and eject removable NTFS media. You can use this policy setting to prevent unauthorized users from removing data on one computer to access it on another computer on which they have local administrator privileges.
@@ -899,8 +899,8 @@ control '2.3.4.2_L1_Ensure_Devices_Prevent_users_from_installing_printer_drivers
   impact 1.0
   tag cce: 'CCE-34355-8'
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon') do
-    it { should have_property 'AllocateDASD' }
-    its('AllocateDASD') { should eq '2' }
+    it { should have_property 'AddPrinterDrivers' }
+    its('AddPrinterDrivers') { should eq '1' }
   end
 end
 
