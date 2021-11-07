@@ -528,7 +528,7 @@ control '2.2.28_L1_Ensure_Log_on_as_a_batch_job_is_set_to_Administrators' do
   end
 end
 
-control '2.2.29_L2_Confgure_Log_on_as_as_a_service' do
+control '2.2.29_L2_Configure_Log_on_as_as_a_service' do
   title "(L2) Configure 'Log on as a service'"
   desc  "
     This policy setting allows users to dynamically load a new device driver on a system. An attacker could potentially use this capability to install malicious code that appears to be a device driver. This user right is required for users to add local printers or printer drivers in Windows Vista.
