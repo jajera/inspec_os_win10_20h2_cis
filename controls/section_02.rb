@@ -1051,7 +1051,7 @@ control '2.3.7.3_L1_Ensure_Interactive_logon_Machine_account_lockout_threshold_i
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\System') do
     it { should have_property 'MaxDevicePasswordFailedAttempts' }
     its('MaxDevicePasswordFailedAttempts') { should cmp <= 10 }
-  end  
+  end
 end
 
 control '2.3.7.4_L1_Ensure_Interactive_logon_Machine_inactivity_limit_is_set_to_900_or_fewer_seconds_but_not_0' do
