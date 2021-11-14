@@ -308,7 +308,7 @@ control '2.2.16_L1_Ensure_Deny_access_to_this_computer_from_the_network_to_inclu
 end
 
 control '2.2.17_L1_Ensure_Deny_log_on_as_a_batch_job_to_include_Guests' do
-  title "(L1) Ensure 'Deny    subject { ['BUILTIN\\Guests', 'BUILTIN\\Users'] }
+  title "(L1) Ensure 'Deny log on as a batch job' to include 'Guests'" }
     it { should be_in Array(security_policy(translate_sid: true).SeDenyNetworkLogonRight) }
   end
 end
