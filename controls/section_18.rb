@@ -541,8 +541,8 @@ control '18.4.11_L2_Ensure_MSS_TcpMaxDataRetransmissions_IPv6_How_many_times_una
   "
   impact 1.0
   describe registry_key('HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\TCPIP6\\Parameters') do
-    it { should have_property 'tcpmaxdataretransmissions' }
-    its('tcpmaxdataretransmissions') { should cmp == 3 }
+    it { should have_property 'TcpMaxDataRetransmissions' }
+    its('TcpMaxDataRetransmissions') { should cmp == 3 }
   end
 end
 
@@ -557,8 +557,8 @@ control '18.4.12_L2_Ensure_MSS_TcpMaxDataRetransmissions_How_many_times_unacknow
   "
   impact 1.0
   describe registry_key('HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\Tcpip\\Parameters') do
-    it { should have_property 'tcpmaxdataretransmissions' }
-    its('tcpmaxdataretransmissions') { should cmp == 3 }
+    it { should have_property 'TcpMaxDataRetransmissions' }
+    its('TcpMaxDataRetransmissions') { should cmp == 3 }
   end
 end
 
