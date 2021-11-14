@@ -308,12 +308,6 @@ control '2.2.16_L1_Ensure_Deny_access_to_this_computer_from_the_network_to_inclu
 end
 
 control '2.2.17_L1_Ensure_Deny_log_on_as_a_batch_job_to_include_Guests' do
-  title "(L1) Ensure 'Deny log on as a batch job' to include 'Guests'" }
-    it { should be_in Array(security_policy(translate_sid: true).SeDenyNetworkLogonRight) }
-  end
-end
-
-control '2.2.17_L1_Ensure_Deny_log_on_as_a_batch_job_to_include_Guests' do
   title "(L1) Ensure 'Deny log on as a batch job' to include 'Guests'"
   desc  "
     This policy setting determines which accounts will not be able to log on to the computer as a batch job. A batch job is not a batch (.bat) file, but rather a batch-queue facility. Accounts that use the Task Scheduler to schedule jobs need this user right.
@@ -386,13 +380,6 @@ control '2.2.20_L1_Ensure_Deny_log_on_through_Remote_Desktop_Services_to_include
   describe 'Security Policy SeDenyRemoteInteractiveLogonRight' do
     subject { ['BUILTIN\\Guests', 'BUILTIN\\Users'] }
     it { should be_in Array(security_policy(translate_sid: true).SeDenyRemoteInteractiveLogonRight) }
-could allow unauthorized users to impersonate other users on the network. An attacker could exploit this privilege to gain access to network resources and make it difficult to determine what has happened after a security incident.
-  "
-  impact 1.0
-  tag cce: 'CCE-33778-2'
-  describe 'Security Policy SeEnableDelegationPrivilege' do
-    subject { Array(security_policy(translate_sid: true).SeEnableDelegationPrivilege) }
-    it { should be_empty }
   end
 end
 
