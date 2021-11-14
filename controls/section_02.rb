@@ -204,7 +204,7 @@ control '2.2.11_L1_Ensure_Create_a_token_object_is_set_to_No_One' do
   impact 1.0
   tag cce: 'CCE-33779-0'
   describe 'Security Policy SeCreatePagefilePrivilege' do
-    subject { Array(security_policy(translate_sid: true).SeCreatePagefilePrivilege) }
+    subject { Array(security_policy(translate_sid: true).SeCreateTokenPrivilege) }
     it { should be_empty }
   end
 end
@@ -302,7 +302,13 @@ control '2.2.16_L1_Ensure_Deny_access_to_this_computer_from_the_network_to_inclu
   impact 1.0
   tag cce: 'CCE-34173-5'
   describe 'Security Policy SeDenyNetworkLogonRight' do
-    subject { ['BUILTIN\\Guests', 'BUILTIN\\Users'] }
+    subject { Array(security_policy(translate_sid: true).SeDenyNetworkLogonRight) | ['BUILTIN\\Guests', 'BUILTIN\\Users'] }
+    it { should match_array ['BUILTIN\\Guests', 'BUILTIN\\Users'] }
+  end
+end
+
+control '2.2.17_L1_Ensure_Deny_log_on_as_a_batch_job_to_include_Guests' do
+  title "(L1) Ensure 'Deny    subject { ['BUILTIN\\Guests', 'BUILTIN\\Users'] }
     it { should be_in Array(security_policy(translate_sid: true).SeDenyNetworkLogonRight) }
   end
 end
@@ -380,17 +386,7 @@ control '2.2.20_L1_Ensure_Deny_log_on_through_Remote_Desktop_Services_to_include
   describe 'Security Policy SeDenyRemoteInteractiveLogonRight' do
     subject { ['BUILTIN\\Guests', 'BUILTIN\\Users'] }
     it { should be_in Array(security_policy(translate_sid: true).SeDenyRemoteInteractiveLogonRight) }
-  end
-end
-
-control '2.2.21_L1_Ensure_Enable_computer_and_user_accounts_to_be_trusted_for_delegation_is_set_to_No_One' do
-  title "(L1) Ensure 'Enable computer and user accounts to be trusted for delegation' is set to 'No One'"
-  desc  "
-    This policy setting allows users to change the Trusted for Delegation setting on a computer object in Active Directory. Abuse of this privilege could allow unauthorized users to impersonate other users on the network.
-
-    The recommended state for this setting is: No One.
-
-    Rationale: Misuse of the Enable computer and user accounts to be trusted for delegation user right could allow unauthorized users to impersonate other users on the network. An attacker could exploit this privilege to gain access to network resources and make it difficult to determine what has happened after a security incident.
+could allow unauthorized users to impersonate other users on the network. An attacker could exploit this privilege to gain access to network resources and make it difficult to determine what has happened after a security incident.
   "
   impact 1.0
   tag cce: 'CCE-33778-2'
@@ -898,7 +894,7 @@ control '2.3.4.2_L1_Ensure_Devices_Prevent_users_from_installing_printer_drivers
   "
   impact 1.0
   tag cce: 'CCE-34355-8'
-  describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon') do
+  describe registry_key('HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Print\\Providers\\LanMan Print Services\\Servers') do
     it { should have_property 'AddPrinterDrivers' }
     its('AddPrinterDrivers') { should eq '1' }
   end
