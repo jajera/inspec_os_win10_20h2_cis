@@ -302,8 +302,8 @@ control '2.2.16_L1_Ensure_Deny_access_to_this_computer_from_the_network_to_inclu
   impact 1.0
   tag cce: 'CCE-34173-5'
   describe 'Security Policy SeDenyNetworkLogonRight' do
-    subject { Array(security_policy(translate_sid: true).SeDenyNetworkLogonRight) | ['BUILTIN\\Guests', 'BUILTIN\\Users'] }
-    it { should match_array ['BUILTIN\\Guests', 'BUILTIN\\Users'] }
+    subject { ['BUILTIN\\Guests', 'BUILTIN\\Users'] }
+    it { should be_in Array(security_policy(translate_sid: true).SeDenyNetworkLogonRight) }
   end
 end
 
@@ -883,7 +883,7 @@ control '2.3.4.2_L1_Ensure_Devices_Prevent_users_from_installing_printer_drivers
   tag cce: 'CCE-34355-8'
   describe registry_key('HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Print\\Providers\\LanMan Print Services\\Servers') do
     it { should have_property 'AddPrinterDrivers' }
-    its('AddPrinterDrivers') { should eq '1' }
+    its('AddPrinterDrivers') { should eq 1 }
   end
 end
 
