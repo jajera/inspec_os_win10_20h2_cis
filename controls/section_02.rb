@@ -302,8 +302,8 @@ control '2.2.16_L1_Ensure_Deny_access_to_this_computer_from_the_network_to_inclu
   impact 1.0
   tag cce: 'CCE-34173-5'
   describe 'Security Policy SeDenyNetworkLogonRight' do
-    subject { Array(security_policy(translate_sid: true).SeDenyNetworkLogonRight) | ['BUILTIN\\Guests', 'BUILTIN\\Users'] }
-    it { should match_array ['BUILTIN\\Guests', 'BUILTIN\\Users'] }
+    subject { ['BUILTIN\\Guests', 'BUILTIN\\Users'] }
+    it { should be_in Array(security_policy(translate_sid: true).SeDenyNetworkLogonRight) }
   end
 end
 
@@ -321,8 +321,8 @@ control '2.2.17_L1_Ensure_Deny_log_on_as_a_batch_job_to_include_Guests' do
   impact 1.0
   tag cce: 'CCE-35461-3'
   describe 'Security Policy SeDenyBatchLogonRight' do
-    subject { Array(security_policy(translate_sid: true).SeDenyBatchLogonRight) | ['BUILTIN\\Guests'] }
-    it { should match_array ['BUILTIN\\Guests'] }
+    subject {  ['BUILTIN\\Guests'] }
+    it { should be_in Array(security_policy(translate_sid: true).SeDenyBatchLogonRight) }
   end
 end
 
@@ -340,8 +340,8 @@ control '2.2.18_L1_Ensure_Deny_log_on_as_a_service_to_include_Guests' do
   impact 1.0
   tag cce: 'CCE-35404-3'
   describe 'Security Policy SeDenyServiceLogonRight' do
-    subject { Array(security_policy(translate_sid: true).SeDenyServiceLogonRight) | ['BUILTIN\\Guests'] }
-    it { should match_array ['BUILTIN\\Guests'] }
+    subject { ['BUILTIN\\Guests'] }
+    it { should be_in Array(security_policy(translate_sid: true).SeDenyServiceLogonRight) }
   end
 end
 
@@ -359,8 +359,8 @@ control '2.2.19_L1_Ensure_Deny_log_on_locally_to_include_Guests' do
   impact 1.0
   tag cce: 'CCE-35293-0'
   describe 'Security Policy SeDenyInteractiveLogonRight' do
-    subject { Array(security_policy(translate_sid: true).SeDenyInteractiveLogonRight) | ['BUILTIN\\Guests'] }
-    it { should match_array ['BUILTIN\\Guests'] }
+    subject { ['BUILTIN\\Guests'] }
+    it { should be_in Array(security_policy(translate_sid: true).SeDenyInteractiveLogonRight) }
   end
 end
 
@@ -378,8 +378,8 @@ control '2.2.20_L1_Ensure_Deny_log_on_through_Remote_Desktop_Services_to_include
   impact 1.0
   tag cce: 'CCE-33787-3'
   describe 'Security Policy SeDenyRemoteInteractiveLogonRight' do
-    subject { Array(security_policy(translate_sid: true).SeDenyRemoteInteractiveLogonRight) | ['BUILTIN\\Guests', 'BUILTIN\\Users'] }
-    it { should match_array ['BUILTIN\\Guests', 'BUILTIN\\Users'] }
+    subject { ['BUILTIN\\Guests', 'BUILTIN\\Users'] }
+    it { should be_in Array(security_policy(translate_sid: true).SeDenyRemoteInteractiveLogonRight) }
   end
 end
 
